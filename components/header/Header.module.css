@@ -144,6 +144,9 @@
     background-color: #f1f1f124;
     padding:5px;
   }
+  .mainContainerScrolled{
+    height: 80px;
+  }
   .mainWrapper {
     display: flex;
     justify-content: space-between;
@@ -237,6 +240,10 @@
 }
 
 @media (max-width: 420px) {
+
+  .mainContainerScrolled{
+    height: 60px;
+  }
  
   .contactsTel{
     display: none;

@@ -239,6 +239,7 @@
 @media (max-width: 820px) {
   .sectionSlider {
     width: 100%;
+    margin-top: 70px;
   }
   .sectionContentContainer {
     width: 100%;

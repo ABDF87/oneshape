@@ -12,6 +12,8 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 type Props = {
   setDeployedMenu: (value: boolean) => void;
@@ -21,7 +23,12 @@ type Anchor = 'right';
 
 const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
   const [state, setState] = useState({ right: false });
-  const [isHovered, setIsHovered] = useState('');
+  const [activeMenuItem, setActiveMenuItem] = useState('');
+
+  const path = usePathname();
+  useEffect(() => {
+    setActiveMenuItem(path);
+  }, [path]);
 
   useEffect(() => {
     if (deployedMenu) {
@@ -47,7 +54,7 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
     <Box
       sx={{
         width: 250,
-        backgroundColor: '#000',
+        backgroundColor: '#323131',
         fontFamily: 'Montserrat',
         color: '#fff',
         height: '100vh',
@@ -56,26 +63,30 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
       onClick={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Головна', 'Масаж', 'Манікюр', 'Навчання', 'Контакти'].map(
+        {['Головна', 'Ціни', 'Масаж', 'Манікюр', 'Навчання', 'Контакти'].map(
           (text, index) => (
             <ListItem
               key={text}
               disablePadding
               sx={
-                isHovered === text
-                  ? {
-                      backgroundColor: '#eee',
-                      color: '#000',
-                      borderBottom: '1px solid #eee',
-                    }
+                activeMenuItem === '/' && text === 'Головна'
+                  ? { backgroundColor: '#000' }
+                  : activeMenuItem === '/prices' && text === 'Ціни'
+                  ? { backgroundColor: '#000' }
+                  : activeMenuItem === '/massage' && text === 'Масаж'
+                  ? { backgroundColor: '#000' }
+                  : activeMenuItem === '/manicure' && text === 'Манікюр'
+                  ? { backgroundColor: '#000' }
+                  : activeMenuItem === '/courses/massage' && text === 'Навчання'
+                  ? { backgroundColor: '#000' }
+                  : activeMenuItem === '/contact' && text === 'Контакти'
+                  ? { backgroundColor: '#000' }
                   : {
-                      backgroundColor: '#000',
+                      backgroundColor: '#323131',
                       width: '100%',
-                      borderBottom: '1px solid #eee',
+                      borderBottom: '1px solid #000',
                     }
               }
-              onMouseEnter={() => setIsHovered(text)}
-              onMouseLeave={() => setIsHovered('')}
             >
               <ListItemButton>
                 <Link
@@ -83,6 +94,8 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
                   href={
                     text === 'Головна'
                       ? `/`
+                      : text === 'Ціни'
+                      ? '/prices'
                       : text === 'Масаж'
                       ? '/massage'
                       : text === 'Манікюр'
@@ -92,7 +105,7 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
                       : '/contact'
                   }
                 >
-                <ListItemText primary={text} />
+                  <ListItemText primary={text} />
                 </Link>
               </ListItemButton>
             </ListItem>
