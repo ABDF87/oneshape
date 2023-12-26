@@ -52,10 +52,10 @@ const BookOnlineButton = ({
     border: border ? border : 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    width: customWidth ? customWidth : width < 420 ? 'auto' : width < 768 ? '150px' : '200px',
+    width: customWidth ? customWidth : width < 420 ? '100px' : width < 768 ? '150px' : '200px',
     // width: customWidth ? customWidth : width > 768 ? '200px' : '100px',
-    height: customHeight ? customHeight : width < 420 ? '20px' : width < 768 ? '30px' : '40px',
-    fontSize:  customFontSize ? customFontSize : width < 420 ? '8px' : width < 768 ? '18px' : '20px',
+    height: customHeight ? customHeight : width < 420 ? '30px' : width < 768 ? '30px' : '40px',
+    fontSize:  customFontSize ? customFontSize : width < 420 ? '10px' : width < 768 ? '18px' : '20px',
     padding: '5px 10px',
    
   };
