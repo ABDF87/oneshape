@@ -51,7 +51,7 @@ const BookForm = ({
                 </div>
                 {selectedServices.map((service: any, index: any) => {
                   return (
-                    <div className={styles.selectedService}>
+                    <div className={styles.selectedService} key={index}>
                       <div className={styles.selectedTitleWrapper}>
                         <span>{service.type}:&nbsp;</span>
                         <span>{service.name}</span>

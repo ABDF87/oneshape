@@ -99,7 +99,7 @@ const Manicure = () => {
                   {manicureWorksData.map((photo, index) => {
                     if (index === activeManicureWork)
                       return (
-                        <div className={styles.dispalyedManicurePhoto}>
+                        <div className={styles.dispalyedManicurePhoto} key={index}>
                           <Image
                             alt='фото манікюру в салоні Ler Beauty'
                             src={photo}
@@ -113,7 +113,7 @@ const Manicure = () => {
                 <div className={styles.ourWorksContainerRight}>
                   {manicureWorksData.map((photo, index) => {
                     return (
-                      <div className={styles.ourWorksPhotoWrapper}>
+                      <div className={styles.ourWorksPhotoWrapper} key={index}>
                         <div
                           className={styles.ourWorksPhoto}
                           onClick={() => handleManicureWorkClick(index)}
@@ -133,7 +133,7 @@ const Manicure = () => {
             </section>
             <section className={styles.beforeAndAfterSection}>
               <div className={styles.titleBeforeAndAfter}>
-                Наші роботи з подології <br /> "до і після"
+                Наші роботи з подології <br /> &ldquo;до і після&ldquo;
               </div>
               <div className={styles.beforeAndAfterContainer}>
                 <BeforeAfterSlider photos={manicure_ba_data} />

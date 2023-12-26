@@ -12,8 +12,7 @@ interface Props {
     price: string;
   }[];
   selectServiceHandler: (type: string, name: string, price: string) => void;
-    tableTitle: string;
-
+  tableTitle: string;
 }
 
 const massagePrices = ({
@@ -29,7 +28,7 @@ const massagePrices = ({
         <div className={styles.massageTitleWrapper}>
           {/* <div className={styles.massagePriceTitle}>PRICE LIST</div> */}
           <div className={styles.massagePriceSubTitle}>
-           {tableTitle}
+            {tableTitle}
             <span></span>
           </div>
         </div>
@@ -44,17 +43,21 @@ const massagePrices = ({
       </div>
       <div className={styles.pricesContainer}>
         {dataMassagePrices.map(
-          ({
-            type,
-            name,
-            description,
-            description2,
-            description3,
-            duration,
-            price,
-          }) => {
+          (
+            {
+              type,
+              name,
+              description,
+              description2,
+              description3,
+              duration,
+              price,
+            },
+            index
+          ) => {
             return (
               <div
+                key={index}
                 className={styles.priceItem}
                 onClick={() => selectServiceHandler(type, name, price)}
               >

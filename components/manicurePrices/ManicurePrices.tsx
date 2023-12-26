@@ -25,7 +25,6 @@ const ManicurePrices = ({
 
       <div className={styles.massagePriceTitleContainer}>
         <div className={styles.massageTitleWrapper}>
-          {/* <div className={styles.massagePriceTitle}>PRICE LIST</div> */}
           <div className={styles.massagePriceSubTitle}>
             {tableTitle}
             <span></span>
@@ -47,11 +46,13 @@ const ManicurePrices = ({
             description3,
 
             price,
-          }) => {
+            
+          }, index) => {
             return (
               <div
                 className={styles.priceItem}
                 onClick={() => selectServiceHandler(type, name, price)}
+                key={index}
               >
                 <div className={styles.priceItemTextWrapper}>
                   <div className={styles.priceItemTitle}>{name}</div>

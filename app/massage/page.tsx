@@ -92,7 +92,7 @@ const Massage = () => {
 
             <section className={styles.beforeAndAfterSection}>
               <div className={styles.titleBeforeAndAfter}>
-                Наші роботи "до і після"
+                Наші роботи &ldquo;до і після&ldquo;
               </div>
               <div className={styles.beforeAndAfterContainer}>
                 <BeforeAfterSlider photos={massage_ba_data} />

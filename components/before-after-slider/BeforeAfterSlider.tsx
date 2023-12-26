@@ -50,7 +50,7 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
       <Slider {...settings}>
         {photos.map((photo, index) => {
           return (
-            <div style={slideContainer}>
+            <div style={slideContainer} key={index}>
               <Image
                 style={slideStyle}
                 src={photo}
