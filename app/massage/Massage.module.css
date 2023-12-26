@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Nunito+Sans:opsz@6..12&display=swap');
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.innerContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  margin-top: 120px;
+  background-color: #fff;
+}
+.topContainerSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  z-index: 20;
+}
+.topWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  background-color: transparent;
+  z-index: 20;
+}
+.layer {
+  width: auto;
+  height: 100%;
+  background-color: #fff;
+  z-index: 50;
+}
+.video {
+  width: auto;
+  height: 80vh;
+  z-index: 10;
+}
+
+.titleTopContainer {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  width: 60%;
+  height: 80%;
+  margin-top: 50px;
+  background-color: #3a393991;
+  z-index: 50;
+}
+.titleTop {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 500;
+  margin-left: 180px;
+  background-color: transparent;
+}
+
+.descriptionTop {
+  display: flex;
+  justify-content: left;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  width: 100%;
+  margin-left: 180px;
+}
+.bookMassageButtonContainer {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  transform: translate(-20px, 100%);
+}
+.bookMassageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  background-color: #070707;
+  border-radius: 4px;
+  margin-left: 180px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.sideLayer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  align-items: end;
+  right: 0;
+  bottom: -40px;
+  width: 700px;
+  height: 400px;
+  background-color: #f2f1f1;
+}
+.instaContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.instaLogo {
+  font-size: 20px;
+}
+.instaTitle {
+  font-size: 16px;
+  color: #5a5959;
+}
+
+.goToCoursesSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-image: url('/photos/massage-neck-horizont.jpg');
+  background-size: cover;
+  margin: 100px 0 0 0;
+  font-weight: 200;
+}
+.goToCoursesLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #15141485;
+  z-index: 20;
+}
+.goToCoursesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 40px 0 20px 0;
+  background-color: transparent;
+  font-size: 40px;
+  font-weight: 200;
+  color: #fff;
+  z-index: 30;
+}
+.goToCoursesTitle {
+  margin-bottom: 10px;
+}
+.goToCoursesDescription {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.goToCoursesButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 50px;
+  color: #fff;
+  background-color: #070707;
+  border-radius: 4px;
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.goToCoursesButton:hover {
+  background-color: #e39836;
+}
+.goToCoursesButton:active {
+  background-color: #e39836;
+  transform: scale(0.99);
+}
+
+.beforeAndAfterSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin-top: 100px;
+}
+.titleBeforeAndAfter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 200;
+}
+.beforeAndAfterContainer {
+  width: 100%;
+  height: auto;
+  background-color: #f0efef;
+  padding: 50px 100px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.beforeAndAfterContainer img {
+  width: auto;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.beforeAndAfterPhotoWrapper {
+  border: 1px solid #4a4949;
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .topWrapper {
+    height: auto;
+    background-color: #fff;
+  }
+  .titleTopContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    background-color: #3a393991;
+    z-index: 50;
+  }
+  .video {
+    height: auto;
+    background-color: transparent;
+  }
+  .sideLayer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    align-items: end;
+    right: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 400px;
+    background-color: #f2f1f1;
+  }
+  .titleTop {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .descriptionTop {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 15px;
+  }
+  .bookMassageButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    transform: translate(0, 100%);
+  }
+}
+
+@media (max-width: 820px) {
+  .innerContainer {
+    margin-top: 80px;
+  }
+  .titleTop {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    font-size: 40px;
+  }
+  .descriptionTop {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 10px;
+  }
+  .instaTitle {
+    font-size: 16px;
+  }
+  .instaLogo {
+    font-size: 16px;
+  }
+  .goToCoursesTitle {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .goToCoursesDescription {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .instaTitle {
+    font-size: 14px;
+  }
+  .instaLogo {
+    font-size: 14px;
+  }
+}
+@media (max-width: 420px) {
+  .innerContainer{
+    margin-top: 50px;
+  }
+  .sideLayer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    align-items: center;
+    right: 0;
+    bottom: -17px;
+    width: 100%;
+    height: auto;
+    background-color: #f2f1f1;
+  }
+  
+  .instaTitle {
+    font-size: 8px;
+  }
+  .instaLogo {
+    font-size: 10px;
+  }
+  .goToCoursesSection {
+    margin: 0;
+  }
+  .goToCoursesTitle {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .goToCoursesDescription {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .beforeAndAfterContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: #f0efef;
+    padding: 0px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .titleBeforeAndAfter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    height: 50px;
+    background-color: transparent;
+    font-size: 30px;
+    margin-bottom: 80px;
+    font-weight: 200;
+  }
+}

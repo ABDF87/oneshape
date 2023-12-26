@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+.mainContainer {
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  background-color: transparent;
+  color: rgb(28, 27, 27);
+  z-index: 100;
+  font-family: 'Cormorant Garamond', serif;
+}
+.deployedMenuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 50px;
+  width: 100%;
+  gap:20px;
+  background-color: transparent;
+}
+
+.menuItem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: auto;
+  color: rgb(22, 23, 23);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: transparent;
+}
+.menuItem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(22, 23, 23);
+  /* transform-origin: bottom right; */
+  transition: transform 0.25s ease-out;
+}
+.menuItem:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom ;
+}
+.activeMenuItem{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: auto;
+  color: rgb(22, 23, 23);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(22, 23, 23);;
+}
+
+.deployedServiceMenuContainer{
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 150px;
+height: auto;
+margin-top: -5px;
+background-color: #fff;
+z-index: 100;
+}
+
+.serviceMenuSubItem{
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  padding: 10px 20px;
+  color: #686868;
+  font-family: 'Nunito Sans', sans-serif;
+  border-bottom: 1px solid #ebeaea;
+  cursor: pointer;
+  font-size: 14px;  
+}
+
+.serviceMenuSubItem:hover{
+  background-color: #ecebea;
+}
+
+.activeUnderliner{
+  width: 10px;
+  height: 1px;
+  background-color: #fff;
+  transition: transform 3s;
+  transform: scaleX(6, 0.5);
+}
+
+.activeMenuItemWhite {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  cursor: pointer;
+  color: rgb(223, 176, 35);
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 0.5px solid rgb(223, 176, 35);
+}
+/* .menuItem:hover {
+  border-bottom: 1px solid #f8f5f5;
+  transition: 3s;
+} */
+
+@media (max-width: 1000px) {
+  .deployedMenuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 50px;
+    width: 100%;
+    gap:10px;
+    background-color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 20px;
+    background-color: transparent;
+    width: auto;
+    color: white;
+    z-index: 100;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+}
