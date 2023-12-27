@@ -44,23 +44,14 @@ const Home = () => {
                   <div className={styles.imageWrapper}>
                     <div className={styles.imageTitle}>Cпина</div>
                     <Image
-                      src='/photos/massage-back.jpg'
+                      src='/photos/anticellu-massage.jpg'
                       alt='massage'
                       width={500}
                       height={500}
                     />
                   </div>
                   <div className={styles.imageWrapper}>
-                    <div className={styles.imageTitle}>Шія</div>
-                    <Image
-                      src='/photos/massage-neck.jpg'
-                      alt='massage'
-                      width={500}
-                      height={500}
-                    />
-                  </div>
-                  <div className={styles.imageWrapper}>
-                    <div className={styles.imageTitle}>Лімфодренаж</div>
+                    <div className={styles.imageTitle}>Антицелюлітні програми</div>
                     <Image
                       src='/photos/massage-stomac.jpg'
                       alt='massage'
@@ -69,7 +60,16 @@ const Home = () => {
                     />
                   </div>
                   <div className={styles.imageWrapper}>
-                    <div className={styles.imageTitle}>Лице</div>
+                    <div className={styles.imageTitle}>Лімфодренаж</div>
+                    <Image
+                      src='/photos/leg-massage.jpg'
+                      alt='massage'
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                  <div className={styles.imageWrapper}>
+                    <div className={styles.imageTitle}>Обличчя</div>
                     <Image
                       src='/photos/cosmetology-landing.jpg'
                       alt='massage'

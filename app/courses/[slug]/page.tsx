@@ -64,7 +64,8 @@ const Courses = () => {
                   autoPlay
                   loop
                   muted
-                  src='/videos/massage-video.mp4'
+                  playsInline
+                  src='/videos/courses-banner.mov'
                 />
                 <div className={styles.titleTopContainer}>
                   <div className={styles.titleTop}>Навчання</div>

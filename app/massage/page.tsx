@@ -42,6 +42,7 @@ const Massage = () => {
                   autoPlay
                   loop
                   muted
+                  playsInline
                   src='/videos/massage-video.mp4'
                 />
                 <div className={styles.titleTopContainer}>
