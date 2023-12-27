@@ -90,7 +90,7 @@
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .innerContainer {
     display: flex;
     flex-direction: column;
@@ -140,13 +140,14 @@
 
   .contactsContainer p {
     font-weight: lighter;
-    font-size: 9px;
+    font-size: 10px;
+    font-weight: normal;
   }
   .divider {
     display: block;
     width: 0.5px;
-    height: 100%;
-    background-color: #3d3c3c;
+    height: 120%;
+    background-color: #b4b2b2;
   }
   .mapContainer {
     width: 100%;

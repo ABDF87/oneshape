@@ -5,7 +5,7 @@ import { useFormContext } from '../formContextProvider/FormContextProvider';
 import BookOnlineButton from '../bookOnlineButton/BookOnlineButton';
 
 const Contact = () => {
-  const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
+  const {setIsModalOpen} = useFormContext();
   return (
     <div className={styles.innerContainer}>
       <div className={styles.contactsContainer}>

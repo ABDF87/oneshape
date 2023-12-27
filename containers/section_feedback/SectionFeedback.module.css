@@ -89,7 +89,7 @@
   }
 }
 
-@media (max-width:420px) {
+@media (max-width:430px) {
   .feedbackDescriptionName span{
     transform: translate(0%, -50%);
   }

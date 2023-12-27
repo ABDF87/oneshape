@@ -211,7 +211,7 @@
     display: none;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 430px) {
   .mastersContainer {
     display: flex;
     flex-direction: column;
@@ -236,22 +236,22 @@
   }
   .masterContainer {
     gap: 20px;
-    width: 90%;
+    width: 100%;
   }
   .masterPhoto {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 90%;
+    width: 100%;
     height: auto;
     padding: 10px;
     background-color: #f2f1f1;
     z-index: 20;
   }
   .masterPhoto img {
-    width: 90%;
-    height: 300px;
+    width: 100%;
+    height: 350px;
     object-fit: cover;
   }
   .masterDescriptionContainer {
@@ -274,7 +274,7 @@
   .masterDescription {
     display: flex;
     justify-content: center;
-    width: 300px;
+    width: 100%;
     height: 100%;
     background-color: transparent;
     /* transform: translate(60px, -20px); */

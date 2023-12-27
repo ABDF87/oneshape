@@ -62,7 +62,7 @@
       width:80%;
     }
   }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .modalContent {
     width: 90%;
   }

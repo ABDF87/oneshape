@@ -90,7 +90,7 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .mainContainer {
     width: 100%;
     height: 100vh;
@@ -146,7 +146,7 @@
 
   .contactsContainer p {
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .mapContainer {

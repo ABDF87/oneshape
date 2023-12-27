@@ -251,7 +251,7 @@
     font-size: 14px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .innerContainer {
     margin-top: 50px;
   }

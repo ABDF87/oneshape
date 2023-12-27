@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ServicesSection.module.css';
 import Image from 'next/image';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
+import Slide from '@mui/material/Slide';
 
 interface Props {
   services: {
@@ -21,18 +22,41 @@ const ServicesSection = ({ services, sectionTitle, serviceType }: Props) => {
     useState<boolean>(false);
   const [activeDescription, setActiveDescription] = useState<number>();
 
+  const [isVisible, setIsVisible] = useState(false);
+
   const { setIsModalOpen, setFormInfo } = useFormContext();
 
   const showDescriptionHandler = (index: any) => {
     setIsDescriptionShowed(true);
     setActiveDescription(index);
-    console.log(index);
   };
   const hideDescriptionHandler = (index: any) => {
     setIsDescriptionShowed(false);
     setActiveDescription(-1);
-    console.log(index);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window === undefined) return;
+      let threshold;
+      if (window.innerHeight >= 1200) {
+        threshold = 700;
+      } else if (window.innerHeight < 1200 && window.innerHeight > 940) {
+        threshold = 300;
+      } else if (window.innerHeight < 940) {
+        threshold = 100;
+      }
+      const currentScrollY = window.scrollY;
+      if (threshold === undefined) return;
+      setIsVisible(currentScrollY > threshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className={styles.serviceSection}>
       <div className={styles.titleService}>{sectionTitle}</div>
@@ -54,23 +78,36 @@ const ServicesSection = ({ services, sectionTitle, serviceType }: Props) => {
                     alt='massage'
                     width={500}
                     height={500}
-                    style={{ transform: 'rotate:90deg' }}
+                    // style={{ transform: 'rotate:90deg' }}
                   />
                 </div>
 
                 <div className={styles.serviceDescriptionContainer}>
                   <div className={styles.serviceDescription}>
-                    {isDescriptionShowed && activeDescription === index && (
-                      <>
-                        <div className={styles.serviceDescriptionText}>
-                          {description}
-                        </div>
+                    {/* {isDescriptionShowed && activeDescription === index && ( */}
 
-                        <div className={styles.servicePrice}>
-                          Ціна: {price} грн. за {duration} хв.
-                        </div>
-                      </>
-                    )}
+                    <div className={styles.serviceDescriptionText}>
+                      <Slide
+                        direction='right'
+                        in={isVisible}
+                        mountOnEnter
+                        unmountOnExit
+                      >
+                        <div>{description}</div>
+                      </Slide>
+                    </div>
+                    <Slide
+                      direction='up'
+                      in={isVisible}
+                      mountOnEnter
+                      unmountOnExit
+                    >
+                      <div className={styles.servicePrice}>
+                        Ціна: {price} грн. за {duration} хв.
+                      </div>
+                    </Slide>
+
+                    {/* )} */}
                   </div>
 
                   {/* <div className={styles.bottomServiceWrapper}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SectionMassageCourses.module.css';
+import styles from './SectionCourses.module.css';
 import SectionFeedback from '../section_feedback/SectionFeedback';
 import { FaPeoplePulling } from 'react-icons/fa6';
 import { FiClock } from 'react-icons/fi';

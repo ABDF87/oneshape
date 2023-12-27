@@ -70,7 +70,7 @@ const AnchorButtons = ({
   const buttonContainerStyle: any = {
     display: 'flex',
     justifyContent: 'center',
-    flexDirection: customFlexDirection ? customFlexDirection : width < 420 ? 'column' : 'row',
+    flexDirection: customFlexDirection ? customFlexDirection : width < 430 ? 'column' : 'row',
     alignItems: 'center',
     width: 'auto',
     height: 'auto',

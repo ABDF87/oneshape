@@ -5,7 +5,7 @@ import Image from 'next/image';
 import styles from './Courses.module.css';
 import Header from '@/components/header/Header';
 import instructors from '@/data/instructors';
-import SectionMassageCourses from '@/containers/section_massage_courses/SectionCourses';
+import SectionMassageCourses from '@/containers/section_courses/SectionCourses';
 import Contact from '@/components/contact/Contact';
 import massageCoursesData from '@/data/massageCoursesData';
 import manicureCoursesData from '@/data/manicureCoursesData';
@@ -19,29 +19,32 @@ const Courses = () => {
   const [activeCourseData, setActiveCourseData] = useState(massageCoursesData);
 
   const { slug } = useParams();
-  const router = useRouter();
 
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
+
+  //manicure courses options currently deactivated
 
   useEffect(() => {
     if (slug === 'massage') {
       setActiveCourseData(massageCoursesData);
       setActiveCourseTitle('massage-courses');
     } else {
-      setActiveCourseData(manicureCoursesData);
+      // still redirecting to massage courses
+      setActiveCourseData(massageCoursesData);
       setActiveCourseTitle('manicure-courses');
     }
   }, [slug]);
 
-  const changeActiveCourse = (course: string) => {
-    if (course === 'massage-courses') {
-      setActiveCourseTitle('massage-courses');
-      setActiveCourseData(massageCoursesData);
-    } else {
-      setActiveCourseTitle('manicure-courses');
-      setActiveCourseData(manicureCoursesData);
-    }
-  };
+
+  // const changeActiveCourse = (course: string) => {
+  //   if (course === 'massage-courses') {
+  //     setActiveCourseTitle('massage-courses');
+  //     setActiveCourseData(massageCoursesData);
+  //   } else {
+  //     setActiveCourseTitle('manicure-courses');
+  //     setActiveCourseData(manicureCoursesData);
+  //   }
+  // };
 
   return (
     <main className={styles.mainContainer}>
@@ -86,7 +89,7 @@ const Courses = () => {
                 </div>
               </div>
             </section>
-            <div className={styles.coursesTitleToggle}>
+            {/* <div className={styles.coursesTitleToggle}>
               <div
                 className={
                   activeCourseTitle === 'massage-courses'
@@ -107,7 +110,7 @@ const Courses = () => {
               >
                 Курси манікюру
               </div>
-            </div>
+            </div> */}
             <SectionMassageCourses courseData={activeCourseData} />
             <div className={styles.contactContainer}>
               <Contact />

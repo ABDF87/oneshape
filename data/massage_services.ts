@@ -10,7 +10,7 @@ interface MassageService {
 const massageServices:MassageService[] = [
     {
         name: 'Масаж обличчя',
-        description: 'Swedish massage is the most common and best-known type of massage in the West. If it\'s your first time or you don\'t get massage often, Swedish massage is the best place to start.',
+        description: 'Swedish massage is the most common and best-known type of massage in the West. ',
         duration: '90',
         price: '1000',
         image: '/photos/cosmetology-landing.jpg',

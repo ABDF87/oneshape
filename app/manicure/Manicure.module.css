@@ -121,7 +121,7 @@
   width: 100%;
   height: auto;
   background-color: transparent;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 .titleOurWorks {
   display: flex;
@@ -453,7 +453,7 @@
     font-size: 14px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .innerContainer{
     margin-top: 50px;
   }

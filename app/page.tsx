@@ -145,7 +145,7 @@ const Home = () => {
                 <div className={styles.benefitItemText}>
                   <div className={styles.benefitItemTitle}>Навчання</div>
                   <div className={styles.benefitItemDescription}>
-                    Ми навчаємо майбутніх майстрів масажу та манікюру в нашій
+                    Ми навчаємо майбутніх майстрів масажу в нашій
                     школі краси
                   </div>
                 </div>

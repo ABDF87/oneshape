@@ -26,8 +26,8 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
     autoplaySpeed: 2000,
     pauseOnHover: false,
     arrows: false,
-    vertical: width < 420 ? true : false,
-    verticalSwiping: width < 420 ? true : false,
+    vertical: width < 430 ? true : false,
+    verticalSwiping: width < 430 ? true : false,
   };
 
   const slideStyle: any = {

@@ -8,7 +8,7 @@ const MassageCoursesBanner = () => {
     <div className={styles.goToCoursesLayer}></div>
     <div className={styles.goToCoursesContainer}>
       <div className={styles.goToCoursesTitle}>
-        Хочеш стати майстром з массажу або манікюру?
+        Хочеш стати майстром з массажу?
       </div>
       <div className={styles.goToCoursesDescription}>
         Навчайся у нашіх топ-майстрів та отримуй високооплачувану

@@ -74,7 +74,9 @@ const Manicure = () => {
             />
             <MastersSection mastersData={manicureMasters} />
 
-            <section className={styles.goToCoursesSection}>
+
+          {/* manicure courses option currently deactivated */}
+            {/* <section className={styles.goToCoursesSection}>
               <div className={styles.goToCoursesLayer}></div>
               <div className={styles.goToCoursesContainer}>
                 <div className={styles.goToCoursesTitle}>
@@ -90,7 +92,7 @@ const Manicure = () => {
                   </Link>
                 </div>
               </div>
-            </section>
+            </section> */}
             <section className={styles.ourWorksSection}>
               <div className={styles.titleOurWorks}>Наші роботи</div>
               <div className={styles.ourWorksContainer}>
