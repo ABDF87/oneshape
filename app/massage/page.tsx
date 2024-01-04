@@ -48,7 +48,7 @@ const Massage = () => {
                 <div className={styles.titleTopContainer}>
                   <div className={styles.titleTop}>Масаж</div>
                   <div className={styles.descriptionTop}>
-                    Ваше здоров'я, молодість та неперевершений вигляд
+                    Ваше здоров&#39;я, молодість та неперевершений вигляд
                   </div>
                   <div className={styles.bookMassageButtonContainer}>
                     <BookOnlineButton
