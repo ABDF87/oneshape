@@ -70,7 +70,7 @@ const SliderShow = () => {
     infinite: true,
     autoplaySpeed: 4000,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     pauseOnFocus: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -305,7 +305,7 @@ const SliderShow = () => {
               top: width < 430 ? '50%': width < 830 ? '40%' : '0px',
               right:  width < 430 ? '15%':'0px',
               height:  width < 430 ? '400px' : '100%',
-              width:  width < 430 ? '100%' : '100%',
+              width:  width < 430 ? '100%' : 'auto',
               display: width < 430 && 'block',
             }}
           />
