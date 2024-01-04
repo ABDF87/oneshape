@@ -27,7 +27,7 @@ const BookOnlineModal = ({ isModalOpen, setIsModalOpen, formInfo }: Props) => {
           className={styles.closeIcon}
           onClick={() => setIsModalOpen(false)}
         />
-        <BookForm isFormSent={isFormSent} />
+        <BookForm />
       </div>
     </Modal>
   );

@@ -18,6 +18,7 @@ import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import MastersSection from '@/containers/section_masters/MastersSection';
+
 const Manicure = () => {
   const [activeManicureWork, setActiveManicureWork] = useState<number>(0);
 
@@ -37,18 +38,27 @@ const Manicure = () => {
             <section className={styles.topContainerSection}>
               <div className={styles.topWrapper}>
                 {/* <div className={styles.layer}></div> */}
-                <video
-                  className={styles.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  src='/videos/massage-video.mp4'
+                <div className={styles.bannerWrapper}>
+                <Image
+                  className={styles.bannerBackground}
+                  alt='manicure'
+                  src='/photos/banners/nail-background.jpeg'
+                  width={500}
+                  height={500}
                 />
+                  <Image
+                  className={styles.bannerNails}
+                  alt='manicure'
+                  src='/photos/banners/nails.png'
+                  width={400}
+                  height={400}
+                />
+                </div>
+
                 <div className={styles.titleTopContainer}>
                   <div className={styles.titleTop}>Манікюр</div>
                   <div className={styles.descriptionTop}>
-                    Насолоджуйтесь манікюром від наших майстрів
+                    Краса рук та насолода від процедури{' '}
                   </div>
                   <div className={styles.bookButtonTopContainer}>
                     <BookOnlineButton
@@ -75,8 +85,7 @@ const Manicure = () => {
             />
             <MastersSection mastersData={manicureMasters} />
 
-
-          {/* manicure courses option currently deactivated */}
+            {/* manicure courses option currently deactivated */}
             {/* <section className={styles.goToCoursesSection}>
               <div className={styles.goToCoursesLayer}></div>
               <div className={styles.goToCoursesContainer}>
@@ -102,7 +111,10 @@ const Manicure = () => {
                   {manicureWorksData.map((photo, index) => {
                     if (index === activeManicureWork)
                       return (
-                        <div className={styles.dispalyedManicurePhoto} key={index}>
+                        <div
+                          className={styles.dispalyedManicurePhoto}
+                          key={index}
+                        >
                           <Image
                             alt='фото манікюру в салоні Ler Beauty'
                             src={photo}

@@ -14,6 +14,7 @@ import { GiCheckMark } from 'react-icons/gi';
 import Contact from '@/components/contact/Contact';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
+import BookForm from '@/components/bookForm/BookForm';
 
 interface MassagePrice {
   type: string;
@@ -56,7 +57,6 @@ const Prices = () => {
     serviceName: string,
     servicePrice: string
   ) => {
-  
     setIsFormSent(false);
     const newService = {
       type: serviceType,
@@ -66,18 +66,13 @@ const Prices = () => {
     setSelectedServices([...selectedServices, newService]);
     setTotalPrice(totalPrice + Number(servicePrice));
   };
-  const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
-
+  const { isModalOpen, setIsModalOpen} = useFormContext();
 
   const deleteSelectedServiceHandler = (index: number) => {
     const newSelectedServices = [...selectedServices];
     setTotalPrice(totalPrice - Number(newSelectedServices[index].price));
     newSelectedServices.splice(index, 1);
     setSelectedServices(newSelectedServices);
-  };
-
-  const selectMoreHandler = () => {
-    setIsFormSent(false);
   };
 
   const component1Ref = useRef(null);
@@ -93,155 +88,89 @@ const Prices = () => {
 
   return (
     <main className={styles.mainContainer}>
-        <BookOnlineModal
+      <BookOnlineModal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
       />
-        {!isModalOpen && (
+      {!isModalOpen && (
         <>
-      <Header />
+          <Header />
 
-      <div className={styles.innerContainer}>
-        <div className={styles.titleContainer}>Ціни на послуги </div>
-        <div className={styles.navButtonsContainer}>
-          <div className={styles.navInnerWrapper}>
-            <div
-              className={styles.navButton}
-              onClick={() => scrollToComponent(component1Ref)}
-            >
-              МАСАЖ АБОНЕМЕНТИ
-            </div>
-            <div
-              className={styles.navButton}
-              onClick={() => scrollToComponent(component2Ref)}
-            >
-              МАСАЖ ТІЛА
-            </div>
-            <div
-              className={styles.navButton}
-              onClick={() => scrollToComponent(component3Ref)}
-            >
-              МАСАЖ ОБЛИЧЧЯ
-            </div>
-
-            <div
-              className={styles.navButton}
-              onClick={() => scrollToComponent(component4Ref)}
-            >
-              МАНІКЮР ВІД ТОП МАСТЕРА
-            </div>
-          </div>
-        </div>
-        <div className={styles.contentWrapper}>
-          <div className={styles.priceTablesContainer}>
-            <div className={styles.tablePriceElement} ref={component1Ref}>
-              <MassagePrices
-                dataMassagePrices={dataMassagePackagePrices}
-                selectServiceHandler={selectServiceHandler}
-                tableTitle='МАСАЖ АБОНЕМЕНТИ'
-              />
-            </div>
-            <div className={styles.tablePriceElement} ref={component2Ref}>
-              <MassagePrices
-                dataMassagePrices={dataMassageSessionPrices}
-                selectServiceHandler={selectServiceHandler}
-                tableTitle='МАСАЖ ТІЛА'
-              />
-            </div>
-            <div className={styles.tablePriceElement} ref={component3Ref}>
-              <MassagePrices
-                dataMassagePrices={dataMassageFacePrices}
-                selectServiceHandler={selectServiceHandler}
-                tableTitle='МАСАЖ ОБЛИЧЧЯ'
-              />
-            </div>
-            <div className={styles.tablePriceElement} ref={component4Ref}>
-              <ManicurePrices
-                dataManicurePrices={dataManicureTopMasterPrices}
-                selectServiceHandler={selectServiceHandler}
-                tableTitle='МАНІКЮР ВІД ТОП МАСТЕРА'
-              />
-            </div>
-          </div>
-          <div className={styles.formContainer}>
-            {!isFormSent && (
-              <form>
-                <div className={styles.formWrapper}>
-                  <div className={styles.formTitle}>ЗАПИС</div>
-                  <input
-                    className={styles.formInput}
-                    placeholder='Ім’я'
-                    required
-                  />
-                  <input
-                    className={styles.formInput}
-                    placeholder='Телефон'
-                    required
-                  />
-                  {selectedServices.length > 0 ? (
-                    <div className={styles.selectedServicesContainer}>
-                      <div className={styles.selectedServicesTitle}>
-                        Обрані послуги:
-                      </div>
-                      {selectedServices.map((service, index) => {
-                        return (
-                          <div className={styles.selectedService} key={index}>
-                            <div className={styles.selectedTitleWrapper}>
-                              <span>{service.type}:&nbsp;</span>
-                              <span>{service.name}</span>
-                            </div>
-                            <div className={styles.selectedPriceWrapper}>
-                              <span>{service.price} грн.</span>
-                              <span
-                                className={styles.deleteSelectedServiceButton}
-                                onClick={() =>
-                                  deleteSelectedServiceHandler(index)
-                                }
-                              >
-                                <IoMdRemoveCircleOutline />
-                              </span>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div className={styles.callToSelectServices}>
-                      {' '}
-                      додайте послуги зі списку{' '}
-                    </div>
-                  )}
-                </div>
-                <div className={styles.formButtonWrapper}>
-                  <div className={styles.formButton}>Замовити</div>
-                  <div className={styles.formTotalPrice}>{totalPrice} грн.</div>
-                </div>
-              </form>
-            )}
-            {isFormSent && (
-              <div className={styles.formInfo}>
-                <div className={styles.formInfoTitle}>
-                  <GiCheckMark />
-                  Заявка відправлена.
-                </div>
-                <div className={styles.formInfoDescription}>
-                  В найближчий час з Вами зв’яжеться адміністратор для
-                  підтвердження запису.
+          <div className={styles.innerContainer}>
+            <div className={styles.titleContainer}>Ціни на послуги </div>
+            <div className={styles.navButtonsContainer}>
+              <div className={styles.navInnerWrapper}>
+                <div
+                  className={styles.navButton}
+                  onClick={() => scrollToComponent(component1Ref)}
+                >
+                  МАСАЖ АБОНЕМЕНТИ
                 </div>
                 <div
-                  className={styles.selectMoreButton}
-                  onClick={selectMoreHandler}
+                  className={styles.navButton}
+                  onClick={() => scrollToComponent(component2Ref)}
                 >
-                  Обрати ще послуги
+                  МАСАЖ ТІЛА
+                </div>
+                <div
+                  className={styles.navButton}
+                  onClick={() => scrollToComponent(component3Ref)}
+                >
+                  МАСАЖ ОБЛИЧЧЯ
+                </div>
+
+                <div
+                  className={styles.navButton}
+                  onClick={() => scrollToComponent(component4Ref)}
+                >
+                  МАНІКЮР ВІД ТОП МАСТЕРА
                 </div>
               </div>
-            )}
+            </div>
+            <div className={styles.contentWrapper}>
+              <div className={styles.priceTablesContainer}>
+                <div className={styles.tablePriceElement} ref={component1Ref}>
+                  <MassagePrices
+                    dataMassagePrices={dataMassagePackagePrices}
+                    selectServiceHandler={selectServiceHandler}
+                    tableTitle='МАСАЖ АБОНЕМЕНТИ'
+                  />
+                </div>
+                <div className={styles.tablePriceElement} ref={component2Ref}>
+                  <MassagePrices
+                    dataMassagePrices={dataMassageSessionPrices}
+                    selectServiceHandler={selectServiceHandler}
+                    tableTitle='МАСАЖ ТІЛА'
+                  />
+                </div>
+                <div className={styles.tablePriceElement} ref={component3Ref}>
+                  <MassagePrices
+                    dataMassagePrices={dataMassageFacePrices}
+                    selectServiceHandler={selectServiceHandler}
+                    tableTitle='МАСАЖ ОБЛИЧЧЯ'
+                  />
+                </div>
+                <div className={styles.tablePriceElement} ref={component4Ref}>
+                  <ManicurePrices
+                    dataManicurePrices={dataManicureTopMasterPrices}
+                    selectServiceHandler={selectServiceHandler}
+                    tableTitle='МАНІКЮР ВІД ТОП МАСТЕРА'
+                  />
+                </div>
+              </div>
+              <div className={styles.formContainer}>
+                <BookForm
+                  setSelectedServices={setSelectedServices}
+                  selectedServices={selectedServices}
+                  deleteSelectedServiceHandler={deleteSelectedServiceHandler}
+                  totalPrice={totalPrice}
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      {/* <Contact /> */}
-      </>
-        )}
+          {/* <Contact /> */}
+        </>
+      )}
     </main>
   );
 };

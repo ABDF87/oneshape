@@ -11,7 +11,7 @@ const MassageCoursesBanner = () => {
         Хочеш стати майстром з массажу?
       </div>
       <div className={styles.goToCoursesDescription}>
-        Навчайся у нашіх топ-майстрів та отримуй високооплачувану
+        Навчайся у нашого топ-майстра та отримуй високооплачувану
         професію
       </div>
       <div className={styles.goToCoursesButton}>

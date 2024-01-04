@@ -11,7 +11,7 @@ const Contacts = () => {
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
   return (
     <main className={styles.mainContainer}>
-       <BookOnlineModal
+      <BookOnlineModal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
       />
@@ -26,12 +26,12 @@ const Contacts = () => {
                   <p>вул. Гагарінське плато 5а</p>
                   <p>(2 перлина)</p>
                   <p> Часи роботи: </p>
-                  <p>9:00 - 22:00</p>
+                  <p>10:00 - 18:00</p>
                 </div>
                 <div className={styles.divider}></div>
                 <div className={styles.contactsInnerWrapperRight}>
-                  <p> +38 (050) 12 34 567 </p>
-                  <p> +38 (050) 76 54 321</p>
+                  <p>+38 (063) 57 11 996</p>
+                  <p>+38 (097) 04 15 216</p>
                   <div className={styles.buttonWrapper}>
                     <BookOnlineButton
                       setIsModalOpen={setIsModalOpen}

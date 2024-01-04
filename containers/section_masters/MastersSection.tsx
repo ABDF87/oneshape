@@ -16,36 +16,84 @@ type MastersSectionProps = {
 const MastersSection = ({ mastersData }: MastersSectionProps) => {
   return (
     <section className={styles.mastersSection}>
-      <div className={styles.masterLayer}></div>
       <div className={styles.titleMasters}>Hаші майстри</div>
       <div className={styles.mastersContainer}>
-        {mastersData.map(({ name, rank, experience, description, photo }) => (
-          <div className={styles.masterContainer}>
-            <div className={styles.masterPhoto}>
-              <Image src={photo} alt='massage' width={500} height={500} />
-              <div className={styles.masterRank}>
-                {/* <FaRegStar /> */}
-                <span>{rank}</span>
-              </div>
-            </div>
-            <div className={styles.masterDescriptionContainer}>
-              <div className={styles.masterNameWrapper}>
-                <div className={styles.masterName}>{name}</div>
-              </div>{' '}
-              <div className={styles.masterDescription}>
-                <ul>
-                  <li>{experience}</li>
-                  <li>{description}</li>
-                </ul>
-              </div>
-              {/* <div className={styles.bookMasterButtonWrapper}>
-                <div className={styles.bookMasterButton}>
-                  записатись
-                </div>
-              </div> */}
+        {/* {mastersData.map(({ name, rank, experience, description, photo }) => ( */}
+        <div className={styles.masterContainer}>
+          <div className={styles.masterLayer}></div>
+          <div className={styles.masterPhoto}>
+            <Image
+              src={'/photos/massage-landing.jpg'}
+              alt='massage'
+              width={500}
+              height={500}
+            />
+            <div className={styles.masterRank}>
+              {/* <FaRegStar /> */}
+              <span>топ-майстер</span>
             </div>
           </div>
-        ))}
+          <div className={styles.masterDescriptionContainer}>
+            <div className={styles.masterNameWrapper}>
+              <div className={styles.masterName}>{'Тетяна Склема'}</div>
+            </div>
+            <div className={styles.masterDescription}>
+              <div>Досвід: 10 років</div>
+              <div>Топ-майстер масажу, ГУРУ тейпування.</div>
+              <div>4 роки викладацької діяльності</div>
+              <br />
+              <div>Виконує такі види масажу:</div>
+              <br />
+              <ul>
+                <li>Оздоровчий</li>
+                <li>Тайський</li>
+                <li>Лімфодренажний</li>
+                <li>Фітнес-моделюючий</li>
+                <li>Спортивний</li>
+                <li>Антицелюлітний</li>
+                <li>Масаж для вагітних</li>
+                <li>Масаж обличчя</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={styles.masterContainer}>
+        <div className={styles.masterLayer}></div>
+          <div className={styles.masterPhoto}>
+            <Image
+              src={'/photos/massage-master-2.jpg'}
+              alt='massage'
+              width={500}
+              height={500}
+            />
+            <div className={styles.masterRank}>
+              {/* <FaRegStar /> */}
+              <span>майстер</span>
+            </div>
+          </div>
+          <div className={styles.masterDescriptionContainer}>
+            <div className={styles.masterNameWrapper}>
+              <div className={styles.masterName}>Афанасьєва Єлизавета</div>
+            </div>
+            <div className={styles.masterDescription}>
+              <div>Досвід: 2 роки</div>
+              <div>Майстер масажу, має медичну освіту</div>
+              <br />
+              <div>Виконує такі види масажу:</div>
+              <br />
+              <ul>
+                <li>Оздоровчий</li>
+                <li>Класичний</li>
+                <li>Лімфодренажний</li>
+                <li>Фітнес-моделюючий</li>
+                <li>Спортивний</li>
+                <li>Антицелюлітний</li>
+                <li>Масаж обличчя</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* ))} */}
       </div>
     </section>
   );

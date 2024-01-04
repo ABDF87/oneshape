@@ -15,6 +15,7 @@ const SectionCourses = ({ courseData }: any) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.innerContainer}>
+        <div className={styles.courseTitleContainer}>Наші курси</div>
         <div className={styles.courseContainerWrapper}>
           {courseData[0].courses.map((course: any) => (
             <div className={styles.courseContainer}>

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@300&family=Nunito+Sans:opsz@6..12&display=swap');
 
+@font-face {
+  font-family: 'Alexandra Script';
+  src: url('../../public/fonts/Alexandra_Script.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .mainContainer {
   position: fixed;
   top: 0;
@@ -76,6 +82,9 @@
   color: #020202;
   transform: translate(0, -10px);
   background-color: transparent;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+
 }
 .contactsTel{
   font-size: 14px;

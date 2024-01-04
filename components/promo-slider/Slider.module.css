@@ -1,0 +1,75 @@
+/* Slideshow.css */
+
+@font-face {
+  font-family: 'DinproReg';
+  src: url('../../public/fonts/DINPRO-CONDENSEDREGULAR.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DinproBold';
+  src: url('../../public/fonts/DINPRO-CONDENSEDBOLD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* .slideshow-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #270404;
+  }
+  .slideshow-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .slide-container {
+    display: flex;
+    transition: transform 1s ease; /* Adjust the duration and easing as needed }*/
+
+.slide {
+  width: 100%;
+}
+
+.next {
+  transform: translateX(-100%);
+  transition: transform 1s ease;
+}
+
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+.fontDniproReg {
+  font-family: 'DinproReg' sans-serif;
+  color: rgb(253, 240, 208);
+}
+.fontDniproBold {
+  font-family: 'DinproBold' sans-serif;
+  font-weight: 700;
+  color: rgb(253, 240, 208);
+}
+.bannerImage {
+  display: block;
+  position: 'absolute';
+  top: 0px;
+  right: '0';
+  height: '100%';
+  width: 'auto';
+}
+
+.bannerText{
+  position: 'absolute';
+  height: '100% ';
+  width: '100%';
+}
+@media (max-width: 430px) {
+  /* .bannerImage {
+    display: none;
+  } */
+}

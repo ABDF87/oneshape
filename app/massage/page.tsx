@@ -48,7 +48,7 @@ const Massage = () => {
                 <div className={styles.titleTopContainer}>
                   <div className={styles.titleTop}>Масаж</div>
                   <div className={styles.descriptionTop}>
-                    Насолоджуйтесь масажем від наших майстрів
+                    Ваше здоров'я, молодість та неперевершений вигляд
                   </div>
                   <div className={styles.bookMassageButtonContainer}>
                     <BookOnlineButton

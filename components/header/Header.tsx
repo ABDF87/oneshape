@@ -6,7 +6,10 @@ import { useRouter } from 'next/navigation';
 import { FiMenu } from 'react-icons/fi';
 import { BsTelephone } from 'react-icons/bs';
 import MobileMenu from '../mobile_menu/MobileMenu';
-
+import localFont from 'next/font/local';
+const subTitlteFont = localFont({
+  src: '../../public/fonts/Angelica.ttf',
+});
 const Header = () => {
   const [activePage, setActivePage] = useState('');
   const [deployedMenu, setDeployedMenu] = useState(false);
@@ -23,13 +26,11 @@ const Header = () => {
     console.log(pathName);
   }, [pathName]);
 
-
-
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if(typeof window === 'undefined') return;
+      if (typeof window === 'undefined') return;
       if (window.scrollY > 1) {
         setScrolling(true);
 
@@ -64,10 +65,10 @@ const Header = () => {
                 router.push('/');
               }}
             >
-              Ler Beauty
+             One Shape
             </span>
-            {/* <span className={styles.titleSubName}>
-             Масаж та манікюр в серці Аркадії
+            {/* <span className={styles.titleSubName} >
+              Форма твого ідеального тіла
             </span> */}
           </div>
 
@@ -84,9 +85,8 @@ const Header = () => {
                 </a>
               </div>
               <div className={styles.contactsTel}>
-                <a href='tel:+380675555555'>+38 (067) 555-55-55</a>
+                <a href='tel:+380635711996'> +38 (063) 57-11-996</a>
               </div>
-           
             </div>
 
             <div
@@ -98,7 +98,7 @@ const Header = () => {
                 setDeployedMenu={setDeployedMenu}
                 deployedMenu={deployedMenu}
               />
-          {/* {deployedMenu && (
+              {/* {deployedMenu && (
                 <div className={styles.deployedMobMenuContainer} ref={menuRef}>
                   <div
                     className={

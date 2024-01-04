@@ -7,7 +7,7 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   background-color: transparent;
 }
 .sectionTitle {
@@ -31,6 +31,20 @@
   width: 100%;
   height: auto;
 }
+.courseTitleContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  color: #242424;
+}
+
 .layer {
   position: absolute;
   top: 0;
