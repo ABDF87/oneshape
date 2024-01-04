@@ -80,7 +80,7 @@ const Header = () => {
           <div className={styles.contactsContainer}>
             <div className={styles.contactsWrapper}>
               <div className={styles.contactsTelIcon}>
-                <a href='tel:+380675555555'>
+                <a href='tel:+380635711996'>
                   <BsTelephone />
                 </a>
               </div>

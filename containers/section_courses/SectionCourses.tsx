@@ -80,7 +80,7 @@ const SectionCourses = ({ courseData }: any) => {
               <LuCalendarClock />
             </div>
 
-            <div className={styles.courseConditionsDescriptionValue}>
+            <div className={styles.courseConditionsDescriptionItemValue}>
               {courseData[0].details.friquency}
               <br />
               {courseData[0].details.friquencyComment}

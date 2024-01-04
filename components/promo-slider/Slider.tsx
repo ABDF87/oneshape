@@ -9,7 +9,6 @@ import localFont from 'next/font/local';
 import BookOnlineModal from '../bookOnlineModal/BookOnlineModal';
 import BookOnlineButton from '../bookOnlineButton/BookOnlineButton';
 
-
 const boldFont = localFont({
   src: '../../public/fonts/DINPRO-CONDENSEDBOLD.ttf',
 });
@@ -26,15 +25,13 @@ const SliderShow = () => {
   const images: any = promoSlides;
 
   useEffect(() => {
-
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-
   }, []);
 
   const imageStyle: any = {
     position: 'relative',
-    height:'100% ',
+    height: '100% ',
     width: '100%',
   };
 
@@ -54,14 +51,14 @@ const SliderShow = () => {
     top: '20%',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: width < 431 && 'center' ,
+    alignItems: width < 431 && 'center',
     // justifyContent:  width < 431 && 'center',
     // textAlign: width < 431 ? 'center' : width < 830 ? 'left' : 'left',
     height: '100%',
     width: 'auto',
     color: 'white',
     fontSize: '26px',
-    transform: width < 830 ? 'translate(0px, -10%)' : 'translate(0%, 0%)',
+    transform: width < 830 ? 'translate(0px, -10%)' : 'translate(0%, -5%)',
   };
 
   const settings: any = {
@@ -125,7 +122,7 @@ const SliderShow = () => {
             height={500}
             style={leyerImagesStyles}
           />
-          <div style={leyerTextStyles}>
+          <div style={{ ...leyerTextStyles }}>
             <span
               className={boldFont.className}
               style={{
@@ -157,7 +154,7 @@ const SliderShow = () => {
                   width < 430 ? 'translate(0%, 0%)' : 'translate(0%, -80%)',
                 color: 'rgb(253, 240, 208)',
                 width: width < 431 ? '80%' : width < 830 ? '70%' : '100%',
-                marginTop: width < 430 ? '0px' : '20px',
+                marginTop: width < 430 ? '0px' : width < 830 ? '20px' : '0px',
               }}
             >
               на всі антицелюлітні програми
@@ -182,9 +179,9 @@ const SliderShow = () => {
             style={{
               ...leyerImagesStyles,
               top: '20px',
-              right:  width < 830 ? '-350px':'0px',
+              right: width < 830 ? '-350px' : '0px',
               height: '95%',
-              width:  width < 830 ? '120%':'auto',
+              width: width < 830 ? '120%' : 'auto',
             }}
           />
           <div style={leyerTextStyles}>
@@ -265,7 +262,8 @@ const SliderShow = () => {
               className={boldFont.className}
               style={{
                 fontSize: width < 430 ? '50px' : '70px',
-                transform:  width < 430 ? 'translate(0%, 60%)' : 'translate(0%, 40%)' ,
+                transform:
+                  width < 430 ? 'translate(0%, 60%)' : 'translate(0%, 40%)',
                 color: 'rgb(253, 240, 208)',
                 width: width < 430 ? '80%' : width < 830 ? '70%' : '100%',
               }}
@@ -277,7 +275,12 @@ const SliderShow = () => {
                 fontSize: '70px',
                 padding: '0',
                 color: 'rgb(253, 240, 208)',
-                transform:  width < 430 ? 'translate(0%, 60%)' : width < 830 ? 'translate(0%, 80%)'  :'translate(0%, 0%)'  ,
+                transform:
+                  width < 430
+                    ? 'translate(0%, 60%)'
+                    : width < 830
+                    ? 'translate(0%, 80%)'
+                    : 'translate(0%, 0%)',
               }}
               className={boldFont.className}
             >
@@ -302,10 +305,10 @@ const SliderShow = () => {
             height={500}
             style={{
               ...leyerImagesStyles,
-              top: width < 430 ? '50%': width < 830 ? '40%' : '0px',
-              right:  width < 430 ? '15%':'0px',
-              height:  width < 430 ? '400px' : '100%',
-              width:  width < 430 ? '100%' : 'auto',
+              top: width < 430 ? '50%' : width < 830 ? '40%' : '0px',
+              right: width < 430 ? '15%' : '0px',
+              height: width < 430 ? '400px' : '100%',
+              width: width < 430 ? '100%' : 'auto',
               display: width < 430 && 'block',
             }}
           />
@@ -313,8 +316,13 @@ const SliderShow = () => {
             <span
               className={boldFont.className}
               style={{
-                fontSize: '70px',
-                transform: width < 430 ?  'translate(20px, 20%)': 'translate(0%, 40%)',
+                fontSize: width < 430 ? '50px' : width < 830 ? '60px' : '70px',
+                transform:
+                  width < 430
+                    ? 'translate(70px, 20%)'
+                    : width < 830
+                    ? 'translate(0%, 30%)'
+                    : 'translate(0%, 80%)',
                 color: 'rgb(253, 240, 208)',
               }}
             >
@@ -322,10 +330,15 @@ const SliderShow = () => {
             </span>
             <span
               style={{
-                fontSize: '70px',
+                fontSize: width < 430 ? '50px' : width < 830 ? '60px' : '70px',
                 padding: '0',
                 color: 'rgb(253, 240, 208)',
-                transform: width < 430 ?  'translate(20px, 20%)': 'translate(0%, 40%)',
+                transform:
+                  width < 430
+                    ? 'translate(70px, 20%)'
+                    : width < 830
+                    ? 'translate(0%, 30%)'
+                    : 'translate(0%, 80%)',
               }}
               className={boldFont.className}
             >
