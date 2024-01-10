@@ -19,8 +19,7 @@ import { useFormContext } from '@/components/formContextProvider/FormContextProv
 import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import MastersSection from '@/containers/section_masters/MastersSection';
-
-
+import { url } from 'inspector';
 
 const Massage = () => {
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
@@ -75,7 +74,7 @@ const Massage = () => {
               serviceType='масаж'
             />
             <MastersSection mastersData={massageMasters} />
-          
+
             <section className={styles.goToCoursesSection}>
               <div className={styles.goToCoursesLayer}></div>
               <div className={styles.goToCoursesContainer}>
@@ -104,6 +103,65 @@ const Massage = () => {
             </section>
 
             <SectionFeedback feedbacksData={massageFeedback} />
+            {/* <div
+              className={styles.feedbackSession}
+              style={{
+                width: '100%',
+                height: '500px',
+                padding: '30px',
+                // backgroundImage: 'url(/photos/banners/general-background.jpeg)',
+              }}
+            >
+              <div
+                className={styles.feedbackTitle}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  color: 'balck',
+                  fontSize: '30px',
+                  marginTop: '30px',
+                  marginBottom: '30px',
+                }}
+              >
+                Відгуки наших клієнтів
+              </div>
+              <div
+                className={styles.feedbackWrapper}
+                style={{
+                  display: 'flex',
+                  gap: '20px',
+                  backgroundColor: '#fff',
+                  padding: '0px',
+                  width: '100%',
+                  height: '300',
+                  borderRadius: '10px',
+          
+                }}
+              >
+                <Image
+                  alt='feedback'
+                  src='/photos/feedbacks/feedback-massage-01c.jpeg'
+                  width={500}
+                  height={500}
+                  style={{ width: '250px', height: '200px', borderRadius: '10px' }}
+                />
+                 <Image
+                  alt='feedback'
+                  src='/photos/feedbacks/feedback-massage-course-02c.jpeg'
+                  width={500}
+                  height={500}
+                  style={{ width: '250px', height: '100%', borderRadius: '10px' }}
+                />
+                <Image
+                  alt='feedback'
+                  src='/photos/feedbacks/feedback-massage-course-01c.jpeg'
+                  width={500}
+                  height={500}
+                  style={{ width: '250px', height: '250px', borderRadius: '10px' }}
+                />
+               
+              </div>
+            </div> */}
             <div
               style={{
                 width: '110%',

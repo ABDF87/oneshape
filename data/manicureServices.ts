@@ -1,6 +1,6 @@
 interface ManicureService {
   name: string;
-  description: string;
+  description: string[];
   duration: string;
   price: string;
   image: string;
@@ -10,7 +10,7 @@ const manicureServices: ManicureService[] = [
   {
     name: 'Манікюр',
     description:
-      'Відчуйте естетику бездоганного дизайну та дбайте про здоров`я своїх нігтів, виглядаючи завжди доглянено та елегантно',
+      ['Манікюр зі зміцненням нігтів', 'Нарщування нігтів', 'Викладний френч', 'Дизайн у подарунок'],
     duration: '60',
     price: '250',
     image: '/photos/manicure-landing-bezh.jpg',
@@ -18,7 +18,7 @@ const manicureServices: ManicureService[] = [
   {
     name: 'Педікюр',
     description:
-      'Подаруйте своїм ногам вишуканий відпочинок з нашим професійним педікюром – ідеальним способом надати вашим нігтям та шкірі комфорт та бездоганний вигляд.',
+      ['з обробкою пальчиків та стоп', 'Покриття коліром входить у вартість' ],
     duration: '90',
     price: '350',
     image: '/photos/manicure/pedicureBG.jpeg',
@@ -26,7 +26,7 @@ const manicureServices: ManicureService[] = [
   {
     name: 'Подологічні послуги',
     description:
-      'Насолоджуйтеся вищим стандартом догляду за вашими стопами. Наші фахівці з подології забезпечать ваші ноги не лише здоров`ям, але й естетичним виглядом.',
+      [ 'Обробка від грибка', 'Розгрузки на тріщіни', 'видалення мозолів', 'Видалення врослого нігтя'],
     duration: '90',
     price: '350',
     image: '/photos/manicure/manicure-ba-heel-a.jpg',
@@ -34,7 +34,7 @@ const manicureServices: ManicureService[] = [
   {
     name: 'Парафіно терапія',
     description:
-      'Насолоджуйтеся теплотою та корисним впливом парафіну, який забезпечить вашим рукам не лише неперевершений вигляд, але й неймовірну м`якість та еластичність."',
+      ['Неперевершений вигляд рук',  'М`якість та еластичність шкіри'],
     duration: '90',
     price: '350',
     image: '/photos/manicure/parafin-therapy-2.webp',

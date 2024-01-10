@@ -67,7 +67,7 @@ const SliderShow = () => {
     infinite: true,
     autoplaySpeed: 4000,
     speed: 500,
-    autoplay: true,
+    autoplay: false,
     pauseOnFocus: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -299,16 +299,20 @@ const SliderShow = () => {
             style={imageStyle}
           />
           <Image
-            src={'/photos/banners/banner-04.png'}
+            src={
+              width < 830
+                ? '/photos/banners/Баннер-004-2.png'
+                : '/photos/banners/banner-04.png'
+            }
             alt='ler-beauty'
             width={500}
             height={500}
             style={{
               ...leyerImagesStyles,
               top: width < 430 ? '50%' : width < 830 ? '40%' : '0px',
-              right: width < 430 ? '15%' : '0px',
-              height: width < 430 ? '400px' : '100%',
-              width: width < 430 ? '100%' : 'auto',
+              right: width < 430 ? '15%' : '20px',
+              height: width < 430 ? '600px' : width < 830 ? '650px' : '100%',
+              width: width < 430 ? '100%' : width < 830 ? '100%' : 'auto',
               display: width < 430 && 'block',
             }}
           />

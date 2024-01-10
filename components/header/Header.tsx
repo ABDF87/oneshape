@@ -18,7 +18,6 @@ const Header = () => {
 
   const deployMobMenuHandler = () => {
     setDeployedMenu(!deployedMenu);
-    console.log('deployedMenu', deployedMenu);
   };
 
   useEffect(() => {
@@ -34,7 +33,6 @@ const Header = () => {
       if (window.scrollY > 1) {
         setScrolling(true);
 
-        console.log('scrolling');
       } else {
         setScrolling(false);
       }
@@ -47,7 +45,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  console.log('deployedMenu', deployedMenu);
 
   return (
     <div

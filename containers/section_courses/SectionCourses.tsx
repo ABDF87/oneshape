@@ -9,6 +9,7 @@ import { TiStar } from 'react-icons/ti';
 import Image from 'next/image';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
+import massageCourseFeedback from '@/data/massage_course_feedbacks';
 
 const SectionCourses = ({ courseData }: any) => {
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
@@ -55,14 +56,17 @@ const SectionCourses = ({ courseData }: any) => {
                 <div className={styles.courseComment}>{course?.comment}</div>
               </div>
               <div className={styles.orderWrapper}>
-                <div className={styles.coursePriceContainer}>
+                {/* <div className={styles.coursePriceContainer}>
                   {course.price}
-                </div>
-                <br/>
+                </div> */}
+                <br />
                 <div className={styles.orderButtonContainer}>
                   <BookOnlineButton
                     text='ЗАМОВИТИ'
-                    additionalFormInfo={{ service: 'Навчання ' + course.title, master: '' }}
+                    additionalFormInfo={{
+                      service: 'Навчання ' + course.title,
+                      master: '',
+                    }}
                     setIsModalOpen={setIsModalOpen}
                     setFormInfo={setFormInfo}
                     backgroundColor='#eea03a'
@@ -145,7 +149,8 @@ const SectionCourses = ({ courseData }: any) => {
             </div>
           </div>
         </div>
-        <SectionFeedback feedbacksData={courseData[0].feedbacks} />
+        {/* while manicure course is off pass massage feedbacks directly (not from courseData) */}
+        <SectionFeedback feedbacksData={massageCourseFeedback} />
       </div>
     </main>
   );

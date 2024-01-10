@@ -23,7 +23,7 @@ const MastersSection = ({ mastersData }: MastersSectionProps) => {
           <div className={styles.masterLayer}></div>
           <div className={styles.masterPhoto}>
             <Image
-              src={'/photos/massage-landing.jpg'}
+              src={'/photos/masters/master-portfolio-Tanya.jpg'}
               alt='massage'
               width={500}
               height={500}
@@ -42,8 +42,12 @@ const MastersSection = ({ mastersData }: MastersSectionProps) => {
               <div>Топ-майстер масажу, ГУРУ тейпування.</div>
               <div>4 роки викладацької діяльності</div>
               <br />
-              <div>Виконує такі види масажу:</div>
-              <br />
+            </div>
+            <div className={styles.massageList}>
+              <div style={{ marginBottom: '5px', fontSize: '18px' }}>
+                Виконує такі види масажу:
+              </div>
+
               <ul>
                 <li>Оздоровчий</li>
                 <li>Тайський</li>
@@ -58,7 +62,7 @@ const MastersSection = ({ mastersData }: MastersSectionProps) => {
           </div>
         </div>
         <div className={styles.masterContainer}>
-        <div className={styles.masterLayer}></div>
+          <div className={styles.masterLayer}></div>
           <div className={styles.masterPhoto}>
             <Image
               src={'/photos/massage-master-2.jpg'}
@@ -79,8 +83,12 @@ const MastersSection = ({ mastersData }: MastersSectionProps) => {
               <div>Досвід: 2 роки</div>
               <div>Майстер масажу, має медичну освіту</div>
               <br />
-              <div>Виконує такі види масажу:</div>
-              <br />
+            </div>
+            <div className={styles.massageList}>
+              <div style={{ marginBottom: '5px', fontSize: '18px' }}>
+                Виконує такі види масажу:
+              </div>
+
               <ul>
                 <li>Оздоровчий</li>
                 <li>Класичний</li>

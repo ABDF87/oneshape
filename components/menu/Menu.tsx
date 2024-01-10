@@ -10,9 +10,9 @@ const Menu = () => {
   const pathName = usePathname();
   const router = useRouter();
 
-  const showServiceMenuHandler = () => {
-    setDeployedServiceMenu(!deployedServiceMenu);
-  };
+  // const showServiceMenuHandler = () => {
+  //   setDeployedServiceMenu(!deployedServiceMenu);
+  // };
 
   useEffect(() => {
     setActivePage(pathName);
@@ -59,7 +59,7 @@ const Menu = () => {
         </div>
 
   
-        <div className={activePage === '/courses/[slug]' ?  styles.activeMenuItem : styles.menuItem}>
+        <div className={activePage === '/courses/massage' ?  styles.activeMenuItem : styles.menuItem}>
           <Link href='/courses/massage'>Навчання</Link>
         </div>
         {/* <div

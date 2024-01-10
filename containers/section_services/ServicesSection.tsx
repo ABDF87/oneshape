@@ -4,12 +4,13 @@ import Image from 'next/image';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import Slide from '@mui/material/Slide';
+import { TiStar } from 'react-icons/ti';
 
 interface Props {
   services: {
     name: string;
     price: string;
-    description: string;
+    description: any;
     duration: string;
     image: string;
   }[];
@@ -17,7 +18,11 @@ interface Props {
   serviceType: string;
 }
 
-const ServicesSection = ({ services, sectionTitle, serviceType }: Props) => {
+const ServicesSection: React.FC<Props> = ({
+  services,
+  sectionTitle,
+  serviceType,
+}) => {
   const [isDescriptionShowed, setIsDescriptionShowed] =
     useState<boolean>(false);
   const [activeDescription, setActiveDescription] = useState<number>();
@@ -78,7 +83,7 @@ const ServicesSection = ({ services, sectionTitle, serviceType }: Props) => {
                     alt='massage'
                     width={500}
                     height={500}
-                    // style={{ transform: 'rotate:90deg' }}
+                    style={{ transform: 'translate(0, -30%)' }}
                   />
                 </div>
 
@@ -87,14 +92,35 @@ const ServicesSection = ({ services, sectionTitle, serviceType }: Props) => {
                     {/* {isDescriptionShowed && activeDescription === index && ( */}
 
                     <div className={styles.serviceDescriptionText}>
-                      <Slide
+                      {/* <Slide
                         direction='right'
                         in={isVisible}
                         mountOnEnter
                         unmountOnExit
-                      >
-                        <div>{description}</div>
-                      </Slide>
+                      > */}
+                      <ul style={{width:'100%'}}>
+                        {description.map((item: any, index: number) => (
+                          <li style={{marginBottom:'0px',}}>
+                            <div
+                              style={{
+
+                                display: 'flex',
+                                justifyContent: 'left',
+                                alignItems: 'center',
+                                width:'100%',
+                                gap: '5px',
+                              }}
+                            >
+                              <div style={{color:'yellow'}}>
+                                <TiStar />
+                              </div>
+                              <div key={index}>{item}</div>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* </Slide> */}
                     </div>
                     <Slide
                       direction='up'
@@ -103,7 +129,8 @@ const ServicesSection = ({ services, sectionTitle, serviceType }: Props) => {
                       unmountOnExit
                     >
                       <div className={styles.servicePrice}>
-                        Ціна: {price} грн. за {duration} хв.
+                        Ціна: від {price} грн. 
+                        {/* за {duration} хв. */}
                       </div>
                     </Slide>
 

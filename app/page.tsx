@@ -216,9 +216,9 @@ const Home = () => {
             </div>
           </div>
           <MassageCoursesBanner />
-          <div className={styles.sectionFeedbacks}>
+          {/* <div className={styles.sectionFeedbacks}>
             <SectionFeedback feedbacksData={massageFeedback} />
-          </div>
+          </div> */}
           <div className={styles.sectionContact}>
             <Contact />
           </div>

@@ -9,8 +9,8 @@
   width: 100%;
   height: auto;
   background-color: transparent;
-  margin-top: 80px;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 100px;
 }
 .masterLayer {
   position: absolute;
@@ -147,10 +147,15 @@
   flex-direction: column;
   justify-content: center;
   width: auto;
-  height: auto;
+  height: 100px;
   background-color: transparent;
+  font-family: 'Cormorant Garamond', serif;
 
   /* transform: translate(60px, -20px); */
+}
+.massageList{
+    font-family: 'Cormorant Garamond', serif;
+
 }
 
 .masterDescription div {

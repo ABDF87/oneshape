@@ -41,12 +41,15 @@ const BookForm = ({
     if (formInfo && formInfo.service) {
       setMessage(formInfo.service);
     }
-  }, [formInfo]);
+  }, []);
 
   //manage calltopickservice on price page
   useEffect(() => {
     if (path === '/prices') {
       setCallToPickService(false);
+      if (setFormInfo) {
+        setFormInfo({ master: '', service: '' });
+      }
     } else {
       setCallToPickService(true);
     }
@@ -136,7 +139,7 @@ const BookForm = ({
               required
             />
 
-            {formInfo && formInfo.service && (
+            {formInfo && formInfo.service.length > 0 && (
               <input
                 readOnly
                 style={{ backgroundColor: 'transparent' }}

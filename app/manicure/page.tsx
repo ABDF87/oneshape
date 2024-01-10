@@ -83,9 +83,12 @@ const Manicure = () => {
               sectionTitle='Наші послуги'
               serviceType='манікюр'
             />
-            <MastersSection mastersData={manicureMasters} />
+            {/* master section still in production */}
+
+            {/* <MastersSection mastersData={manicureMasters} /> */}
 
             {/* manicure courses option currently deactivated */}
+
             {/* <section className={styles.goToCoursesSection}>
               <div className={styles.goToCoursesLayer}></div>
               <div className={styles.goToCoursesContainer}>
@@ -154,7 +157,7 @@ const Manicure = () => {
                 <BeforeAfterSlider photos={manicure_ba_data} />
               </div>
             </section>
-            <SectionFeedback feedbacksData={manicureFeedback} />
+
             <div
               style={{
                 width: '120%',

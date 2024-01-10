@@ -29,9 +29,9 @@ const Courses = () => {
       setActiveCourseData(massageCoursesData);
       setActiveCourseTitle('massage-courses');
     } else {
-      // still redirecting to massage courses
+      // while manicure courses off redirecting to massage courses
       setActiveCourseData(massageCoursesData);
-      setActiveCourseTitle('manicure-courses');
+      setActiveCourseTitle('massage-courses');
     }
   }, [slug]);
 

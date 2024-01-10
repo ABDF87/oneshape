@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './SectionFeedback.module.css';
+import Image from 'next/image';
 
 interface Props {
   feedbacksData: {
-    name: string;
-    feedback: string;
+   image: string; 
   }[];
 }
 
@@ -14,15 +14,11 @@ const SectionFeedback = ({ feedbacksData }: Props) => {
       <div className={styles.titleFeedbackSection}>Відгуки</div>
       <div className={styles.feedbacksContainer}>
         {/* <div className={styles.feedbackPhoto}></div> */}
-        {feedbacksData.map(({ name, feedback }) => (
+        {feedbacksData.map(({ image }) => (
           <div className={styles.feedbackWrapper}>
-            <div className={styles.feedbackLayer}>
-              <div className={styles.feedbackDescription}>" {feedback} "</div>
-            </div>
-
-            <div className={styles.feedbackDescriptionName}>
-              <span>{name}</span>
-            </div>
+            <div className={styles.feedbackPhoto}>
+              <Image src={image} width={500} height={500} alt="feedback" />
+              </div>
           </div>
         ))}
       </div>

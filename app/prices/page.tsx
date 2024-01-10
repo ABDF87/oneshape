@@ -123,7 +123,7 @@ const Prices = () => {
                   className={styles.navButton}
                   onClick={() => scrollToComponent(component4Ref)}
                 >
-                  МАНІКЮР ВІД ТОП МАСТЕРА
+                  МАНІКЮР 
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ const Prices = () => {
                   <ManicurePrices
                     dataManicurePrices={dataManicureTopMasterPrices}
                     selectServiceHandler={selectServiceHandler}
-                    tableTitle='МАНІКЮР ВІД ТОП МАСТЕРА'
+                    tableTitle='МАНІКЮР'
                   />
                 </div>
               </div>
