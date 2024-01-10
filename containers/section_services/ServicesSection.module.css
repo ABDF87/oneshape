@@ -44,21 +44,16 @@
   height: 180px;
   background-color: transparent;
   overflow: hidden;
-background-color: #000;
+  background-color: #000;
   border-radius: 0px 0px 10px 10px;
   overflow: hidden;
-  z-index: 100;
-
-
-
+  z-index: 10;
 }
 .servicePhoto img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 4px;
-
-
 }
 /* .serviceDescriptionContainer {
   position: absolute;
@@ -91,6 +86,16 @@ background-color: #000;
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
   transform: translate(0px, 100%);
+}
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: left;
+}
+.descriptionListItem {
+  display: flex;
+  margin-bottom: 5px;
 }
 .serviceLayer {
   position: absolute;
@@ -134,13 +139,13 @@ background-color: #000;
   overflow: scroll;
   background-color: #1f1e1e86;
 }
-.serviceDescriptionText{
+.serviceDescriptionText {
   width: 100%;
   font-size: 14px;
   margin-top: 10px;
   padding: 20px 10px;
 }
-.servicePrice{
+.servicePrice {
   margin-bottom: 20px;
   font-size: 14px;
 }
@@ -205,7 +210,7 @@ background-color: #000;
     font-size: 30px;
   }
   .servicesContainer {
-    gap: 10px;
+    gap: 40px;
   }
   .serviceContainer {
     position: relative;
@@ -226,5 +231,11 @@ background-color: #000;
     font-size: 30px;
     margin-bottom: 20px;
     font-weight: 200;
+  }
+  .servicePhotoWrapper {
+    border-radius: 0px 0px 0px 0px;
+  }
+  .descriptionListItem {
+    font-size: 20px;
   }
 }

@@ -98,18 +98,12 @@ const ServicesSection: React.FC<Props> = ({
                         mountOnEnter
                         unmountOnExit
                       > */}
-                      <ul style={{width:'100%'}}>
+                      <ul className={styles.descriptionList}>
                         {description.map((item: any, index: number) => (
-                          <li style={{marginBottom:'0px',}}>
-                            <div
-                              style={{
-
-                                display: 'flex',
-                                justifyContent: 'left',
-                                alignItems: 'center',
-                                width:'100%',
-                                gap: '5px',
-                              }}
+                          <li className={styles.descriptionListItem} >
+                            <div className={styles.serviceDescriptionItem}
+                            style={{display:'flex', alignItems:'center', gap:'5px'}}
+                              
                             >
                               <div style={{color:'yellow'}}>
                                 <TiStar />

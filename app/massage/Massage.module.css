@@ -47,7 +47,7 @@
 .video {
   width: auto;
   height: 80vh;
-  z-index: 10;
+  z-index: -99;
 }
 
 .titleTopContainer {
