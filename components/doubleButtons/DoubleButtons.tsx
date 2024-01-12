@@ -1,5 +1,6 @@
 import React, { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
+import styles from './AnchorButtons.module.css';
 
 interface IAnchorButtonsProps {
   customFlexDirection?: string;
@@ -17,7 +18,7 @@ interface IAnchorButtonsProps {
   setFormInfo?: (value: { service: string; master: string }) => void;
 }
 
-const AnchorButtons = ({
+const DoubleButtons = ({
   customFlexDirection,
   customColor,
   setIsModalOpen,
@@ -37,13 +38,45 @@ const AnchorButtons = ({
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
+  const router = useRouter();
+  let pathName: string;
+
+  // set width and height on mount
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }, []);
 
-  const router = useRouter();
-  let pathName: string;
+  // set custom color and background color if they are passed as props
+  useEffect(() => {
+    if (customColor) {
+      setColor(customColor);
+    }
+  }, [customColor]);
+
+  useEffect(() => {
+    if (customBackgroundColor) {
+      setBackgroundColor(customBackgroundColor);
+    }
+  }, [customBackgroundColor]);
+
+  // set url if it is passed as props
+  useEffect(() => {
+    if (url) {
+      pathName = url;
+    }
+  }, []);
+
+  // set custom flex direction if it is passed as props
+  useEffect(() => {
+    if (customFlexDirection) {
+      setFlexDirection(customFlexDirection);
+    }
+    if (customColor) {
+      setColor(customColor);
+    }
+  }, [customFlexDirection, customColor]);
+
 
   const bookOnlineHandler = () => {
     setIsModalOpen!(true);
@@ -52,25 +85,16 @@ const AnchorButtons = ({
     }
   };
 
-  useEffect(() => {
-    if (customColor) {
-      setColor(customColor);
-    }
-  }, [customColor]);
-  useEffect(() => {
-    if (customBackgroundColor) {
-      setBackgroundColor(customBackgroundColor);
-    }
-  }, [customBackgroundColor]);
 
-  if (url) {
-    pathName = url;
-  }
-
+// styles
   const buttonContainerStyle: any = {
     display: 'flex',
     justifyContent: 'center',
-    flexDirection: customFlexDirection ? customFlexDirection : width < 435 ? 'column' : 'row',
+    flexDirection: customFlexDirection
+      ? customFlexDirection
+      : width < 435
+      ? 'column'
+      : 'row',
     alignItems: 'center',
     width: 'auto',
     height: 'auto',
@@ -124,6 +148,7 @@ const AnchorButtons = ({
     zIndex: '100',
   };
 
+  // hover handlers
   const hoverOrderHandler = () => {
     setIsOrderHovered(true);
   };
@@ -137,18 +162,7 @@ const AnchorButtons = ({
     setIsLearnHovered(false);
   };
 
-  const modalOpenHandler = () => {
-    setIsModalOpen!(true);
-  };
 
-  useEffect(() => {
-    if (customFlexDirection) {
-      setFlexDirection(customFlexDirection);
-    }
-    if (customColor) {
-      setColor(customColor);
-    }
-  }, [customFlexDirection, customColor]);
 
   return (
     <main style={buttonContainerStyle}>
@@ -172,4 +186,4 @@ const AnchorButtons = ({
   );
 };
 
-export default AnchorButtons;
+export default DoubleButtons;

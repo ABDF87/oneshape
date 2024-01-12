@@ -6,10 +6,8 @@ import { useRouter } from 'next/navigation';
 import { FiMenu } from 'react-icons/fi';
 import { BsTelephone } from 'react-icons/bs';
 import MobileMenu from '../mobile_menu/MobileMenu';
-import localFont from 'next/font/local';
-const subTitlteFont = localFont({
-  src: '../../public/fonts/Angelica.ttf',
-});
+
+
 const Header = () => {
   const [activePage, setActivePage] = useState('');
   const [deployedMenu, setDeployedMenu] = useState(false);

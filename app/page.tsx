@@ -5,7 +5,7 @@ import Header from '@/components/header/Header';
 import Slider from '@/components/promo-slider/Slider';
 import Contact from '@/components/contact/Contact';
 import Image from 'next/image';
-import AnchorButtons from '@/components/anchorButtons/AnchorButtons';
+import DoubleButtons from '@/components/doubleButtons/DoubleButtons';
 import { FaMapLocationDot } from 'react-icons/fa6';
 import { FaPeopleGroup } from 'react-icons/fa6';
 import { FaChalkboardTeacher } from 'react-icons/fa';
@@ -51,7 +51,9 @@ const Home = () => {
                     />
                   </div>
                   <div className={styles.imageWrapper}>
-                    <div className={styles.imageTitle}>Антицелюлітні програми</div>
+                    <div className={styles.imageTitle}>
+                      Антицелюлітні програми
+                    </div>
                     <Image
                       src='/photos/massage-stomac.jpg'
                       alt='massage'
@@ -81,14 +83,14 @@ const Home = () => {
               </div>
               <div className={styles.massageButtonContainer}>
                 <div className={styles.massageButtonContainerExtention}> </div>
-                <AnchorButtons
+                <DoubleButtons
                   setIsModalOpen={setIsModalOpen}
                   customBackgroundColor='black'
                   customColor='white'
                   hoverBackgroundColor='grey'
                   hoverColor='white'
                   url='/massage'
-                  additionalFormInfo={{service: 'Масаж', master: ''}}
+                  additionalFormInfo={{ service: 'Масаж', master: '' }}
                   setFormInfo={setFormInfo}
                 />
               </div>
@@ -121,13 +123,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-             
-
 
               <div className={styles.benefitItem}>
                 <div className={styles.benefitItemImage}>
                   <FaMapLocationDot />
-               
                 </div>
                 <div className={styles.benefitItemText}>
                   <div className={styles.benefitItemTitle}>Локація</div>
@@ -137,7 +136,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-        
+
               <div className={styles.benefitItem}>
                 <div className={styles.benefitItemImage}>
                   <FaChalkboardTeacher />
@@ -145,8 +144,7 @@ const Home = () => {
                 <div className={styles.benefitItemText}>
                   <div className={styles.benefitItemTitle}>Навчання</div>
                   <div className={styles.benefitItemDescription}>
-                    Ми навчаємо майбутніх майстрів масажу в нашій
-                    школі краси
+                    Ми навчаємо майбутніх майстрів масажу в нашій школі краси
                   </div>
                 </div>
               </div>
@@ -201,14 +199,14 @@ const Home = () => {
                 <div className={styles.sectionTitleManicure}>Манікюр</div>
               </div>
               <div className={styles.manicureButtonContainer}>
-                <AnchorButtons
+                <DoubleButtons
                   url='/manicure'
                   setIsModalOpen={setIsModalOpen}
                   customBackgroundColor='black'
                   customColor='white'
                   hoverBackgroundColor='grey'
                   hoverColor='white'
-                  additionalFormInfo={{service: 'Манікюр', master: ''}}
+                  additionalFormInfo={{ service: 'Манікюр', master: '' }}
                   setFormInfo={setFormInfo}
                 />
                 <div className={styles.massageButtonContainerExtention}> </div>

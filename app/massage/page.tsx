@@ -19,10 +19,11 @@ import { useFormContext } from '@/components/formContextProvider/FormContextProv
 import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import MastersSection from '@/containers/section_masters/MastersSection';
-import { url } from 'inspector';
 
 const Massage = () => {
+
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
+  
   return (
     <main className={styles.mainContainer}>
       <BookOnlineModal

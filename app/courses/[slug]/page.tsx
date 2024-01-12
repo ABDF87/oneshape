@@ -7,8 +7,8 @@ import Header from '@/components/header/Header';
 import instructors from '@/data/instructors';
 import SectionMassageCourses from '@/containers/section_courses/SectionCourses';
 import Contact from '@/components/contact/Contact';
-import massageCoursesData from '@/data/massageCoursesData';
-import manicureCoursesData from '@/data/manicureCoursesData';
+import massageCoursesData from '@/data/massage_courses_data';
+import manicureCoursesData from '@/data/manicure-courses_data';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { CiInstagram } from 'react-icons/ci';
@@ -22,20 +22,20 @@ const Courses = () => {
 
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
 
-  //manicure courses options currently deactivated
+
 
   useEffect(() => {
     if (slug === 'massage') {
       setActiveCourseData(massageCoursesData);
       setActiveCourseTitle('massage-courses');
     } else {
-      // while manicure courses off redirecting to massage courses
+      // while manicure course is off redirecting to massage courses
       setActiveCourseData(massageCoursesData);
       setActiveCourseTitle('massage-courses');
     }
   }, [slug]);
 
-
+  //manicure courses options currently deactivated
   // const changeActiveCourse = (course: string) => {
   //   if (course === 'massage-courses') {
   //     setActiveCourseTitle('massage-courses');
@@ -90,6 +90,7 @@ const Courses = () => {
                 </div>
               </div>
             </section>
+            {/* Toogle is off due to manicure course is currently disabled */}
             {/* <div className={styles.coursesTitleToggle}>
               <div
                 className={

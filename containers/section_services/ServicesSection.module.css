@@ -236,6 +236,9 @@
     border-radius: 0px 0px 0px 0px;
   }
   .descriptionListItem {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .servicePrice{
+    font-size: 18px;
   }
 }

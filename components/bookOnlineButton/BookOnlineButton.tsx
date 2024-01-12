@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './BookOnlineButton.module.css';
 
 type Props = {
   setIsModalOpen: (value: boolean) => void;
@@ -28,21 +29,25 @@ const BookOnlineButton = ({
   customHeight,
   customFontSize,
 }: Props) => {
-  const bookOnlineHandler = () => {
-    setIsModalOpen!(true);
-    console.log('additionalFormInfo', additionalFormInfo);
-    if (additionalFormInfo && setFormInfo) {
-      setFormInfo(additionalFormInfo);
-    }
-  };
 
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+
+  // set width and height on mount
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }, []);
 
+  const bookOnlineHandler = () => {
+    setIsModalOpen!(true);
+    if (additionalFormInfo && setFormInfo) {
+      setFormInfo(additionalFormInfo);
+    }
+  };
+
+
+//styles
   const buttonStyle = {
     display: 'flex',
     justifyContent: 'center',
@@ -52,12 +57,29 @@ const BookOnlineButton = ({
     border: border ? border : 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    width: customWidth ? customWidth : width < 431 ? '100px' : width < 768 ? '150px' : '200px',
+    width: customWidth
+      ? customWidth
+      : width < 431
+      ? '100px'
+      : width < 768
+      ? '150px'
+      : '200px',
     // width: customWidth ? customWidth : width > 768 ? '200px' : '100px',
-    height: customHeight ? customHeight : width < 431 ? '30px' : width < 768 ? '30px' : '40px',
-    fontSize:  customFontSize ? customFontSize : width < 431 ? '10px' : width < 768 ? '18px' : '20px',
+    height: customHeight
+      ? customHeight
+      : width < 431
+      ? '30px'
+      : width < 768
+      ? '30px'
+      : '40px',
+    fontSize: customFontSize
+      ? customFontSize
+      : width < 431
+      ? '10px'
+      : width < 768
+      ? '18px'
+      : '20px',
     padding: '5px 10px',
-   
   };
 
   return (
@@ -65,7 +87,7 @@ const BookOnlineButton = ({
       style={buttonStyle}
       onClick={bookOnlineHandler}
       onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = '#070707';
+        e.currentTarget.style.backgroundColor = '#363434';
         e.currentTarget.style.color = '#fff';
       }}
       onMouseLeave={(e) => {

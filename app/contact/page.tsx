@@ -2,13 +2,14 @@
 import React from 'react';
 import styles from './Contact.module.css';
 import Header from '@/components/header/Header';
-import Contact from '@/components/contact/Contact';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 
 const Contacts = () => {
-  const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
+
+  const { isModalOpen, setIsModalOpen } = useFormContext();
+
   return (
     <main className={styles.mainContainer}>
       <BookOnlineModal
@@ -37,10 +38,7 @@ const Contacts = () => {
                       setIsModalOpen={setIsModalOpen}
                       backgroundColor='transparent'
                       color='#000'
-                      border='1px solid #000'
-                      // customHeight='30px'
-                      // customWidth='150px'
-                      // customFontSize='12px'
+                      border='1px solid #000'              
                     />
                   </div>
                 </div>
@@ -53,7 +51,6 @@ const Contacts = () => {
                 width='100%'
                 height='400'
                 loading='lazy'
-                //   referrerpolicy='no-referrer-when-downgrade'
               ></iframe>
             </div>
           </div>

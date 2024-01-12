@@ -8,6 +8,8 @@ import Slider from 'react-slick';
 import localFont from 'next/font/local';
 import BookOnlineModal from '../bookOnlineModal/BookOnlineModal';
 import BookOnlineButton from '../bookOnlineButton/BookOnlineButton';
+import { useFormContext } from '../formContextProvider/FormContextProvider';
+import Slide from '@mui/material/Slide';
 
 const boldFont = localFont({
   src: '../../public/fonts/DINPRO-CONDENSEDBOLD.ttf',
@@ -17,10 +19,13 @@ const regularFont = localFont({
   src: '../../public/fonts/DINPRO-CONDENSEDREGULAR.ttf',
 });
 
+
 const SliderShow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+
+  const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
 
   const images: any = promoSlides;
 
@@ -35,39 +40,15 @@ const SliderShow = () => {
     width: '100%',
   };
 
-  const leyerImagesStyles: any = {
-    display: width < 431 ? 'none' : 'block',
-    position: 'absolute',
-    top: '0px',
-    right: '0',
-    height: '100%',
-    width: 'auto',
-    transform: width < 830 ? 'translate(100px, -0%)' : 'translate(0%, 0%)',
-  };
 
-  const leyerTextStyles: any = {
-    position: 'absolute',
-    left: width < 431 ? '20px' : width < 830 ? '40px' : '250px',
-    top: '20%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: width < 431 && 'center',
-    // justifyContent:  width < 431 && 'center',
-    // textAlign: width < 431 ? 'center' : width < 830 ? 'left' : 'left',
-    height: '100%',
-    width: 'auto',
-    color: 'white',
-    fontSize: '26px',
-    transform: width < 830 ? 'translate(0px, -10%)' : 'translate(0%, -5%)',
-  };
 
   const settings: any = {
     dots: true,
     dotsClass: `slick-dots ${imageStyle}`,
     infinite: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     pauseOnFocus: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -88,41 +69,43 @@ const SliderShow = () => {
       );
     },
   };
+
   const slideStyle: any = {
     width: '300px',
     height: '300px',
   };
-  console.log('width', width);
+
   return (
     <Slider {...settings}>
       <div
         style={{
-          // display: 'flex',
-          // alignItems: 'center',
-          // gap: '20%',
-          // padding: '50px',
           width: '100%',
           height: '600px',
           backgroundColor: '#353434',
           background: 'linear-gradient(90deg, #353434 0%, #000000 100%)',
         }}
       >
-        <div className={styles.bannerWrapper}>
-          <Image
-            src={'/photos/banners/general-background.jpeg'}
-            alt='section_training'
-            width={500}
-            height={500}
-            style={imageStyle}
-          />
+        <div className={styles.bannerWrapper} >
+        <Slide
+                      direction='left'
+                      in={true}
+                      mountOnEnter
+                      unmountOnExit
+                      
+                    >
           <Image
             src={'/photos/banners/banner-1.png'}
-            alt='ler-beauty'
+            alt='oneshape масаж'
             width={500}
             height={500}
-            style={leyerImagesStyles}
+            // style={leyerImagesStyles}
+            className={styles.leyerImagesStyles}
           />
-          <div style={{ ...leyerTextStyles }}>
+          </Slide>
+          <div
+            // style={{ ...leyerTextStyles }}
+            className={styles.leyerTextStyles}
+          >
             <span
               className={boldFont.className}
               style={{
@@ -143,48 +126,34 @@ const SliderShow = () => {
             >
               50%
             </span>
-            <span
-              style={{
-                display: 'flex',
-                justifyContent: width < 430 ? 'center' : 'left',
-                textAlign: width < 430 ? 'center' : 'left',
-                fontSize: '25px',
-                fontWeight: '100',
-                transform:
-                  width < 430 ? 'translate(0%, 0%)' : 'translate(0%, -80%)',
-                color: 'rgb(253, 240, 208)',
-                width: width < 431 ? '80%' : width < 830 ? '70%' : '100%',
-                marginTop: width < 430 ? '0px' : width < 830 ? '20px' : '0px',
-              }}
-            >
+            <span className={styles.leyerTextLight}>
               на всі антицелюлітні програми
             </span>
+
+            <BookOnlineButton
+              setIsModalOpen={setIsModalOpen}
+              backgroundColor={'transparent'}
+              color={'#fdf0d0'}
+              border=' 1px solid #fdf0d0'
+              setFormInfo={setFormInfo}
+              additionalFormInfo={{
+                service: 'Знижка до 50% на антицеллюлітні програми ',
+                master: '',
+              }}
+            />
           </div>
         </div>
       </div>
       <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
           <Image
-            src={'/photos/banners/general-background.jpeg'}
-            alt='section_training'
-            width={500}
-            height={500}
-            style={imageStyle}
-          />
-          <Image
             src={'/photos/banners/banner-2-1.png'}
             alt='ler-beauty'
             width={500}
             height={500}
-            style={{
-              ...leyerImagesStyles,
-              top: '20px',
-              right: width < 830 ? '-350px' : '0px',
-              height: '95%',
-              width: width < 830 ? '120%' : 'auto',
-            }}
+            className={styles.leyerImagesStyles}
           />
-          <div style={leyerTextStyles}>
+          <div className={styles.leyerTextStyles}>
             <span
               className={boldFont.className}
               style={{
@@ -204,50 +173,47 @@ const SliderShow = () => {
               className={boldFont.className}
             >
               40%
+              <span
+                style={{
+                  transform: 'translate(0%, -50%)',
+                  backgroundColor: 'rgb(253, 240, 208)',
+                  width: '350px',
+                  height: '50px',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  fontSize: '30px',
+                  fontWeight: '100',
+                  color: '#000',
+                }}
+              >
+                на першу процедуру
+              </span>
             </span>
-
-            <span
-              style={{
-                transform: 'translate(0%, -50%)',
-                backgroundColor: 'rgb(253, 240, 208)',
-                width: '350px',
-                height: '50px',
-                borderRadius: '10px',
-                display: 'flex',
-                justifyContent: 'center',
-                fontSize: '30px',
-                fontWeight: '100',
-                color: '#000',
+            <BookOnlineButton
+              setIsModalOpen={setIsModalOpen}
+              backgroundColor={'transparent'}
+              color={'#fdf0d0'}
+              border=' 1px solid #fdf0d0'
+              setFormInfo={setFormInfo}
+              additionalFormInfo={{
+                service: 'Знижка до 40% на першу процедуру',
+                master: '',
               }}
-            >
-              на першу процедуру
-            </span>
+            />
           </div>
         </div>
       </div>
       <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
           <Image
-            src={'/photos/banners/general-background.jpeg'}
-            alt='section_training'
-            width={500}
-            height={500}
-            style={imageStyle}
-          />
-          <Image
             src={'/photos/banners/banner-03.png'}
             alt='ler-beauty'
             width={500}
             height={500}
-            style={{
-              ...leyerImagesStyles,
-              top: '0px',
-              right: '0px',
-              height: '100%',
-              width: 'auto',
-            }}
+            className={styles.leyerImagesStyles}
           />
-          <div style={leyerTextStyles}>
+          <div className={styles.leyerTextStyles}>
             <span
               style={{
                 fontSize: '30px',
@@ -272,9 +238,10 @@ const SliderShow = () => {
             </span>
             <span
               style={{
-                fontSize: '70px',
+                fontSize: width < 430 ? '50px' : '70px',
                 padding: '0',
                 color: 'rgb(253, 240, 208)',
+                marginBottom: width < 430 ? '80px':'20px',
                 transform:
                   width < 430
                     ? 'translate(0%, 60%)'
@@ -286,18 +253,24 @@ const SliderShow = () => {
             >
               у подарунок
             </span>
+
+            <BookOnlineButton
+              setIsModalOpen={setIsModalOpen}
+              backgroundColor={'transparent'}
+              color={'#fdf0d0'}
+              border=' 1px solid #fdf0d0'
+              setFormInfo={setFormInfo}
+              additionalFormInfo={{
+                service: '+1 безкоштовна процедура при покупці абонемента',
+                master: '',
+              }}
+            />
           </div>
         </div>
       </div>
       <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
-          <Image
-            src={'/photos/banners/general-background.jpeg'}
-            alt='section_training'
-            width={500}
-            height={500}
-            style={imageStyle}
-          />
+      
           <Image
             src={
               width < 830
@@ -307,26 +280,20 @@ const SliderShow = () => {
             alt='ler-beauty'
             width={500}
             height={500}
-            style={{
-              ...leyerImagesStyles,
-              top: width < 430 ? '50%' : width < 830 ? '40%' : '0px',
-              right: width < 430 ? '15%' : '20px',
-              height: width < 430 ? '600px' : width < 830 ? '650px' : '100%',
-              width: width < 430 ? '100%' : width < 830 ? '100%' : 'auto',
-              display: width < 430 && 'block',
-            }}
+            className={styles.leyerImagesStyles}
+       
           />
-          <div style={leyerTextStyles}>
+          <div className={styles.leyerTextStyles}>
             <span
               className={boldFont.className}
               style={{
                 fontSize: width < 430 ? '50px' : width < 830 ? '60px' : '70px',
                 transform:
                   width < 430
-                    ? 'translate(70px, 20%)'
+                    ? 'translate(0px, 0%)'
                     : width < 830
                     ? 'translate(0%, 30%)'
-                    : 'translate(0%, 80%)',
+                    : 'translate(0%, 0%)',
                 color: 'rgb(253, 240, 208)',
               }}
             >
@@ -339,15 +306,28 @@ const SliderShow = () => {
                 color: 'rgb(253, 240, 208)',
                 transform:
                   width < 430
-                    ? 'translate(70px, 20%)'
+                    ? 'translate(0px, 0%)'
                     : width < 830
                     ? 'translate(0%, 30%)'
-                    : 'translate(0%, 80%)',
+                    : 'translate(0%, 0%)',
+                marginBottom: width < 430 ? '50px':'20px',    
               }}
               className={boldFont.className}
             >
               сертифікати
+
             </span>
+            <BookOnlineButton
+              setIsModalOpen={setIsModalOpen}
+              backgroundColor={'transparent'}
+              color={'#fdf0d0'}
+              border=' 1px solid #fdf0d0'
+              setFormInfo={setFormInfo}
+              additionalFormInfo={{
+                service: 'Подарунковий сертифікат',
+                master: '',
+              }}
+            />
           </div>
         </div>
       </div>

@@ -27,9 +27,6 @@ const Contact = () => {
                 backgroundColor='transparent'
                 color='#000'
                 border='1px solid #000'
-                // customHeight='30px'
-                // customWidth='150px'
-                // customFontSize='12px'
               />
             </div>
           </div>

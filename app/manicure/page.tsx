@@ -106,6 +106,7 @@ const Manicure = () => {
                 </div>
               </div>
             </section> */}
+
             <section className={styles.ourWorksSection}>
               <div className={styles.titleOurWorks}>Наші роботи</div>
               <div className={styles.ourWorksContainer}>
@@ -119,7 +120,7 @@ const Manicure = () => {
                           key={index}
                         >
                           <Image
-                            alt='фото манікюру в салоні Ler Beauty'
+                            alt='фото манікюру в салоні One Shape'
                             src={photo}
                             width={500}
                             height={500}
@@ -137,7 +138,7 @@ const Manicure = () => {
                           onClick={() => handleManicureWorkClick(index)}
                         >
                           <Image
-                            alt='фото манікюру в салоні Ler Beauty'
+                            alt='фото манікюру в салоні One Shape'
                             src={photo}
                             width={500}
                             height={500}

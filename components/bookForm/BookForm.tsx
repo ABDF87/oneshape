@@ -34,7 +34,6 @@ const BookForm = ({
 
   const form: any = useRef();
   const path = usePathname();
-  console.log('path', path);
 
   // set formInfo.service to message
   useEffect(() => {

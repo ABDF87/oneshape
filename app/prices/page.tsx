@@ -9,9 +9,6 @@ import massageFacePrices from '@/data/massage_face_prices';
 import manicureTopMasterPrices from '@/data/manicure_top_prices';
 import MassagePrices from '@/components/massagePrices/MassagePrices';
 import ManicurePrices from '@/components/manicurePrices/ManicurePrices';
-import { IoMdRemoveCircleOutline } from 'react-icons/io';
-import { GiCheckMark } from 'react-icons/gi';
-import Contact from '@/components/contact/Contact';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 import BookForm from '@/components/bookForm/BookForm';
@@ -52,6 +49,8 @@ const Prices = () => {
   const dataMassageFacePrices: MassagePrice[] = massageFacePrices;
   const dataManicureTopMasterPrices: ManicurePrice[] = manicureTopMasterPrices;
 
+  const { isModalOpen, setIsModalOpen} = useFormContext();
+
   const selectServiceHandler = (
     serviceType: string,
     serviceName: string,
@@ -66,7 +65,8 @@ const Prices = () => {
     setSelectedServices([...selectedServices, newService]);
     setTotalPrice(totalPrice + Number(servicePrice));
   };
-  const { isModalOpen, setIsModalOpen} = useFormContext();
+  
+
 
   const deleteSelectedServiceHandler = (index: number) => {
     const newSelectedServices = [...selectedServices];
