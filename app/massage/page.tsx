@@ -4,14 +4,11 @@ import styles from './Massage.module.css';
 import Header from '@/components/header/Header';
 import ServicesSection from '@/containers/section_services/ServicesSection';
 import SectionFeedback from '@/containers/section_feedback/SectionFeedback';
-import Image from 'next/image';
-import { FaRegStar } from 'react-icons/fa';
 import { CiInstagram } from 'react-icons/ci';
 import massageMasters from '@/data/massage_masters';
 import massageServices from '@/data/massage_services';
 import massageFeedback from '@/data/massageFeedback';
 import BeforeAfterSlider from '@/components/before-after-slider/BeforeAfterSlider';
-import SliderShow from '@/components/promo-slider/Slider';
 import Contact from '@/components/contact/Contact';
 import Link from 'next/link';
 import massage_ba_data from '@/data/massage_ba_data';
@@ -23,7 +20,7 @@ import MastersSection from '@/containers/section_masters/MastersSection';
 const Massage = () => {
 
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
-  
+
   return (
     <main className={styles.mainContainer}>
       <BookOnlineModal
@@ -55,6 +52,7 @@ const Massage = () => {
                       setIsModalOpen={setIsModalOpen}
                       setFormInfo={setFormInfo}
                       additionalFormInfo={{ service: 'Масаж', master: '' }}
+                      border='1px solid #fff'
                     />
                   </div>
                 </div>

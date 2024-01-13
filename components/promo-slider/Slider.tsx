@@ -19,7 +19,6 @@ const regularFont = localFont({
   src: '../../public/fonts/DINPRO-CONDENSEDREGULAR.ttf',
 });
 
-
 const SliderShow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [width, setWidth] = useState(0);
@@ -39,8 +38,6 @@ const SliderShow = () => {
     height: '100% ',
     width: '100%',
   };
-
-
 
   const settings: any = {
     dots: true,
@@ -77,33 +74,16 @@ const SliderShow = () => {
 
   return (
     <Slider {...settings}>
-      <div
-        style={{
-          width: '100%',
-          height: '600px',
-          backgroundColor: '#353434',
-          background: 'linear-gradient(90deg, #353434 0%, #000000 100%)',
-        }}
-      >
-        <div className={styles.bannerWrapper} >
-        <Slide
-                      direction='left'
-                      in={true}
-                      mountOnEnter
-                      unmountOnExit
-                      
-                    >
-          <Image
-            src={'/photos/banners/banner-1.png'}
-            alt='oneshape масаж'
-            width={500}
-            height={500}
-            // style={leyerImagesStyles}
-            className={styles.leyerImagesStyles}
-          />
-          </Slide>
+      <div style={slideStyle}>
+        <div className={styles.bannerWrapper}>
+            <Image
+              src={'/photos/banners/banner-1.png'}
+              alt='oneshape масаж'
+              width={500}
+              height={500}
+              className={styles.leyerImagesStyles}
+            />
           <div
-            // style={{ ...leyerTextStyles }}
             className={styles.leyerTextStyles}
           >
             <span
@@ -148,7 +128,7 @@ const SliderShow = () => {
         <div className={styles.bannerWrapper}>
           <Image
             src={'/photos/banners/banner-2-1.png'}
-            alt='ler-beauty'
+            alt='OneShape масаж'
             width={500}
             height={500}
             className={styles.leyerImagesStyles}
@@ -241,7 +221,8 @@ const SliderShow = () => {
                 fontSize: width < 430 ? '50px' : '70px',
                 padding: '0',
                 color: 'rgb(253, 240, 208)',
-                marginBottom: width < 430 ? '80px':'20px',
+                marginBottom:
+                  width < 430 ? '80px' : width < 830 ? '110px' : '20px',
                 transform:
                   width < 430
                     ? 'translate(0%, 60%)'
@@ -270,7 +251,6 @@ const SliderShow = () => {
       </div>
       <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
-      
           <Image
             src={
               width < 830
@@ -281,7 +261,6 @@ const SliderShow = () => {
             width={500}
             height={500}
             className={styles.leyerImagesStyles}
-       
           />
           <div className={styles.leyerTextStyles}>
             <span
@@ -310,12 +289,12 @@ const SliderShow = () => {
                     : width < 830
                     ? 'translate(0%, 30%)'
                     : 'translate(0%, 0%)',
-                marginBottom: width < 430 ? '50px':'20px',    
+                marginBottom:
+                  width < 430 ? '30px' : width < 830 ? '50px' : '20px',
               }}
               className={boldFont.className}
             >
               сертифікати
-
             </span>
             <BookOnlineButton
               setIsModalOpen={setIsModalOpen}

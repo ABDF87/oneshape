@@ -77,6 +77,7 @@ const Courses = () => {
                       setIsModalOpen={setIsModalOpen}
                       setFormInfo={setFormInfo}
                       additionalFormInfo={{ service: 'Навчання', master: '' }}
+                      border='1px solid #fff'
                     />
                   </div>
                 </div>

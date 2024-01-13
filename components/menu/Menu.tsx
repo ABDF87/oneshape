@@ -62,27 +62,6 @@ const Menu = () => {
         <div className={activePage === '/courses/massage' ?  styles.activeMenuItem : styles.menuItem}>
           <Link href='/courses/massage'>Навчання</Link>
         </div>
-        {/* <div
-          className={
-            activePage === '/about'
-              ? styles.activeMenuItemWhite
-              : styles.menuItem
-          }
-        >
-          <Link href='/about'>Магазин</Link>
-        </div>
-        <div
-          className={
-            activePage === '/giftcard'
-              ? styles.activeMenuItemWhite
-              : styles.menuItem
-          }
-        >
-          <Link href='/giftcard'>Подарункова картка</Link>
-        </div> */}
-        {/* <div className={activePage === '/about' ?  styles.activeMenuItem : styles.menuItem}>
-          <Link href='/about'>Про нас</Link>
-        </div> */}
         <div className={activePage === '/contact' ?  styles.activeMenuItem : styles.menuItem}>
           <Link href='/contact'>Контакти</Link>
         </div>

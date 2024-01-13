@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import styles from './Manicure.module.css';
 import Header from '@/components/header/Header';
 import Image from 'next/image';
-import manicureMasters from '@/data/manicureMasters';
-import manicureServices from '@/data/manicureServices';
-import manicureFeedback from '@/data/manicureFeedback';
+import manicureMasters from '@/data/manicure-masters';
+import manicureServices from '@/data/manicure-services';
+import manicureFeedback from '@/data/manicure-feedback';
 import ServicesSection from '@/containers/section_services/ServicesSection';
 import SectionFeedback from '@/containers/section_feedback/SectionFeedback';
 import Contact from '@/components/contact/Contact';
@@ -65,6 +65,7 @@ const Manicure = () => {
                       setIsModalOpen={setIsModalOpen}
                       setFormInfo={setFormInfo}
                       additionalFormInfo={{ service: 'Манікюр', master: '' }}
+                      border='1px solid #fff'
                     />
                   </div>
                 </div>
