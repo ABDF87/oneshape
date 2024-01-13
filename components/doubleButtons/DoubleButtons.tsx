@@ -39,7 +39,7 @@ const DoubleButtons = ({
   const [height, setHeight] = useState(0);
 
   const router = useRouter();
-  let pathName: string;
+
 
   // set width and height on mount
   useEffect(() => {
@@ -60,12 +60,8 @@ const DoubleButtons = ({
     }
   }, [customBackgroundColor]);
 
-  // set url if it is passed as props
-  useEffect(() => {
-    if (url) {
-      pathName = url;
-    }
-  }, []);
+
+
 
   // set custom flex direction if it is passed as props
   useEffect(() => {
@@ -178,7 +174,7 @@ const DoubleButtons = ({
         style={buttonStyleLearnMore}
         onMouseEnter={() => hoverLearnHandler()}
         onMouseLeave={() => hoverLearnOffHandler()}
-        onClick={() => router.push(`${pathName}`)}
+        onClick={() => router.push(`${url}`)}
       >
         ДІЗНАТИСЯ БІЛЬШЕ
       </div>
