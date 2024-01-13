@@ -103,8 +103,8 @@ const BookOnlineButton = ({
     // >
     //   {text ? text : 'ЗАПИС ONLINE'}
     // </div>
-    <div className={styles.buttonContainer} style={buttonStyles}>
-      ЗАПИС ONLINE
+    <div className={styles.buttonContainer} style={buttonStyles}  onClick={bookOnlineHandler}>
+     //   {text ? text : 'ЗАПИС ONLINE'}
     </div>
   );
 };
