@@ -74,6 +74,7 @@
   background-color: #eb09b391;
   /* background-color: #002b1191;  */
   z-index: 50;
+  color:#fff;
 }
 .titleTop {
   display: flex;
@@ -95,6 +96,7 @@
   width: 100%;
   margin-left: 180px;
 }
+
 .bookButtonTopContainer {
   display: flex;
   justify-content: left;
@@ -146,6 +148,7 @@
   margin-top: 40px;
   font-size: 40px;
   font-weight: 200;
+  color: #070707
 }
 .ourWorksContainer {
   position: relative;
@@ -250,6 +253,7 @@
   margin-top: 40px;
   font-size: 40px;
   font-weight: 200;
+  color: #070707
 }
 .beforeAndAfterSection {
   display: flex;
@@ -271,6 +275,7 @@
   font-size: 40px;
   margin-bottom: 80px;
   font-weight: 200;
+  color: #070707
 }
 .beforeAndAfterContainer {
   width: 100%;

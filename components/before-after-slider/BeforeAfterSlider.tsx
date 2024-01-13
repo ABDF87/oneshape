@@ -54,7 +54,7 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
               <Image
                 style={slideStyle}
                 src={photo}
-                alt='массаж та манікюр в Ler Beauty'
+                alt='массаж та манікюр в '
                 width={300}
                 height={300}
               />

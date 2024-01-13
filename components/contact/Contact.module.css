@@ -39,6 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #292828;
 }
 .contactsInnerWrapperRight {
   display: flex;
@@ -46,6 +47,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  color: #292828;
 }
 .contactsInnerWrapperLeft {
   display: flex;
@@ -53,6 +55,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  color: #292828;
 }
 .buttonWrapper {
   margin-top: 10px;
@@ -89,7 +92,6 @@
   }
 }
 
-
 @media (max-width: 430px) {
   .innerContainer {
     display: flex;
@@ -108,7 +110,6 @@
     height: 100px;
     margin: 0px 0px;
     padding: 0px;
- 
   }
   .contactsWrapper {
     display: flex;
@@ -120,18 +121,20 @@
     align-items: center;
     margin: 0px 0px;
     padding-top: 10px;
-
+    color: #292828;
   }
   .contactsInnerWrapperLeft {
     width: 40%;
     height: 100%;
     justify-content: center;
     align-items: center;
+    color: #292828;
   }
   .contactsInnerWrapperRight {
     width: 40%;
     height: 100%;
     align-items: center;
+    color: #292828;
   }
 
   .buttonWrapper {
