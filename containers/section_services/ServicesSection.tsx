@@ -137,8 +137,8 @@ const ServicesSection: React.FC<Props> = ({
             setFormInfo={setFormInfo}
             setIsModalOpen={setIsModalOpen}
             additionalFormInfo={{ service: serviceType, master: '' }}
-            color='#070707'
-            backgroundColor='transparent'
+            color='#fff'
+            customBackgroundColor='#070707'
             border='1px solid #070707'
           />
         </div>

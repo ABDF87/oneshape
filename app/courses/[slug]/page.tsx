@@ -78,6 +78,7 @@ const Courses = () => {
                       setFormInfo={setFormInfo}
                       additionalFormInfo={{ service: 'Навчання', master: '' }}
                       border='1px solid #fff'
+                      customBackgroundColor='transparent'
                     />
                   </div>
                 </div>

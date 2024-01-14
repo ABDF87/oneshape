@@ -53,6 +53,7 @@ const Massage = () => {
                       setFormInfo={setFormInfo}
                       additionalFormInfo={{ service: 'Масаж', master: '' }}
                       border='1px solid #fff'
+                      customBackgroundColor='transparent'
                     />
                   </div>
                 </div>

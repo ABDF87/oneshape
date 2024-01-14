@@ -36,7 +36,7 @@ const Contacts = () => {
                   <div className={styles.buttonWrapper}>
                     <BookOnlineButton
                       setIsModalOpen={setIsModalOpen}
-                      backgroundColor='transparent'
+                      customBackgroundColor='transparent'
                       color='#000'
                       border='1px solid #000'              
                     />

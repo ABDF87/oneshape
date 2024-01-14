@@ -28,6 +28,7 @@
   flex-wrap: wrap;
   gap: 30px;
   height: auto;
+  margin-top: 50px;
 }
 .serviceContainer {
   position: relative;
@@ -41,7 +42,7 @@
   margin-bottom: 50px;
 }
 .serviceContinarInnerWrapper {
-  width: auto;
+  width: 400px;
 }
 .servicePhotoWrapper {
   width: auto;
@@ -80,7 +81,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 200px;
   font-family: 'Garmond', sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -208,6 +209,13 @@
   .titleService {
     font-size: 40px;
   }
+  .servicesContainer {
+    height: auto;
+    margin-top: 20px;
+  }
+  .serviceContainer {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -236,7 +244,6 @@
     position: relative;
     display: flex;
     align-items: center;
-  
     width: 100%;
     height: auto;
     background-color: transparent;

@@ -66,6 +66,7 @@ const Manicure = () => {
                       setFormInfo={setFormInfo}
                       additionalFormInfo={{ service: 'Манікюр', master: '' }}
                       border='1px solid #fff'
+                      customBackgroundColor='transparent'
                     />
                   </div>
                 </div>

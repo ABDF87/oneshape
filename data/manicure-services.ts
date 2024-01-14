@@ -9,32 +9,44 @@ interface ManicureService {
 const manicureServices: ManicureService[] = [
   {
     name: 'Манікюр',
-    description:
-      ['Манікюр зі зміцненням нігтів', 'Нарщування нігтів', 'Викладний френч', 'Дизайн у подарунок'],
+    description: [
+      'Манікюр зі зміцненням нігтів',
+      'Нарщування нігтів',
+      'Викладний френч',
+      'Дизайн у подарунок',
+    ],
     duration: '60',
     price: '250',
     image: '/photos/manicure-landing-bezh.jpg',
   },
   {
     name: 'Педікюр',
-    description:
-      ['з обробкою пальчиків та стоп', 'Покриття коліром входить у вартість' ],
+    description: [
+      'З обробкою пальчиків та стоп',
+      'Покриття коліром входить у вартість',
+    ],
     duration: '90',
     price: '350',
     image: '/photos/manicure/pedicureBG.jpeg',
   },
   {
     name: 'Подологічні послуги',
-    description:
-      [ 'Обробка від грибка', 'Розгрузки на тріщіни', 'видалення мозолів', 'Видалення врослого нігтя'],
+    description: [
+      'Обробка від грибка',
+      'Розгрузки на тріщіни',
+      'Видалення мозолів',
+      'Видалення врослого нігтя',
+    ],
     duration: '90',
     price: '350',
     image: '/photos/manicure/manicure-ba-heel-a.jpg',
   },
   {
     name: 'Парафіно терапія',
-    description:
-      ['Неперевершений вигляд рук',  'М`якість та еластичність шкіри'],
+    description: [
+      'Неперевершений вигляд рук',
+      'М`якість та еластичність шкіри',
+    ],
     duration: '90',
     price: '350',
     image: '/photos/manicure/parafin-therapy-2.webp',

@@ -70,7 +70,7 @@ const SectionCourses = ({ courseData }: any) => {
                     }}
                     setIsModalOpen={setIsModalOpen}
                     setFormInfo={setFormInfo}
-                    backgroundColor='#eea03a'
+                    customBackgroundColor='#eea03a'
                     color='#fff'
                     border='1px solid #fff'
                   />

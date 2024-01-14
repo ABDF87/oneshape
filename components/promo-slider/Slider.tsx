@@ -112,7 +112,7 @@ const SliderShow = () => {
 
             <BookOnlineButton
               setIsModalOpen={setIsModalOpen}
-              backgroundColor={'transparent'}
+              customBackgroundColor={'transparent'}
               color={'#fdf0d0'}
               border=' 1px solid #fdf0d0'
               setFormInfo={setFormInfo}
@@ -172,7 +172,7 @@ const SliderShow = () => {
             </span>
             <BookOnlineButton
               setIsModalOpen={setIsModalOpen}
-              backgroundColor={'transparent'}
+              customBackgroundColor={'transparent'}
               color={'#fdf0d0'}
               border=' 1px solid #fdf0d0'
               setFormInfo={setFormInfo}
@@ -237,7 +237,7 @@ const SliderShow = () => {
 
             <BookOnlineButton
               setIsModalOpen={setIsModalOpen}
-              backgroundColor={'transparent'}
+              customBackgroundColor={'transparent'}
               color={'#fdf0d0'}
               border=' 1px solid #fdf0d0'
               setFormInfo={setFormInfo}
@@ -298,7 +298,7 @@ const SliderShow = () => {
             </span>
             <BookOnlineButton
               setIsModalOpen={setIsModalOpen}
-              backgroundColor={'transparent'}
+              customBackgroundColor={'transparent'}
               color={'#fdf0d0'}
               border=' 1px solid #fdf0d0'
               setFormInfo={setFormInfo}

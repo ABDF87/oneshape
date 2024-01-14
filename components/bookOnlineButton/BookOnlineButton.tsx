@@ -10,7 +10,7 @@ type Props = {
   setFormInfo?: (value: { service: string; master: string }) => void;
   text?: string;
   color?: string;
-  backgroundColor?: string;
+  customBackgroundColor?: string;
   border?: string;
   customWidth?: string;
   customHeight?: string;
@@ -27,6 +27,7 @@ const BookOnlineButton = ({
   customWidth,
   customHeight,
   customFontSize,
+  customBackgroundColor,
 }: Props) => {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
@@ -90,6 +91,7 @@ const BookOnlineButton = ({
       ? '200px'
       : '200px',
     fontSize: width < 430 ? '10px' : width < 830 ? '20px' : '20px',
+    backgroundColor: customBackgroundColor ? customBackgroundColor : '#070707',
   };
 
   return (
@@ -97,6 +99,14 @@ const BookOnlineButton = ({
       className={styles.buttonContainer}
       style={buttonStyles}
       onClick={bookOnlineHandler}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = '#a09f9d6b';
+      }}
+      onMouseLeave={(e) => {
+        if (customBackgroundColor) {
+          e.currentTarget.style.backgroundColor = customBackgroundColor;
+        }
+      }}
     >
       {text ? text : 'ЗАПИС ONLINE'}
     </div>
