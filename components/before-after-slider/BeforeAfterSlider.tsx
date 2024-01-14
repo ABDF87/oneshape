@@ -31,10 +31,11 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
   };
 
   const slideStyle: any = {
-    width: width < 430 ? '350px' : '400px',
-    height: width < 430 ? '350px' : '400px',
+    width: '400px',
+    height: '400px',
     padding: '10px',
     outline: 'none',
+    zIndex: 99,
   };
   const slideContainer = {
     width: '100%',
@@ -54,7 +55,7 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
               <Image
                 style={slideStyle}
                 src={photo}
-                alt='массаж та манікюр в '
+                alt='массаж та манікюр в One Shape'
                 width={300}
                 height={300}
               />

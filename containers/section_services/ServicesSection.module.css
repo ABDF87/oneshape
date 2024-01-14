@@ -227,7 +227,7 @@
     font-size: 30px;
   }
   .servicesContainer {
-    gap: 0px;
+    gap: 20px;
   }
   .serviceContinarInnerWrapper {
     height: auto;
@@ -236,11 +236,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: start;
+  
     width: 100%;
     height: auto;
     background-color: transparent;
     border-radius: 4px;
+    margin-bottom: 0px;
   }
   .titleService {
     display: flex;
