@@ -68,7 +68,7 @@ const ServicesSection: React.FC<Props> = ({
 
       <div className={styles.servicesContainer}>
         {services.map(
-          ({ name, price, description, duration, image }, index) => (
+          ({ name, price, description, image }, index) => (
             <div
               className={styles.serviceContainer}
               onMouseEnter={() => showDescriptionHandler(index)}
@@ -83,27 +83,18 @@ const ServicesSection: React.FC<Props> = ({
                     alt='massage'
                     width={500}
                     height={500}
-                    style={{ transform: 'translate(0, -30%)' }}
+                    style={{ transform: 'translate(0, -20%)' }}
                   />
                 </div>
-
                 <div className={styles.serviceDescriptionContainer}>
                   <div className={styles.serviceDescription}>
                     {/* {isDescriptionShowed && activeDescription === index && ( */}
-
-                    <div className={styles.serviceDescriptionText}>
-                      {/* <Slide
-                        direction='right'
-                        in={isVisible}
-                        mountOnEnter
-                        unmountOnExit
-                      > */}
+                    <div className={styles.serviceDescriptionText}>             
                       <ul className={styles.descriptionList}>
                         {description.map((item: any, index: number) => (
                           <li className={styles.descriptionListItem} >
                             <div className={styles.serviceDescriptionItem}
-                            style={{display:'flex', alignItems:'center', gap:'5px'}}
-                              
+                          
                             >
                               <div style={{color:'yellow'}}>
                                 <TiStar />
@@ -112,9 +103,7 @@ const ServicesSection: React.FC<Props> = ({
                             </div>
                           </li>
                         ))}
-                      </ul>
-
-                      {/* </Slide> */}
+                      </ul>         
                     </div>
                     <Slide
                       direction='up'
@@ -148,6 +137,9 @@ const ServicesSection: React.FC<Props> = ({
             setFormInfo={setFormInfo}
             setIsModalOpen={setIsModalOpen}
             additionalFormInfo={{ service: serviceType, master: '' }}
+            color='#070707'
+            backgroundColor='transparent'
+            border='1px solid #070707'
           />
         </div>
       </div>

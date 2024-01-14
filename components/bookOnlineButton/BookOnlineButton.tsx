@@ -44,67 +44,61 @@ const BookOnlineButton = ({
     }
   };
 
-
-//   const buttonStyle = {
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     color: color ? color : '#fff',
-//     backgroundColor: backgroundColor ? backgroundColor : '#070707',
-//     border: border ? border : 'none',
-//     borderRadius: '4px',
-//     cursor: 'pointer',
-//     width: customWidth
-//       ? customWidth
-//       : width < 431
-//       ? '100px'
-//       : width < 768
-//       ? '150px'
-//       : '200px',
-//     // width: customWidth ? customWidth : width > 768 ? '200px' : '100px',
-//     height: customHeight
-//       ? customHeight
-//       : width < 431
-//       ? '30px'
-//       : width < 768
-//       ? '30px'
-//       : '40px',
-//     fontSize: customFontSize
-//       ? customFontSize
-//       : width < 431
-//       ? '10px'
-//       : width < 768
-//       ? '18px'
-//       : '20px',
-//     padding: '5px 10px',
-//   };
+  //   const buttonStyle = {
+  //     display: 'flex',
+  //     justifyContent: 'center',
+  //     alignItems: 'center',
+  //     color: color ? color : '#fff',
+  //     backgroundColor: backgroundColor ? backgroundColor : '#070707',
+  //     border: border ? border : 'none',
+  //     borderRadius: '4px',
+  //     cursor: 'pointer',
+  //     width: customWidth
+  //       ? customWidth
+  //       : width < 431
+  //       ? '100px'
+  //       : width < 768
+  //       ? '150px'
+  //       : '200px',
+  //     // width: customWidth ? customWidth : width > 768 ? '200px' : '100px',
+  //     height: customHeight
+  //       ? customHeight
+  //       : width < 431
+  //       ? '30px'
+  //       : width < 768
+  //       ? '30px'
+  //       : '40px',
+  //     fontSize: customFontSize
+  //       ? customFontSize
+  //       : width < 431
+  //       ? '10px'
+  //       : width < 768
+  //       ? '18px'
+  //       : '20px',
+  //     padding: '5px 10px',
+  //   };
   //styles
-  
+
   const buttonStyles = {
     color: color ? color : '#fff',
     border: border ? border : 'none',
+    width: customWidth
+      ? customWidth
+      : width < 430
+      ? '110px'
+      : width < 830
+      ? '200px'
+      : '200px',
+    fontSize: width < 430 ? '10px' : width < 830 ? '20px' : '20px',
   };
 
   return (
-    // <div
-    //   style={buttonStyle}
-    //   onClick={bookOnlineHandler}
-    //   onMouseEnter={(e) => {
-    //     e.currentTarget.style.backgroundColor = '#363434';
-    //     e.currentTarget.style.color = '#fff';
-    //   }}
-    //   onMouseLeave={(e) => {
-    //     e.currentTarget.style.backgroundColor = backgroundColor
-    //       ? backgroundColor
-    //       : '#070707';
-
-    //     e.currentTarget.style.color = color ? color : '#fff';
-    //   }}
-    // >
-    //   {text ? text : 'ЗАПИС ONLINE'}
-    // </div>
-    <div className={styles.buttonContainer} style={buttonStyles}  onClick={bookOnlineHandler}>
-        {text ? text : 'ЗАПИС ONLINE'}
+    <div
+      className={styles.buttonContainer}
+      style={buttonStyles}
+      onClick={bookOnlineHandler}
+    >
+      {text ? text : 'ЗАПИС ONLINE'}
     </div>
   );
 };

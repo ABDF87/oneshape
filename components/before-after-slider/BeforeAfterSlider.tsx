@@ -31,8 +31,8 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
   };
 
   const slideStyle: any = {
-    width: '400px',
-    height: '400px',
+    width: width < 430 ? '350px' : '400px',
+    height: width < 430 ? '350px' : '400px',
     padding: '10px',
     outline: 'none',
   };

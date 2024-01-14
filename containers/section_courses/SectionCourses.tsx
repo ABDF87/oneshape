@@ -12,6 +12,7 @@ import { useFormContext } from '@/components/formContextProvider/FormContextProv
 import massageCourseFeedback from '@/data/massage_course_feedbacks';
 
 const SectionCourses = ({ courseData }: any) => {
+
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
   return (
     <main className={styles.mainContainer}>
@@ -78,7 +79,6 @@ const SectionCourses = ({ courseData }: any) => {
             </div>
           ))}
         </div>
-
         <div className={styles.courseConditionsDescription}>
           <div className={styles.courseConditionsDescriptionItem}>
             <div className={styles.courseConditionsDescriptionItemImage}>

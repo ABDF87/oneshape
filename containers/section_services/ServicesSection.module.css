@@ -20,7 +20,6 @@
   margin-bottom: 60px;
   font-weight: 200;
   color: #070707;
-
 }
 .servicesContainer {
   display: flex;
@@ -36,18 +35,21 @@
   align-items: center;
   justify-content: start;
   width: 250px;
-  height: 350px;
+  height: 400px;
   background-color: transparent;
   border-radius: 4px;
   margin-bottom: 50px;
 }
+.serviceContinarInnerWrapper {
+  width: auto;
+}
 .servicePhotoWrapper {
   width: auto;
-  height: 180px;
+  height: 250px;
   background-color: transparent;
   overflow: hidden;
   background-color: #000;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 0px 0px;
   overflow: hidden;
   z-index: 10;
 }
@@ -74,12 +76,11 @@
   transform: translate(0, 50%);
 } */
 .serviceDescriptionContainer {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 60%;
+  height: 100%;
   font-family: 'Garmond', sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -87,7 +88,7 @@
   color: #f8f7f4;
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
-  transform: translate(0px, 100%);
+  transform: translate(0px, 0%);
 }
 .descriptionList {
   display: flex;
@@ -113,7 +114,7 @@
 .serviceContinarInnerWrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 }
 .serviceName {
   display: flex;
@@ -141,21 +142,25 @@
   overflow: scroll;
   background-color: #1f1e1e86;
 }
+.serviceDescriptionItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .serviceDescriptionText {
   width: 100%;
   font-size: 14px;
   margin-top: 10px;
   padding: 20px 10px;
+  color: #fff;
 }
 .servicePrice {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
   font-size: 14px;
 }
 
-.servicePrice {
-  display: flex;
-  justify-content: center;
-}
 .bottomServiceWrapper {
   display: flex;
   flex-direction: column;
@@ -204,7 +209,17 @@
     font-size: 40px;
   }
 }
+
 @media (max-width: 430px) {
+  .servicesContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0px;
+    height: auto;
+  }
+
   .serviceSection {
     margin-top: 50px;
   }
@@ -212,7 +227,10 @@
     font-size: 30px;
   }
   .servicesContainer {
-    gap: 40px;
+    gap: 0px;
+  }
+  .serviceContinarInnerWrapper {
+    height: auto;
   }
   .serviceContainer {
     position: relative;
@@ -220,7 +238,7 @@
     align-items: center;
     justify-content: start;
     width: 100%;
-    height: 370px;
+    height: auto;
     background-color: transparent;
     border-radius: 4px;
   }
@@ -235,12 +253,42 @@
     font-weight: 200;
   }
   .servicePhotoWrapper {
+    height: 350px;
     border-radius: 0px 0px 0px 0px;
+  }
+
+  .servicePhoto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
   }
   .descriptionListItem {
     font-size: 18px;
   }
-  .servicePrice{
+  .servicePrice {
     font-size: 18px;
+  }
+  .serviceDescriptionContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 260px;
+    font-family: 'Garmond', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: #1f1e1e;
+    color: #f8f7f4;
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+    transform: translate(0px, 0%);
+  }
+  .serviceDescriptionItem {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
