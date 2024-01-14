@@ -26,8 +26,7 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
     autoplaySpeed: 2000,
     pauseOnHover: false,
     arrows: false,
-    vertical:true ,
-    //width < 430 ? true : false,
+    vertical: width < 460 ? true : false,
     verticalSwiping: width < 430 ? true : false,
   };
 
