@@ -100,7 +100,7 @@ const FaceMassage = () => {
                     <TiStar />
                   </div>
                   <li>
-                    приведе мʼязи в нормотонус, позбавить від головного болю,
+                    приведе м&apos;язи в нормотонус, позбавить від головного болю,
                     бруксизмів, покращить сон
                   </li>
                 </div>
@@ -132,7 +132,7 @@ const FaceMassage = () => {
             <div className={styles.serviceTechnicContainer}>
               <div className={styles.serviceTechnicItem}>
                 <div className={styles.serviceTechnicItemTitle}>
-                  М'які мануальні техніки
+                  М&apos;які мануальні техніки
                 </div>
               </div>
               <div className={styles.serviceTechnicItem}>
