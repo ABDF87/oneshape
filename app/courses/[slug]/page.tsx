@@ -70,7 +70,7 @@ const Courses = () => {
                 <div className={styles.titleTopContainer}>
                   <div className={styles.titleTop}>Навчання</div>
                   <div className={styles.descriptionTop}>
-                    Навчайтесь масажу та манікюру у наших топ майстрів
+                    Навчайтесь масажу у нашого топ майстра
                   </div>
                   <div className={styles.bookButtonTopContainer}>
                     <BookOnlineButton
@@ -79,6 +79,7 @@ const Courses = () => {
                       additionalFormInfo={{ service: 'Навчання', master: '' }}
                       border='1px solid #fff'
                       customBackgroundColor='transparent'
+                      color='#fff'
                     />
                   </div>
                 </div>

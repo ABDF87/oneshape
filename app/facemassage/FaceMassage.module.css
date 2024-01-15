@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Nunito+Sans:opsz@6..12&display=swap');
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+.topContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+.imageContainer {
+  width: 100%;
+  height: auto;
+  padding: 0 40px;
+}
+
+.imageMobileContainer {
+  display: none;
+}
+
+.serviceDescriptionTitle {
+  font-size: 25px;
+  color: #292828;
+  margin: 20px 0;
+}
+
+@media (max-width: 430px) {
+  .topContainer {
+    justify-content: center;
+    align-items: center;
+  }
+  .imageContainer {
+    display: none;
+  }
+  .imageMobileContainer {
+    display: block;
+    width: 100%;
+    height: 500px;
+    background-image: url('/photos/cosmetology-landing.jpg');
+    background-size: cover;
+  }
+  .imageMobileContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(32, 32, 32, 0.357);
+    z-index: 10;
+  }
+
+  .pageTitle {
+    position: absolute;
+    top: 200px;
+    font-size: 30px;
+    color: #fff;
+    z-index: 20;
+  }
+  .pageSubtitle {
+    position: absolute;
+    top: 250px;
+    font-size: 15px;
+    color: #fff;
+    z-index: 20;
+  }
+
+  .bookButtonContainer {
+    position: absolute;
+    bottom: 100px;
+    z-index: 20;
+    background-color: #1b1b1b70;
+  }
+  .serviceDescriptionSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0 40px;
+    background-color: #fff;
+    margin-top: 30px;
+  }
+  .serviceDescriptionTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+    color: #070707;
+  }
+  .serviceDescriptionText {
+    display: flex;
+    justify-content: left;
+    font-size: 16px;
+    color: #292828;
+    margin-bottom: 30px;
+  }
+  .beforeAndAfterSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    margin-top: 50px;
+  }
+  .beforeAndAfterContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    padding: 0px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .titleBeforeAndAfter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 200;
+    color: #070707;
+    margin-bottom: 80px;
+    font-weight: 200;
+  }
+
+  .listItemWrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  .serviceTechnicSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 50px;
+  }
+  .serviceTechnicContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 50px;
+  }
+  .serviceTechnicTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+    color: #070707;
+  }
+  .serviceTechnicItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    color: #7c4306c5;
+    background-color: transparent;
+    border: 1px solid #7c4306c5;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .mastersSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 50px;
+  }
+  .mastersTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+    color: #070707;
+    margin-bottom: 50px;
+  }
+  .masterItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: #7c4306c5;
+    background-color: transparent;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .masterItem img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+  }
+  .masterDescription {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 200px;
+    background-color: #202020b3;
+  }
+  .masterName {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .masterDescriptionText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 20px;
+    height: auto;
+  }
+  .telNumContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #222020;
+    margin-top: 50px;
+  }
+  .telNum{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color:#fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+  }
+}

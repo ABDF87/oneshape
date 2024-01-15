@@ -100,7 +100,7 @@ const BookOnlineButton = ({
       style={buttonStyles}
       onClick={bookOnlineHandler}
       onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = '#a09f9d6b';
+        e.currentTarget.style.backgroundColor = '#a09f9d43';
       }}
       onMouseLeave={(e) => {
         if (customBackgroundColor) {
