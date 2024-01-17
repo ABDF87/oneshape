@@ -13,8 +13,7 @@ type Props = {
   };
 };
 
-const BookOnlineModal = ({ isModalOpen, setIsModalOpen, formInfo }: Props) => {
-  const [isFormSent, setIsFormSent] = useState(false);
+const BookOnlineModal = ({ isModalOpen, setIsModalOpen }: Props) => {
 
   return (
     <Modal

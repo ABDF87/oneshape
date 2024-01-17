@@ -10,8 +10,7 @@ import massage_ba_data from '@/data/massage_ba_data';
 import { TiStar } from 'react-icons/ti';
 import Image from 'next/image';
 import BookForm from '@/components/bookForm/BookForm';
-import { BsFillTelephoneFill } from "react-icons/bs";
-
+import { BsFillTelephoneFill } from 'react-icons/bs';
 
 const FaceMassage = () => {
   const { isModalOpen, setIsModalOpen } = useFormContext();
@@ -22,15 +21,31 @@ const FaceMassage = () => {
         <>
           <Header />
           <div className={styles.topContainer}>
-            <div className={styles.imageContainer}></div>
+            <div className={styles.imageContainer}>
+              <Image
+                alt=''
+                src='/photos/cosmetology-landing.jpg'
+                width={500}
+                height={500}
+              />
+              <Image
+                alt=''
+                src='/photos/massage-neck.jpg'
+                width={500}
+                height={500}
+              />
+              <Image
+                alt=''
+                src='/photos/inter-oral-massage.jpg'
+                width={500}
+                height={500}
+              />
+            </div>
             <div className={styles.imageMobileContainer}></div>
 
             <div className={styles.pageTitle}>Масаж обличчя</div>
-            <div className={styles.pageSubtitle}>One Shape </div>
-            <div
-              className={styles.pageSubtitle}
-              style={{ marginTop: '80px', fontSize: '10px' }}
-            >
+            <div className={styles.pageSubtitle}>від салону One Shape </div>
+            <div className={styles.pageSubtitleTwo}>
               Аркадія, Гагарінське плато 5а{' '}
             </div>
             <div className={styles.bookButtonContainer}>
@@ -45,76 +60,89 @@ const FaceMassage = () => {
           </div>
           <section className={styles.serviceDescriptionSection}>
             <div className={styles.serviceDescriptionTitle}>Про масаж</div>
-            <div className={styles.serviceDescriptionText}>
-              <ul>
-                <div className={styles.listItemWrapper}>
-                  <TiStar />
-                  <li>омолоджує</li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <TiStar />
-                  <li>знімає набряки</li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <TiStar />
-                  <li>підтягне овал обличчя</li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <TiStar />
-                  <li>сформує гарний кут молодості</li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <TiStar />
-                  <li>позбавить від другого підборіддя </li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <div>
-                    {' '}
+            <div className={styles.serviceDescriptionWrapper}>
+              <div className={styles.serviceDescriptionText}>
+                <ul>
+                  <div className={styles.listItemWrapper}>
                     <TiStar />
+                    <li>омолоджує</li>
                   </div>
-                  <li>
-                    розглядить заломи, мімічні зморшки на лобі, міжбровку та
-                    носогубні складки
-                  </li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <div>
-                    {' '}
+                  <div className={styles.listItemWrapper}>
                     <TiStar />
+                    <li>знімає набряки</li>
                   </div>
-                  <li>позбавить від кісетних зморшки довкола губ</li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <div>
-                    {' '}
+                  <div className={styles.listItemWrapper}>
                     <TiStar />
+                    <li>підтягне овал обличчя</li>
                   </div>
-                  <li>
-                    підніме верхнє повіко, позбавить від гусиних лапок довкола
-                    очей
-                  </li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <div>
-                    {' '}
+                  <div className={styles.listItemWrapper}>
                     <TiStar />
+                    <li>сформує гарний кут молодості</li>
                   </div>
-                  <li>
-                    приведе м&apos;язи в нормотонус, позбавить від головного болю,
-                    бруксизмів, покращить сон
-                  </li>
-                </div>
-                <div className={styles.listItemWrapper}>
-                  <div>
-                    {' '}
+                  <div className={styles.listItemWrapper}>
                     <TiStar />
+                    <li>позбавить від другого підборіддя </li>
                   </div>
-                  <li>
-                    покращить тургор шкіри, стимулює створення природнього
-                    колагену та еластану.
-                  </li>
-                </div>
-              </ul>
+
+                  <div className={styles.listItemWrapper}>
+                    <div>
+                      {' '}
+                      <TiStar />
+                    </div>
+                    <li>позбавить від кісетних зморшки довкола губ</li>
+                  </div>
+
+                  <div className={styles.listItemWrapper}>
+                    <div>
+                      <TiStar />
+                    </div>
+                    <li>
+                      підніме верхнє повіко, позбавить від гусиних лапок довкола
+                      очей
+                    </li>
+                  </div>
+                  <div className={styles.listItemWrapper}>
+                    <div>
+                      {' '}
+                      <TiStar />
+                    </div>
+                    <li>
+                      розглядить заломи, мімічні зморшки на лобі, міжбровку та
+                      носогубні складки
+                    </li>
+                  </div>
+                  <div className={styles.listItemWrapper}>
+                    <div>
+                      {' '}
+                      <TiStar />
+                    </div>
+                    <li>
+                      покращить тургор шкіри, стимулює створення природнього
+                      колагену та еластану.
+                    </li>
+                  </div>
+                  <div className={styles.listItemWrapper}>
+                    <div>
+                      {' '}
+                      <TiStar />
+                    </div>
+                    <li>
+                      приведе м&apos;язи в нормотонус, позбавить від головного
+                      болю, бруксизмів, покращить сон
+                    </li>
+                  </div>
+                </ul>
+              </div>
+              <div className={styles.videoWrapper}>
+                <video
+                  className={styles.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src='/videos/video-face-massage.mp4'
+                />
+              </div>
             </div>
             <BookOnlineButton
               setIsModalOpen={setIsModalOpen}
@@ -165,7 +193,7 @@ const FaceMassage = () => {
             </div>
           </section>
           <section className={styles.mastersSection}>
-            <div className={styles.mastersTitle}>Майстри</div>
+            <div className={styles.mastersTitle}>Наші майстри</div>
             <div className={styles.mastersContainer}>
               <div className={styles.masterItem}>
                 <Image
@@ -211,10 +239,19 @@ const FaceMassage = () => {
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
       />
-      <BookForm />
-      <div className={styles.telNumContainer}>
-        <div className={styles.telNum}>
-         <BsFillTelephoneFill/> <a href='tel:+380673722206'>+38 (067) 372 22 06</a>
+      <div className={styles.contactsSection}>
+        <div className={styles.formWrapper}>
+          <BookForm />
+        </div>
+        <div className={styles.telNumContainer}>
+          <div className={styles.adress}>
+            <div>Одеса, Аркадія</div>
+            <div> вул Гагарінське плато 5а</div>
+          </div>
+          <div className={styles.telNum}>
+            <BsFillTelephoneFill />{' '}
+            <a href='tel:+380673722206'>+38 (067) 372 22 06</a>
+          </div>
         </div>
       </div>
     </div>

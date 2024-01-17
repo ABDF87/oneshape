@@ -92,6 +92,7 @@ const BookForm = ({
 
   const sendEmail = (e: any) => {
     e.preventDefault();
+
     const result = axios
       .post('https://api.emailjs.com/api/v1.0/email/send', formData)
       .then((result: any) => {
@@ -110,8 +111,7 @@ const BookForm = ({
       });
   };
 
-  console.log('callToPickService', callToPickService);
-  console.log('activeMessage', activeMessage);
+
   return (
     <>
       {!formSent ? (

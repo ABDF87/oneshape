@@ -8,36 +8,334 @@
   width: 100%;
   height: auto;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .topContainer {
   position: relative;
   display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
   background-color: #fff;
+  margin-top: 120px;
 }
 
 .imageContainer {
-  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: auto;
   height: auto;
-  padding: 0 40px;
+  padding: 0 0px;
+}
+.imageContainer img {
+  width: auto;
+  height: auto;
+}
+.imageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 32, 32, 0.518);
+  z-index: 10;
+}
+.pageTitle {
+  position: absolute;
+  top: 150px;
+  font-size: 50px;
+  color: #fff;
+  z-index: 20;
+}
+.pageSubtitle {
+  position: absolute;
+  top: 250px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #fff;
+  z-index: 20;
+}
+.pageSubtitleTwo {
+  position: absolute;
+  top: 400px;
+  font-size: 12px;
+  color: #fff;
+  z-index: 20;
+}
+.bookButtonContainer {
+  position: absolute;
+  bottom: 120px;
+  z-index: 20;
+  background-color: #1b1b1b70;
 }
 
 .imageMobileContainer {
   display: none;
 }
-
+.serviceDescriptionSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin: 50px 0;
+}
 .serviceDescriptionTitle {
-  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 200;
   color: #292828;
-  margin: 20px 0;
+  margin-bottom: 40px;
 }
 
+.serviceDescriptionWrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.serviceDescriptionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 0px 0;
+  margin-bottom: 50px;
+  color: #070707;
+  font-weight: 200;
+}
+.listItemWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+  width: 50%;
+  height: auto;
+  padding: 0px 0;
+  margin-bottom: 18px;
+  color: #070707;
+  margin-left: 300px;
+}
+
+.videoWrapper {
+  display: flex;
+  align-items: start;
+  width: 50%;
+  height: 100%;
+}
+.video {
+  width: 280px;
+  height: auto;
+}
+
+.serviceTechnicSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 50px;
+}
+.serviceTechnicContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 50px;
+}
+.serviceTechnicTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 200;
+  color: #070707;
+}
+.serviceTechnicItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60px;
+  color: #7c4306c5;
+  background-color: transparent;
+  border: 1px solid #7c4306c5;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.beforeAndAfterSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin-top: 50px;
+}
+.titleBeforeAndAfter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 200;
+  color: #070707;
+}
+.beforeAndAfterContainer {
+  width: 100%;
+  height: auto;
+  background-color: #f0efef;
+  padding: 50px 100px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.beforeAndAfterContainer img {
+  width: auto;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.beforeAndAfterPhotoWrapper {
+  border: 1px solid #4a4949;
+  border-radius: 4px;
+}
+.mastersSection {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 50px;
+}
+.mastersTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 200;
+  color: #070707;
+  margin-bottom: 60px;
+}
+.mastersContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.masterName {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 200;
+}
+.masterDescriptionText {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+}
+.masterItem img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+.formWrapper {
+  width: 400px;
+}
+.contactsSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #efeeee;
+  width: 100%;
+  height: 300px;
+}
+
+.telNumContainer {
+  display: flex;
+  flex-direction: column;
+}
+.telNum {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 200;
+}
+.adress {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  color: #070707;
+  margin-bottom: 10px;
+}
+@media (max-width: 830px) {
+    .serviceDescriptionSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        margin: 50px 0 10px 0;
+      }
+    .serviceDescriptionText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+        height: auto;
+        padding: 0px 0;
+        margin-bottom: 50px;
+        color: #070707;
+        font-weight: 200;
+      }
+    .listItemWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        gap: 10px;
+        width: 80%;
+        height: auto;
+        padding: 0px 0;
+        margin-bottom: 18px;
+        color: #070707;
+        margin-left: 50px;
+      }
+      .video {
+        width: 400px;
+        height: auto;
+      }
+}
 @media (max-width: 430px) {
   .topContainer {
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
   }
   .imageContainer {
     display: none;
@@ -74,6 +372,13 @@
     color: #fff;
     z-index: 20;
   }
+  .pageSubtitleTwo {
+    position: absolute;
+    top: 50px;
+    font-size: 10px;
+    color: #fff;
+    z-index: 20;
+  }
 
   .bookButtonContainer {
     position: absolute;
@@ -100,12 +405,31 @@
     font-weight: 200;
     color: #070707;
   }
+  .serviceDescriptionWrapper {
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 30px;
+  }
   .serviceDescriptionText {
     display: flex;
     justify-content: left;
+    text-align: start;
     font-size: 16px;
     color: #292828;
     margin-bottom: 30px;
+    margin-left: 0px;
+  }
+  .listItemWrapper {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .videoWrapper {
+    width: 100%;
+    padding: 0;
+  }
+  .video {
+    width: 350px;
+    height: auto;
   }
   .beforeAndAfterSection {
     display: flex;
@@ -207,6 +531,9 @@
     color: #070707;
     margin-bottom: 50px;
   }
+  .mastersContainer {
+    flex-direction: column;
+  }
   .masterItem {
     position: relative;
     display: flex;
@@ -229,7 +556,7 @@
     position: absolute;
     bottom: 0;
     width: 90%;
-    height: 200px;
+    height: 190px;
     background-color: #202020b3;
   }
   .masterName {
@@ -250,7 +577,24 @@
     color: #fff;
     margin-left: 30px;
     margin-top: 20px;
+    margin-bottom: 0px;
     height: auto;
+  }
+  .contactsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #efeeee;
+    width: 100%;
+    height: 400px;
+  }
+  .formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
   .telNumContainer {
     display: flex;
@@ -258,16 +602,22 @@
     align-items: center;
     width: 100%;
     height: 100px;
-    background-color: #222020;
+    background-color: transparent;
     margin-top: 50px;
+    color: #070707;
   }
-  .telNum{
+  .telNum {
     display: flex;
     align-items: center;
-    gap:10px;
-    color:#fff;
+    gap: 10px;
+    color: #070707;
     cursor: pointer;
     padding: 5px 10px;
-    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+
+  .adress {
+    color: #070707;
   }
 }
