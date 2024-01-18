@@ -19,8 +19,7 @@ const Contact = () => {
           </div>
           <div className={styles.divider}></div>
           <div className={styles.contactsInnerWrapperRight}>
-            <p>+38 (063) 57 11 996</p>
-            <p>+38 (097) 04 15 216</p>
+          <a href='tel:+380970415216'>+38 (097) 041-52-16</a>
             <div className={styles.buttonWrapper}>
               <BookOnlineButton
                 setIsModalOpen={setIsModalOpen}

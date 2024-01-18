@@ -19,6 +19,7 @@ import { useFormContext } from '@/components/formContextProvider/FormContextProv
 import { Slide } from '@mui/material';
 
 const Home = () => {
+  
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
 
   return (

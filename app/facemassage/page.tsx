@@ -250,8 +250,9 @@ const FaceMassage = () => {
           </div>
           <div className={styles.telNum}>
             <BsFillTelephoneFill />{' '}
-            <a href='tel:+380673722206'>+38 (067) 372 22 06</a>
+            <a href='tel:+380970415216'>+38 (097) 041-52-16</a>
           </div>
+
         </div>
       </div>
     </div>
@@ -259,3 +260,8 @@ const FaceMassage = () => {
 };
 
 export default FaceMassage;
+
+
+
+
+

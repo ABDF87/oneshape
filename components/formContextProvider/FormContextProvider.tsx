@@ -20,6 +20,7 @@ export default function FormContextProvider({
   children,
 }: FormContextProviderProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const [formInfo, setFormInfo] = useState({ service: '', master: '' });
 
   return (
