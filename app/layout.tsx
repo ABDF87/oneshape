@@ -5,8 +5,6 @@ import FormContextProvider from '@/components/formContextProvider/FormContextPro
 
 const inter = Inter({ subsets: ['latin'] });
 
-
-
 export const metadata: Metadata = {
   title: 'One Shape',
   description: 'Масаж та манікюр',
@@ -17,8 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
-
   return (
     <html lang='en'>
       <head>
@@ -28,12 +24,22 @@ export default function RootLayout({
           href='https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@300&family=Nunito+Sans:opsz@6..12&display=swap'
           rel='stylesheet'
         />
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=AW-11398807049'
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: ` window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-11398807049'); `,
+          }}
+        />
       </head>
 
       <body className={inter.className}>
-        <FormContextProvider>
-          {children}
-        </FormContextProvider>
+        <FormContextProvider>{children}</FormContextProvider>
       </body>
     </html>
   );

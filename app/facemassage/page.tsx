@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { Head } from 'next/document';
 import styles from './FaceMassage.module.css';
 import Header from '@/components/header/Header';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
@@ -11,6 +12,8 @@ import { TiStar } from 'react-icons/ti';
 import Image from 'next/image';
 import BookForm from '@/components/bookForm/BookForm';
 import { BsFillTelephoneFill } from 'react-icons/bs';
+
+
 
 const FaceMassage = () => {
   const { isModalOpen, setIsModalOpen } = useFormContext();

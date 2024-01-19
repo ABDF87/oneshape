@@ -7,7 +7,6 @@ import { FiMenu } from 'react-icons/fi';
 import { BsTelephone } from 'react-icons/bs';
 import MobileMenu from '../mobile_menu/MobileMenu';
 
-
 const Header = () => {
   const [activePage, setActivePage] = useState('');
   const [deployedMenu, setDeployedMenu] = useState(false);
@@ -44,7 +43,11 @@ const Header = () => {
     };
   }, []);
 
+
+
   return (
+    
+
     <div
       className={
         scrolling ? styles.mainContainerScrolled : styles.mainContainer
@@ -80,8 +83,9 @@ const Header = () => {
                 </a>
               </div>
               <div className={styles.contactsTel}>
-              <a href='tel:+380970415216'>+38 (097) 041-52-16</a>
+              <a href='tel:+380970415216' >+38 (097) 041-52-16 </a>
               </div>
+           
             </div>
 
             <div
@@ -179,6 +183,7 @@ const Header = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 
