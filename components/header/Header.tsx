@@ -83,7 +83,7 @@ const Header = () => {
                 </a>
               </div>
               <div className={styles.contactsTel}>
-              <a href='tel:+380970415216' >+38 (097) 041-52-16 </a>
+              <a href='tel:+380970415216' onClick={()=>`return gtag_report_conversion('tel:+380970415216');" href="tel:+380970415216`}>+38 (097) 041-52-16 </a>
               </div>
            
             </div>

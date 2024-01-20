@@ -1,5 +1,7 @@
 'use client';
 import React from 'react';
+import Head from 'next/head';
+import Script from 'next/script';
 import styles from './FaceMassage.module.css';
 import Header from '@/components/header/Header';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
@@ -12,13 +14,33 @@ import Image from 'next/image';
 import BookForm from '@/components/bookForm/BookForm';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 
-
-
 const FaceMassage = () => {
   const { isModalOpen, setIsModalOpen } = useFormContext();
 
   return (
     <div className={styles.mainContainer}>
+      <Head>
+        <Script>
+          {`
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11398807049/I7jKCN7K8IkZEIn8r7sq',
+      'value': 1.0,
+      'currency': 'UAH',
+      'event_callback': callback
+
+  });
+  return false;
+}
+
+`}
+        </Script>
+      </Head>
       {!isModalOpen && (
         <>
           <Header />
@@ -252,9 +274,8 @@ const FaceMassage = () => {
           </div>
           <div className={styles.telNum}>
             <BsFillTelephoneFill />{' '}
-            <a href='tel:+380970415216'>+38 (097) 041-52-16</a>
+`            <a href='tel:+380970415216' onClick={()=>`return gtag_report_conversion('tel:+380970415216');" href="tel:+380970415216`}>+38 (097) 041-52-16</a>
           </div>
-
         </div>
       </div>
     </div>
@@ -262,8 +283,3 @@ const FaceMassage = () => {
 };
 
 export default FaceMassage;
-
-
-
-
-
