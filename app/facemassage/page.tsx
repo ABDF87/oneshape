@@ -19,9 +19,8 @@ const FaceMassage = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <Head>
-        <Script>
-          {`
+      <Script>
+        {`
 function gtag_report_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
@@ -39,8 +38,8 @@ function gtag_report_conversion(url) {
 }
 
 `}
-        </Script>
-      </Head>
+      </Script>
+
       {!isModalOpen && (
         <>
           <Header />
@@ -273,8 +272,15 @@ function gtag_report_conversion(url) {
             <div> вул Гагарінське плато 5а</div>
           </div>
           <div className={styles.telNum}>
-            <BsFillTelephoneFill />{' '}
-`            <a href='tel:+380970415216' onClick={()=>`return gtag_report_conversion('tel:+380970415216');" href="tel:+380970415216`}>+38 (097) 041-52-16</a>
+            <BsFillTelephoneFill /> `{' '}
+            <a
+              href='tel:+380970415216'
+              onClick={() =>
+                `return gtag_report_conversion('tel:+380970415216');" href="tel:+380970415216`
+              }
+            >
+              +38 (097) 041-52-16
+            </a>
           </div>
         </div>
       </div>
