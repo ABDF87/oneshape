@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';
-import Script from 'next/script';
 import styles from './FaceMassage.module.css';
 import Header from '@/components/header/Header';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
@@ -19,26 +17,7 @@ const FaceMassage = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <Script>
-        {`
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11398807049/I7jKCN7K8IkZEIn8r7sq',
-      'value': 1.0,
-      'currency': 'UAH',
-      'event_callback': callback
-
-  });
-  return false;
-}
-
-`}
-      </Script>
+  
 
       {!isModalOpen && (
         <>

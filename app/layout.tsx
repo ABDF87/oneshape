@@ -36,6 +36,28 @@ export default function RootLayout({
           gtag('config', 'AW-11398807049'); `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11398807049/I7jKCN7K8IkZEIn8r7sq',
+      'value': 1.0,
+      'currency': 'UAH',
+      'event_callback': callback
+
+  });
+  return false;
+}
+
+`,
+          }}
+        />
       </head>
 
       <body className={inter.className}>
