@@ -14,11 +14,13 @@ import { BsFillTelephoneFill } from 'react-icons/bs';
 
 const FaceMassage = () => {
   const { isModalOpen, setIsModalOpen } = useFormContext();
+  
+  const callConversionTracking = () => {
+    `return gtag_report_conversion('tel:+380970415216');" href="tel:+380970415216`
+  };
 
   return (
     <div className={styles.mainContainer}>
-  
-
       {!isModalOpen && (
         <>
           <Header />
@@ -251,13 +253,8 @@ const FaceMassage = () => {
             <div> вул Гагарінське плато 5а</div>
           </div>
           <div className={styles.telNum}>
-            <BsFillTelephoneFill /> `{' '}
-            <a
-              href='tel:+380970415216'
-              onClick={() =>
-                `return gtag_report_conversion('tel:+380970415216');" href="tel:+380970415216`
-              }
-            >
+            <BsFillTelephoneFill />
+            <a href='tel:+380970415216' onClick={callConversionTracking}>
               +38 (097) 041-52-16
             </a>
           </div>

@@ -65,7 +65,7 @@ const MastersSection = ({ mastersData }: MastersSectionProps) => {
           <div className={styles.masterLayer}></div>
           <div className={styles.masterPhoto}>
             <Image
-              src={'/photos/massage-master-2.jpg'}
+              src={'/photos/masters/massage-master-2.jpg'}
               alt='massage'
               width={500}
               height={500}
