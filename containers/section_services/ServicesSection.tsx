@@ -5,8 +5,6 @@ import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import Slide from '@mui/material/Slide';
 import { TiStar } from 'react-icons/ti';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 interface Props {
   services: {
@@ -34,7 +32,6 @@ const ServicesSection: React.FC<Props> = ({
 
   const { setIsModalOpen, setFormInfo } = useFormContext();
 
-const router = useRouter();
 
   const showDescriptionHandler = (index: any) => {
     setIsDescriptionShowed(true);
@@ -73,7 +70,7 @@ const router = useRouter();
 
       <div className={styles.servicesContainer}>
         {services.map(
-          ({ name, price, description, image, link }, index) => (
+          ({ name, price, description, image }, index) => (
             <div
               className={styles.serviceContainer}
               onMouseEnter={() => showDescriptionHandler(index)}

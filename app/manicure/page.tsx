@@ -13,7 +13,6 @@ import { CiInstagram } from 'react-icons/ci';
 import BeforeAfterSlider from '@/components/before-after-slider/BeforeAfterSlider';
 import manicure_ba_data from '@/data/manicure_ba_data';
 import manicureWorksData from '@/data/manicureWorksData';
-import Link from 'next/link';
 import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
