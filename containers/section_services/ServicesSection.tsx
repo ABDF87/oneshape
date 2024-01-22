@@ -83,7 +83,6 @@ const router = useRouter();
               <div className={styles.serviceContinarInnerWrapper}>
                 <div className={styles.serviceName}>{name}</div>
                 <div className={styles.servicePhotoWrapper}>
-                  <Link href={link}>   
                   <Image
                     src={image}
                     alt='massage'
@@ -91,7 +90,6 @@ const router = useRouter();
                     height={500}
                     style={{ transform: 'translate(0, -20%)' }}                  
                   />
-               </Link>
                 </div>
                 <div className={styles.serviceDescriptionContainer}>
                   <div className={styles.serviceDescription}>
