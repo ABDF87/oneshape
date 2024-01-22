@@ -5,6 +5,8 @@ import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
 import { useFormContext } from '@/components/formContextProvider/FormContextProvider';
 import Slide from '@mui/material/Slide';
 import { TiStar } from 'react-icons/ti';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 interface Props {
   services: {
@@ -13,6 +15,7 @@ interface Props {
     description: any;
     duration: string;
     image: string;
+    link?: string;
   }[];
   sectionTitle: string;
   serviceType: string;
@@ -30,6 +33,8 @@ const ServicesSection: React.FC<Props> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   const { setIsModalOpen, setFormInfo } = useFormContext();
+
+const router = useRouter();
 
   const showDescriptionHandler = (index: any) => {
     setIsDescriptionShowed(true);
@@ -68,7 +73,7 @@ const ServicesSection: React.FC<Props> = ({
 
       <div className={styles.servicesContainer}>
         {services.map(
-          ({ name, price, description, image }, index) => (
+          ({ name, price, description, image, link }, index) => (
             <div
               className={styles.serviceContainer}
               onMouseEnter={() => showDescriptionHandler(index)}
@@ -78,13 +83,15 @@ const ServicesSection: React.FC<Props> = ({
               <div className={styles.serviceContinarInnerWrapper}>
                 <div className={styles.serviceName}>{name}</div>
                 <div className={styles.servicePhotoWrapper}>
+                  <Link href={link}>   
                   <Image
                     src={image}
                     alt='massage'
                     width={500}
                     height={500}
-                    style={{ transform: 'translate(0, -20%)' }}
+                    style={{ transform: 'translate(0, -20%)' }}                  
                   />
+               </Link>
                 </div>
                 <div className={styles.serviceDescriptionContainer}>
                   <div className={styles.serviceDescription}>

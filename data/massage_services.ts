@@ -4,6 +4,7 @@ interface MassageService {
   duration: string;
   price: string;
   image: string;
+  link?: string;    
 }
 
 const massageServices: MassageService[] = [
@@ -14,6 +15,8 @@ const massageServices: MassageService[] = [
     duration: '90',
     price: '1000',
     image: '/photos/cosmetology-landing.jpg',
+    link: 'https://oneshape.com.ua/facemassage'
+
   },
   {
     name: 'Массаж спини',
