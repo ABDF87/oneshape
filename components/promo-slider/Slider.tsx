@@ -19,6 +19,18 @@ const regularFont = localFont({
   src: '../../public/fonts/DINPRO-CONDENSEDREGULAR.ttf',
 });
 
+const dinProLight = localFont({
+  src: '../../public/fonts/DINPro-Light.ttf',
+});
+
+const dinProBold = localFont({
+  src: '../../public/fonts/DINPro-Bold.ttf',
+});
+
+const dinProMedium = localFont({
+  src: '../../public/fonts/DINPro-Medium.ttf',
+});
+
 const SliderShow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [width, setWidth] = useState(0);
@@ -45,7 +57,7 @@ const SliderShow = () => {
     infinite: true,
     autoplaySpeed: 3000,
     speed: 500,
-    autoplay: true,
+    autoplay: false,
     pauseOnFocus: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -76,16 +88,160 @@ const SliderShow = () => {
     <Slider {...settings}>
       <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
-            <Image
-              src={'/photos/banners/banner-1.png'}
-              alt='oneshape масаж'
-              width={500}
-              height={500}
-              className={styles.leyerImagesStyles}
-            />
-          <div
-            className={styles.leyerTextStyles}
-          >
+          <div className={styles.bannerRightPhoto}>
+          <Image
+            src={'/photos/banners/Баннер 005 1.png'}
+            alt='oneshape масаж'
+            width={500}
+            height={500}
+            className={styles.leyerImagesStyles}
+          />
+          </div>
+
+          <div className={styles.promoBlock}>
+            <div
+              className={dinProBold.className}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                marginTop: '20px',
+                marginLeft: '20px',
+                      
+                color: 'rgb(253, 240, 208)',
+              }}
+            >
+              <div className={styles.promoBlockTitle}>
+              <span >Ексклюзивне</span>
+              <span style={{ marginTop: '-30px' }}>Поєднання</span>
+              </div>
+            </div>
+            <div className={styles.promoBlockDescription}>
+            <div
+           
+              style={{
+                position: 'relative',
+                marginLeft: '0px',
+                width: '100%',
+              }}
+            >
+              <Image
+                src={'/photos/banners/Баннер 005 2.png'}
+                alt='oneshape масаж'
+                width={500}
+                height={500}
+              />
+              <div
+                className={dinProLight.className}
+                style={{
+                  position: 'absolute',
+                  top: '30px',
+                  left: '30px',
+                  color: '#fdf0d0',
+                  width: '100%',
+                 
+                }}
+              >
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '20px',
+                  }}
+                >
+                  -
+                  <div>
+                    <div
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      {' '}
+                      Лімфодренажне детокс
+                    </div>
+                    <div> обгортання BRUNO WASSARY</div>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '100%',
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      width: '50%',
+                    }}
+                  >
+                    <div style={{ display: 'flex', gap: '20px' }}>
+                      -<div> Масаж обличчя</div>
+                    </div>
+                    <div style={{ display: 'flex', gap: '20px' }}>
+                      -
+                      <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div> Ручний дренажний</div>
+                        <div> масаж всього тіла</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      width: '50%',
+                      transform: 'translate(-10px, 0px)',
+                    }}
+                  >
+                    <div
+                      className={dinProBold.className}
+                      style={{ fontSize: '50px', fontWeight: 'bold' }}
+                    >
+                      2
+                    </div>
+                    <div
+                      className={dinProMedium.className}
+                      style={{ transform: 'translate(0, -15px)' }}
+                    >
+                      години
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div 
+            className={styles.promoBlockButton1}
+            // style={{ display: 'flex', position:'absolute', right:'30px', bottom:'50px' }}
+            >
+              <BookOnlineButton
+                setIsModalOpen={setIsModalOpen}
+                customBackgroundColor={'transparent'}
+                color={'#fdf0d0'}
+                border=' 1px solid #fdf0d0'
+                setFormInfo={setFormInfo}
+                additionalFormInfo={{
+                  service: 'Знижка до 50% на антицеллюлітні програми ',
+                  master: '',
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={slideStyle}>
+        <div className={styles.bannerWrapper}>
+          <Image
+            src={'/photos/banners/banner-1.png'}
+            alt='oneshape масаж'
+            width={500}
+            height={500}
+            className={styles.leyerImagesStyles}
+          />
+          <div className={styles.leyerTextStyles}>
             <span
               className={boldFont.className}
               style={{

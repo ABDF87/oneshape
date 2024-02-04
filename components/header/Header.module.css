@@ -75,6 +75,9 @@
   font-family: 'Cormorant Garamond', serif;
   background-color: transparent;
 }
+.titleName img{
+  width: 200px;
+}
 .titleSubName {
   display: flex;
   font-size: 14px;
@@ -263,6 +266,9 @@
   }
   .titleName {
     font-size: 25px;
+  }
+  .titleName img{
+    width: 100px;
   }
 }
 @media (max-width: 850px) and (min-height: 390px) and (orientation: landscape) {

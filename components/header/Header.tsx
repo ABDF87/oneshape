@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { FiMenu } from 'react-icons/fi';
 import { BsTelephone } from 'react-icons/bs';
 import MobileMenu from '../mobile_menu/MobileMenu';
+import Image from 'next/image';
 
 const Header = () => {
   const [activePage, setActivePage] = useState('');
@@ -57,14 +58,14 @@ const Header = () => {
       <div className={styles.mainWrapper}>
         <div className={styles.topHeaderWrapper}>
           <div className={styles.titleWrapper}>
-            <span
+            <div
               className={styles.titleName}
               onClick={() => {
                 router.push('/');
               }}
             >
-             One Shape
-            </span>
+          <Image src='/photos/logo/One Shape - Logo 2024  Sign BK.png' alt='logo' width={100} height={100} />
+            </div>
             {/* <span className={styles.titleSubName} >
               Форма твого ідеального тіла
             </span> */}
