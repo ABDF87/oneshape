@@ -224,7 +224,7 @@ const SliderShow = () => {
                 border=' 1px solid #fdf0d0'
                 setFormInfo={setFormInfo}
                 additionalFormInfo={{
-                  service: 'Знижка до 50% на антицеллюлітні програми ',
+                  service: 'Ексклюзивне поєднання 3 в 1',
                   master: '',
                 }}
               />
