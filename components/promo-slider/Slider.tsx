@@ -90,7 +90,7 @@ const SliderShow = () => {
         <div className={styles.bannerWrapper}>
           <div className={styles.bannerRightPhoto}>
           <Image
-            src={'/photos/banners/Баннер 005 1.png'}
+            src={'/photos/banners/Баннер-005-1.png'}
             alt='oneshape масаж'
             width={500}
             height={500}
@@ -125,7 +125,7 @@ const SliderShow = () => {
               }}
             >
               <Image
-                src={'/photos/banners/Баннер 005 2.png'}
+                src={'/photos/banners/Баннер-005-2.png'}
                 alt='oneshape масаж'
                 width={500}
                 height={500}

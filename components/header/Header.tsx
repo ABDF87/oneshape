@@ -64,7 +64,7 @@ const Header = () => {
                 router.push('/');
               }}
             >
-          <Image src='/photos/logo/One Shape - Logo 2024  Sign BK.png' alt='logo' width={100} height={100} />
+          <Image src='/photos/logo/OneShape-Logo-BK.png' alt='logo' width={100} height={100} />
             </div>
             {/* <span className={styles.titleSubName} >
               Форма твого ідеального тіла
