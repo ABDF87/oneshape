@@ -74,7 +74,7 @@ const SectionCourses = ({ courseData }: any) => {
             </div>
           </div>
         </div>
-        <div className={styles.courseTitleContainer}>Наші курси</div>
+        <div className={styles.courseTitleContainer}>Курси</div>
         <div className={styles.courseContainerWrapper}>
           {courseData[0].courses.map((course: any) => (
             <div className={styles.courseContainer}>
@@ -168,7 +168,7 @@ const SectionCourses = ({ courseData }: any) => {
           </div>
         </div>
         {/* while manicure course is off pass massage feedbacks directly (not from courseData) */}
-        <SectionFeedback feedbacksData={massageCourseFeedback} />
+        {/* <SectionFeedback feedbacksData={massageCourseFeedback} /> */}
       </div>
     </main>
   );

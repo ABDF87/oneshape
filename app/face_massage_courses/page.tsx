@@ -11,7 +11,10 @@ import BookOnlineModal from '@/components/bookOnlineModal/BookOnlineModal';
 
 const FaceMassageCourses = () => {
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
-
+  const openInstagram = () => {
+    window.location.href =
+      'https://www.instagram.com/massage_sklema_odessa?igsh=NzZoOWt3d2d3c3ho';
+  };
   return (
     <div className={styles.mainContainer}>
       <BookOnlineModal
@@ -68,12 +71,12 @@ const FaceMassageCourses = () => {
               <div className={styles.headerTitle}>АВТОРСЬКІ КУРСИ</div>
               <div className={styles.headerTitle}> МАСАЖУ ОБЛИЧЧЯ</div>
               <div className={styles.headerTitleName}> від Тетяни Склеми</div>
-              <div className={styles.instaContainer}>
-                  <div className={styles.instaLogo}>
-                    <CiInstagram />
-                  </div>
-                  <div className={styles.instaTitle}>instagram</div>
+              <div className={styles.instaContainer} onClick={openInstagram}>
+                <div className={styles.instaLogo}>
+                  <CiInstagram onClick={openInstagram} />
                 </div>
+                {/* <div className={styles.instaTitle} onClick={openInstagram}>instagram</div> */}
+              </div>
               <div className={styles.bookButtonContainer}>
                 <BookOnlineButton
                   setIsModalOpen={setIsModalOpen}
@@ -87,6 +90,42 @@ const FaceMassageCourses = () => {
           </div>
 
           <SectionMassageCourses courseData={massageCoursesData} />
+          <div className={styles.caseContainer}>
+            <div className={styles.caseTitle}>Кейс Аполинарії Вермінської</div>
+            <Image alt='' src='/case/case-photo.jpg' width={500} height={500} />
+            <video
+              className={styles.video}
+              controls
+              loop
+              muted
+              playsInline
+              src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243513/case-vide0-1_d1brwp.mp4'
+            />
+            <video
+              className={styles.video}
+              controls
+              loop
+              muted
+              playsInline
+              src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243521/case-video-2_wipzre.mp4'
+            />
+            <video
+              className={styles.video}
+              controls
+              loop
+              muted
+              playsInline
+              src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243519/case-video-3_h8s51b.mp4'
+            />
+            <video
+              className={styles.video}
+              controls
+              loop
+              muted
+              playsInline
+              src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243516/case-video-4_tk8nus.mp4'
+            />
+          </div>
         </>
       )}
     </div>

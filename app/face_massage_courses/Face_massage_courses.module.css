@@ -6,118 +6,118 @@
   min-height: 100vh;
   background-color: #fff;
 }
-  .header {
+.header {
   display: none;
-  }
-  .headerText {
-    display: none;
-    }
-    .topContainerSection {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        background-color: transparent;
-      }
-      .topWrapper {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 80vh;
-        background-color: transparent;
-        z-index: 20;
-      }
-      .layer {
-        width: auto;
-        height: 100%;
-        background-color: #fff;
-        z-index: 50;
-      }
-      .video {
-        width: auto;
-        height: 80vh;
-        z-index: -99;
-      }
-      
-      .titleTopContainer {
-        position: absolute;
-        left: 0%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: right;
-        width: 60%;
-        height: 80%;
-        margin-top: 50px;
-        background-color: #27282891;
-        /* background-color: #002b1191;  */
-        z-index: 50;
-      }
-      .titleTop {
-        display: flex;
-        justify-content: left;
-        width: 100%;
-        color: #fff;
-        font-size: 70px;
-        font-weight: 500;
-        margin-left: 180px;
-        background-color: transparent;
-      }
-      
-      .descriptionTop {
-        display: flex;
-        justify-content: left;
-        font-size: 20px;
-        font-weight: 300;
-        color: #fff;
-        width: 100%;
-        margin-left: 180px;
-      }
-      .bookButtonTopContainer {
-        display: flex;
-        justify-content: right;
-        width: 100%;
-        margin-left: -30px;
-        margin-top: 70px;
-      }
-      
-      .sideLayer {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 5px;
-        align-items: end;
-        right: 0;
-        bottom: -40px;
-        width: 700px;
-        height: 400px;
-        background-color: #f2f1f1;
-      }
-      .instaContainer {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-      }
-      .instaLogo {
-        font-size: 20px;
-      }
-      .instaTitle {
-        font-size: 16px;
-        color: #5a5959;
-      }
+}
+.headerText {
+  display: none;
+}
+.topContainerSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+.topWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  background-color: transparent;
+  z-index: 20;
+}
+.layer {
+  width: auto;
+  height: 100%;
+  background-color: #fff;
+  z-index: 50;
+}
+.video {
+  width: auto;
+  height: 80vh;
+  z-index: -99;
+}
+
+.titleTopContainer {
+  position: absolute;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  width: 60%;
+  height: 80%;
+  margin-top: 50px;
+  background-color: #27282891;
+  /* background-color: #002b1191;  */
+  z-index: 50;
+}
+.titleTop {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 500;
+  margin-left: 180px;
+  background-color: transparent;
+}
+
+.descriptionTop {
+  display: flex;
+  justify-content: left;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  width: 100%;
+  margin-left: 180px;
+}
+.bookButtonTopContainer {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  margin-left: -30px;
+  margin-top: 70px;
+}
+
+.sideLayer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  align-items: end;
+  right: 0;
+  bottom: -40px;
+  width: 700px;
+  height: 400px;
+  background-color: #f2f1f1;
+}
+.instaContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.instaLogo {
+  font-size: 20px;
+}
+.instaTitle {
+  font-size: 16px;
+  color: #5a5959;
+}
 
 @media (max-width: 430px) {
-    .topContainerSection{
-        display: none;
-    }
+  .topContainerSection {
+    display: none;
+  }
   .header {
     position: relative;
     display: flex;
     justify-content: center;
     height: auto;
-    background-color: #797d62; 
+    background-color: #797d62;
   }
   .headerText {
     position: absolute;
@@ -140,7 +140,7 @@
   }
   .headerTitleName {
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 20px;
     font-family: 'Nunito Sans', sans-serif;
   }
@@ -153,7 +153,7 @@
   }
   .instaLogo {
     font-size: 30px;
-    color:#fff
+    color: #fff;
   }
   .instaTitle {
     font-size: 16px;
@@ -164,7 +164,7 @@
     position: absolute;
     bottom: 80px;
   }
-  .courseBenefitsContainer{
+  .courseBenefitsContainer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -187,8 +187,23 @@
     font-weight: 700;
     font-family: 'Nunito Sans', sans-serif;
   }
-  .courseBenefitsIcon{
+  .courseBenefitsIcon {
     color: #000;
     font-size: 50px;
+  }
+  .caseContainer video {
+    background-color: #0b0a0a;
+  }
+  .caseTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    color: #242424;
   }
 }
