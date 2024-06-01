@@ -46,8 +46,8 @@ const Contacts = () => {
 
             <div className={styles.mapContainer}>
               <iframe
-                src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d590.2210264256846!2d30.764122778376638!3d46.43282020010021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1699889866422!5m2!1sru!2sua'
-                width='100%'
+          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d578.0757255782535!2d30.763903572336996!3d46.43272948308042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6330240d5d41f%3A0xcb10854844bb3526!2sOne%20Shape!5e0!3m2!1sru!2sua!4v1713259746976!5m2!1sru!2sua'
+          width='100%'
                 height='400'
                 loading='lazy'
               ></iframe>

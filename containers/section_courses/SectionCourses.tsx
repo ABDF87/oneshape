@@ -5,6 +5,8 @@ import { FaPeoplePulling } from 'react-icons/fa6';
 import { FiClock } from 'react-icons/fi';
 import { LuCalendarClock } from 'react-icons/lu';
 import { TbFileCertificate } from 'react-icons/tb';
+import { PiStudent } from "react-icons/pi";
+
 import { TiStar } from 'react-icons/ti';
 import Image from 'next/image';
 import BookOnlineButton from '@/components/bookOnlineButton/BookOnlineButton';
@@ -17,6 +19,61 @@ const SectionCourses = ({ courseData }: any) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.innerContainer}>
+      <div className={styles.courseConditionsDescription}>
+      <div className={styles.courseConditionsDescriptionItem}>
+            <div className={styles.courseConditionsDescriptionItemImage}>
+            <PiStudent />
+
+            </div>
+
+            <div className={styles.courseConditionsDescriptionItemValue}>
+              Навчайтесь в салоні One Shape в Одесі 
+              <br />
+            або онлайн
+            </div>
+          </div>
+          <div className={styles.courseConditionsDescriptionItemHalfWrapper}>
+          <div className={styles.courseConditionsDescriptionItemHalf}>
+            <div className={styles.courseConditionsDescriptionItemImage}>
+              <LuCalendarClock />
+            </div>
+
+            <div className={styles.courseConditionsDescriptionItemValue}>
+              {courseData[0].details.friquency}
+              <br />
+              {courseData[0].details.friquencyComment}
+            </div>
+          </div>
+          <div className={styles.courseConditionsDescriptionItemHalf}>
+            <div className={styles.courseConditionsDescriptionItemImage}>
+              <FiClock />
+            </div>
+            <div className={styles.courseConditionsDescriptionItemValue}>
+              {courseData[0].details.duration}
+              <br />
+              {courseData[0].details.time}
+            </div>
+          </div>
+          </div>
+          <div className={styles.courseConditionsDescriptionItem}>
+            <div className={styles.courseConditionsDescriptionItemImage}>
+              <FaPeoplePulling />
+            </div>
+            <div className={styles.courseConditionsDescriptionItemValue}>
+              {courseData[0].details.groupInfo}
+              <br />
+              {courseData[0].details.groupInfoComment}
+            </div>
+          </div>
+          <div className={styles.courseConditionsDescriptionItem}>
+            <div className={styles.courseConditionsDescriptionItemImage}>
+              <TbFileCertificate />
+            </div>
+            <div className={styles.courseConditionsDescriptionItemValue}>
+              {courseData[0].details.certificate}
+            </div>
+          </div>
+        </div>
         <div className={styles.courseTitleContainer}>Наші курси</div>
         <div className={styles.courseContainerWrapper}>
           {courseData[0].courses.map((course: any) => (
@@ -79,47 +136,7 @@ const SectionCourses = ({ courseData }: any) => {
             </div>
           ))}
         </div>
-        <div className={styles.courseConditionsDescription}>
-          <div className={styles.courseConditionsDescriptionItem}>
-            <div className={styles.courseConditionsDescriptionItemImage}>
-              <LuCalendarClock />
-            </div>
-
-            <div className={styles.courseConditionsDescriptionItemValue}>
-              {courseData[0].details.friquency}
-              <br />
-              {courseData[0].details.friquencyComment}
-            </div>
-          </div>
-          <div className={styles.courseConditionsDescriptionItem}>
-            <div className={styles.courseConditionsDescriptionItemImage}>
-              <FiClock />
-            </div>
-            <div className={styles.courseConditionsDescriptionItemValue}>
-              {courseData[0].details.duration}
-              <br />
-              {courseData[0].details.time}
-            </div>
-          </div>
-          <div className={styles.courseConditionsDescriptionItem}>
-            <div className={styles.courseConditionsDescriptionItemImage}>
-              <FaPeoplePulling />
-            </div>
-            <div className={styles.courseConditionsDescriptionItemValue}>
-              {courseData[0].details.groupInfo}
-              <br />
-              {courseData[0].details.groupInfoComment}
-            </div>
-          </div>
-          <div className={styles.courseConditionsDescriptionItem}>
-            <div className={styles.courseConditionsDescriptionItemImage}>
-              <TbFileCertificate />
-            </div>
-            <div className={styles.courseConditionsDescriptionItemValue}>
-              {courseData[0].details.certificate}
-            </div>
-          </div>
-        </div>
+     
         <div className={styles.sectionInstructor}>
           <div className={styles.sectionTitle}>Викладач курсу</div>
           <div className={styles.instructorContainer}>

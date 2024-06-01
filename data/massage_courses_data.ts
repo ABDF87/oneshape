@@ -51,7 +51,7 @@ const massageCoursesData: MassageCoursesData[] = [
       },
       {
         title: 'ЛІМФОДРЕНАЖНИЙ МОДЕЛЮЮЧИЙ ДЕТОКС-МАСАЖ',
-        subTitle: 'базовий курс',
+        subTitle: 'авторський курс',
         descriptionTitle:
           'Навчитесь правільній діагностиці клієнтів та лімфодренажним технікам:',
         descriptionOptions: [

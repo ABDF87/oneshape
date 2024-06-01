@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@300&family=Nunito+Sans:opsz@6..12&display=swap');
+
+.mainContainer {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #fff;
+}
+  .header {
+  display: none;
+  }
+  .headerText {
+    display: none;
+    }
+    .topContainerSection {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+      }
+      .topWrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 80vh;
+        background-color: transparent;
+        z-index: 20;
+      }
+      .layer {
+        width: auto;
+        height: 100%;
+        background-color: #fff;
+        z-index: 50;
+      }
+      .video {
+        width: auto;
+        height: 80vh;
+        z-index: -99;
+      }
+      
+      .titleTopContainer {
+        position: absolute;
+        left: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: right;
+        width: 60%;
+        height: 80%;
+        margin-top: 50px;
+        background-color: #27282891;
+        /* background-color: #002b1191;  */
+        z-index: 50;
+      }
+      .titleTop {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        color: #fff;
+        font-size: 70px;
+        font-weight: 500;
+        margin-left: 180px;
+        background-color: transparent;
+      }
+      
+      .descriptionTop {
+        display: flex;
+        justify-content: left;
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+        width: 100%;
+        margin-left: 180px;
+      }
+      .bookButtonTopContainer {
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        margin-left: -30px;
+        margin-top: 70px;
+      }
+      
+      .sideLayer {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5px;
+        align-items: end;
+        right: 0;
+        bottom: -40px;
+        width: 700px;
+        height: 400px;
+        background-color: #f2f1f1;
+      }
+      .instaContainer {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .instaLogo {
+        font-size: 20px;
+      }
+      .instaTitle {
+        font-size: 16px;
+        color: #5a5959;
+      }
+
+@media (max-width: 430px) {
+    .topContainerSection{
+        display: none;
+    }
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: #797d62; 
+  }
+  .headerText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #02020273;
+    /* background: linear-gradient(to bottom, #6c6f7d, hsl(253, 39%, 55%)); */
+  }
+  .headerTitle {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .headerTitleName {
+    color: #fff;
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .instaContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  .instaLogo {
+    font-size: 30px;
+    color:#fff
+  }
+  .instaTitle {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .bookButtonContainer {
+    position: absolute;
+    bottom: 80px;
+  }
+  .courseBenefitsContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin-top: -30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /* background-color: #797d62;  */
+    background-color: #fff;
+  }
+  .courseBenefitsTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #000;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .courseBenefitsIcon{
+    color: #000;
+    font-size: 50px;
+  }
+}
