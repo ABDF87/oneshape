@@ -120,7 +120,7 @@ const SectionCourses = ({ courseData }: any) => {
                 <br />
                 <div className={styles.orderButtonContainer}>
                   <BookOnlineButton
-                    text='ЗАМОВИТИ'
+                    text='ЗАМОВИТИ КУРС'
                     additionalFormInfo={{
                       service: 'Навчання ' + course.title,
                       master: '',
@@ -154,7 +154,41 @@ const SectionCourses = ({ courseData }: any) => {
                 <div className={styles.instructorName}>
                   {courseData[0].instructor.name}
                 </div>
-                <div className={styles.instructorInfo}>
+                <div  className={styles.instructorInfo} >
+                  Вахівець з більше як 10 річним довідом.
+                  <div  className={styles.divider}></div>
+                  Власник салону One Shape 
+                  <br/>
+                  (Одеса, Аркадія)
+                  <div  className={styles.divider}></div>
+                  Веде викладацьку діяльність 4 роки за які випустила десятки учениць.
+                  
+                  <div  className={styles.divider}></div>
+                  Володіє сімома техніками масажу обличчя, а також
+            
+                  лімфодренажними техніками по тілу.
+                  <div  className={styles.divider}></div>
+                  Виконує вісцеральний масаж, тейпування, роботу з тригерними точками.
+                  <div  className={styles.divider}></div>
+                  Виступає спікером на конфернеціях, презентуючи масажні техніки. 
+
+                  <div className={styles.orderButtonContainerInstr}>
+                  <BookOnlineButton
+                    text='ЗАМОВИТИ КУРС'
+                    additionalFormInfo={{
+                      service: 'Навчання ',
+                      master: '',
+                    }}
+                    setIsModalOpen={setIsModalOpen}
+                    setFormInfo={setFormInfo}
+                    customBackgroundColor='#eea03a'
+                    color='#070707'
+                    border='1px solid #eea03a'
+                  />
+                </div>
+                </div>
+
+                {/* <div className={styles.instructorInfo}>
                   {courseData[0].instructor.qualification}
                 </div>
                 <div className={styles.instructorInfo}>
@@ -162,7 +196,7 @@ const SectionCourses = ({ courseData }: any) => {
                 </div>
                 <div className={styles.instructorText}>
                   <p>{courseData[0].instructor.description}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

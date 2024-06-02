@@ -69,7 +69,9 @@ const FaceMassageCourses = () => {
             />
             <div className={styles.headerText}>
               <div className={styles.headerTitle}>АВТОРСЬКІ КУРСИ</div>
-              <div className={styles.headerTitle}> МАСАЖУ ОБЛИЧЧЯ</div>
+              <div className={styles.headerTitle}> МАСАЖУ ОБЛИЧЧЯ </div>
+              <div className={styles.headerTitle}> І ТІЛА </div>
+
               <div className={styles.headerTitleName}> від Тетяни Склеми</div>
               <div className={styles.instaContainer} onClick={openInstagram}>
                 <div className={styles.instaLogo}>
@@ -90,42 +92,96 @@ const FaceMassageCourses = () => {
           </div>
 
           <SectionMassageCourses courseData={massageCoursesData} />
+          <div className={styles.videoInstructorContainer}>
+            <video
+              controls
+              playsInline
+              src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717334828/instructor-sklema_massage_ni4xvr.mp4'
+            />
+          </div>
+          <div className={styles.instructorGallery}>
+            <div className={styles.instructorGalleryTitle}>Галерея</div>
+            <Image
+              alt=''
+              src='/intsructor_photos/instructor-cert-3.jpg'
+              width={500}
+              height={500}
+            />
+            <Image
+              alt=''
+              src='/intsructor_photos/instructor-cert-group.jpg'
+              width={500}
+              height={500}
+            />
+            <Image
+              alt=''
+              src='/intsructor_photos/istructor-cert-1.jpg'
+              width={500}
+              height={500}
+            />
+            <Image
+              alt=''
+              src='/intsructor_photos/instrucor-cert-2.jpg'
+              width={500}
+              height={500}
+            />
+            <Image
+              alt=''
+              src='/intsructor_photos/insructor-training-1.jpg'
+              width={500}
+              height={500}
+            />
+            <Image
+              alt=''
+              src='/intsructor_photos/instructor-training-2.jpg'
+              width={500}
+              height={500}
+            />{' '}
+            <Image
+              alt=''
+              src='/intsructor_photos/instructor-conference.jpg'
+              width={500}
+              height={500}
+            />
+          </div>
           <div className={styles.caseContainer}>
             <div className={styles.caseTitle}>Кейс Аполинарії Вермінської</div>
             <Image alt='' src='/case/case-photo.jpg' width={500} height={500} />
             <video
-              className={styles.video}
               controls
-              loop
-              muted
               playsInline
               src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243513/case-vide0-1_d1brwp.mp4'
             />
             <video
-              className={styles.video}
               controls
-              loop
-              muted
               playsInline
               src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243521/case-video-2_wipzre.mp4'
             />
             <video
-              className={styles.video}
               controls
-              loop
-              muted
               playsInline
               src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243519/case-video-3_h8s51b.mp4'
             />
             <video
-              className={styles.video}
               controls
-              loop
-              muted
               playsInline
               src='https://res.cloudinary.com/dwxlzszxy/video/upload/v1717243516/case-video-4_tk8nus.mp4'
             />
           </div>
+          {/* <div className={styles.orderButtonContainerInstr}>
+            <BookOnlineButton
+              text='ЗАМОВИТИ КУРС'
+              additionalFormInfo={{
+                service: 'Навчання ',
+                master: '',
+              }}
+              setIsModalOpen={setIsModalOpen}
+              setFormInfo={setFormInfo}
+              customBackgroundColor='#eea03a'
+              color='#070707'
+              border='1px solid #eea03a'
+            />
+          </div> */}
         </>
       )}
     </div>
