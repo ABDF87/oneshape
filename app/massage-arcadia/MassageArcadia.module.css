@@ -9,7 +9,8 @@
   .mainContainer {
     display: flex;
     flex-direction: column;
-   align-items: center;
+    align-items: center;
+    height: auto;
   }
   .header {
     position: relative;
@@ -19,6 +20,7 @@
     justify-content: center;
     text-align: center;
     height: auto;
+    margin-bottom: 210px;
     /* background-color: #b24e15; */
   }
   .layer {
@@ -68,7 +70,7 @@
     font-weight: 200;
   }
   .ourMassagesContainer {
-    margin-top: 40px;
+    margin-top: 0px;
   }
   .ourMassagesTitle {
     display: flex;
@@ -77,33 +79,35 @@
     font-size: 30px;
     font-weight: 300;
   }
-  .formContainer{
+  .formContainer {
+    position: absolute;
+    bottom: -180px;
     display: flex;
     width: 90%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    gap: 10px;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
     padding: 30px 10px;
     border-radius: 5px;
     background-color: #30271cb4;
-    transform: translate(0px, -150px);
+    /* transform: translate(0px, -150px); */
     color: #dedbdb;
   }
-  .formContainer h2{
+  .formContainer h2 {
     font-size: 30px;
     font-weight: 500;
     color: #fff;
     margin-bottom: 10px;
   }
-  .label{
+  .label {
     display: flex;
     justify-content: start;
     width: 90%;
   }
-  .input{
+  .input {
     width: 90%;
     height: 40px;
     border-radius: 5px;
@@ -119,7 +123,7 @@
   .input::placeholder {
     color: #2b2727; /* Set your desired color */
   }
-  .formButton{
+  .formButton {
     width: 90%;
     border-radius: 5px;
     border: none;
@@ -129,7 +133,105 @@
     color: #fff;
     margin-top: 10px;
     background-color: #703f02;
-    
+  }
+  .ourMassagesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+  }
+  .faceMassageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+  }
+  .faceMassageTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  .faceMassageImageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #b18686;
+    overflow: hidden;
+  }
+  .faceMassageImageWrapper img{
+    width:300px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #b18686;
+  }
 
+  .massageItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .massageItem {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:20px;
+    padding-left: 10px;
+    width: 95%;
+    height: 100px;
+    background-color: #27292981;
+    color: #fff;
+    font-size: 21px;
+  }
+  .massageItem2Color {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:20px;
+    padding-left: 10px;
+    width: 95%;
+    height: 100px;
+    background-color: #dac7bf;
+    color: #202222ca;
+    font-size: 22px;
+  }
+  .massageItemNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #dac7bf;
+    color: #1d1e1ef0;
+    font-size: 20px;
+  }
+  .massageItemNumber2Color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #27292981;
+    color: #dac7bf;
+    font-size: 20px;
   }
 }

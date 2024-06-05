@@ -89,7 +89,7 @@ const FaceMassageCourses = () => {
               <div className={styles.bookButtonContainer}>
                 <BookOnlineButton
                   setIsModalOpen={setIsModalOpen}
-                  additionalFormInfo={{ service: 'Массаж обличчя', master: '' }}
+                  additionalFormInfo={{ service: 'Курси массажу обличчя', master: '' }}
                   customBackgroundColor='#1b1b1b70'
                   border='1px solid #fff'
                   color='#fff'
