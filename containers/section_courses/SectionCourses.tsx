@@ -120,7 +120,7 @@ const SectionCourses = ({ courseData }: any) => {
                 <br />
                 <div className={styles.orderButtonContainer}>
                   <BookOnlineButton
-                    text='ЗАМОВИТИ КУРС'
+                    text='ЗАМОВИТИ '
                     additionalFormInfo={{
                       service: 'Навчання ' + course.title,
                       master: '',

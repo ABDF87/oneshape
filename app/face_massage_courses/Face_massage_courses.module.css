@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:wght@300&family=Nunito+Sans:opsz@6..12&display=swap');
 
 .mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  overflow: hidden;
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -12,12 +20,27 @@
 .headerText {
   display: none;
 }
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  color: #242424;
+}
 .topContainerSection {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin-top: 20px;
   background-color: transparent;
 }
 .topWrapper {
@@ -110,21 +133,264 @@
 .caseContainer {
   display: none;
 }
+
+.scheduleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 200px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 80px;
+  background-color: #8e9aaf;
+}
+.divider {
+  width: 50%;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.instructorGalleryTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.instructorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+.instructorTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  margin-bottom: 80px;
+  color: #242424;
+}
+.instructorWrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  height: 450px;
+}
+
+.instructorImage {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 300px;
+  height: 100%;
+  border-radius: 4px;
+}
+.instructorImage img {
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+}
+
+.instructorDescription {
+  position: relative;
+  width: 500px;
+  height: 100%;
+  padding: 25px;
+  background-image: url('/photos/massage-stomac.jpg');
+  background-size: cover;
+  font-family: 'Cormorant Garamond', serif;
+  border-radius: 4px;
+  color: #f6f4f4;
+  z-index: 10;
+  /* transform: translate(-50px, 40px); */
+}
+.layerInstructor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1d1d1da0;
+  backdrop-filter: blur(10px);
+  z-index: 0;
+  border-radius: 4px;
+}
+.instructorName {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 30px;
+  z-index: 30;
+}
+
+.instructorInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+  position: relative;
+  z-index: 30;
+  margin-bottom: 20px;
+}
 .videoInstructorContainer {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 20px 10px;
+  width: 300px;
+  height: 100%;
   background-color: transparent;
   border-radius: 5px;
 }
 .videoInstructorContainer video {
-  width: 400px;
+  width: auto;
   height: auto;
   background-color: #0b0a0a;
 }
+.courseConditionsDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  height: 180px;
+  margin-top: 50px;
+  background-color: transparent;
+}
 .instructorGallery {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.instructorGalleryTitle {
+  margin-bottom: 80px;
+}
+.instructorGalleryWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.instructorGalleryWrapper img {
+  width: auto;
+  height: auto;
+}
+
+.courseConditionsDescriptionItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #7c4306c5;
+  color: #000;
+  padding: 10px 0px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.courseConditionsDescriptionItemValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  height: 50%;
+}
+.courseConditionsDescriptionItemImage {
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  height: 50%;
+  padding: 5px 0;
+  border-radius: 4px;
+  color: #7c4306c5;
+}
+
+.coursesContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+.offlineCourse {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 0px;
+  padding: 40px 10px;
+  width: 40%;
+  height: 100%;
+  background-color: #e4f0f7;
+}
+.offLineCourseTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 30px;
+}
+.onlineCourse {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 40px 10px;
+  width: 40%;
+  height: 100%;
+  /* background-color: #e4f0f7; */
+  background-color: #cbd0ea72;
+}
+.onlineCourseTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.onlineCourseDescroption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 30px;
+  margin-bottom: 40px;
+  color: #000;
+}
+.onlineCourseDescroption li {
+  border-left-color: #8891c8;
+  border-left-width: 3px;
+  padding-left: 15px;
+}
+.onlineCourseDescroption li::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: #0c5bbb;
 }
 @media (max-width: 830px) {
   .topWrapper {
@@ -147,7 +413,7 @@
     margin-left: -30px;
     margin-top: 70px;
   }
-  
+
   .titleTopContainer {
     position: absolute;
     left: 0;
@@ -172,6 +438,20 @@
     width: 100%;
     height: auto;
   }
+  .instructorDescription {
+    position: relative;
+    width: 500px;
+    height: 100%;
+    padding: 25px;
+  }
+  .instructorName {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    z-index: 30;
+  }
   .instructorGallery {
     display: flex;
     flex-direction: column;
@@ -187,7 +467,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #fff;
     font-family: 'Nunito', sans-serif;
     font-weight: lighter;
@@ -202,6 +482,11 @@
   }
 }
 @media (max-width: 430px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .topContainerSection {
     display: none;
   }
@@ -211,6 +496,10 @@
     justify-content: center;
     height: auto;
     background-color: #797d62;
+    border-radius: 0;
+  }
+  .header img {
+    border-radius: 0;
   }
   .headerText {
     position: absolute;
@@ -221,9 +510,21 @@
     top: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    background-color: #02020273;
+    background-color: #02020283;
     /* background: linear-gradient(to bottom, #6c6f7d, hsl(253, 39%, 55%)); */
+  }
+  .sectionTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
+    font-size: 40px;
+    color: #242424;
   }
   .headerTitle {
     color: #fff;
@@ -270,12 +571,133 @@
     /* background-color: #797d62;  */
     background-color: #fff;
   }
+  .coursesContainer {
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .offlineCourse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 40px 10px;
+    width: 100%;
+    background-color: #e4f0f7;
+  }
+  .offLineCourseTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+  }
+  .onlineCourse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 40px 10px;
+    width: 100%;
+    /* background-color: #e4f0f7; */
+    background-color: #cbd0ea72;
+  }
+  .onlineCourseTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .onlineCourseDescroption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 30px;
+    margin-bottom: 40px;
+    color: #000;
+  }
+  .onlineCourseDescroption li {
+    border-left-color: #8891c8;
+    border-left-width: 3px;
+    padding-left: 15px;
+  }
+  .onlineCourseDescroption li::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #0c5bbb;
+  }
+ 
+  .instructorName {
+    margin-bottom: 20px;
+  }
+  .instructorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+    margin-bottom: 50px;
+
+  }
+  .instructorTitle {
+margin-bottom: 30px;
+  }
+  .instructorWrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .instructorImage img {
+    width: 100%;
+    transform: translate(0px, 0px);
+  }
+  .instructorDescription {
+    width: 100%;
+    font-size: 20;
+    transform: translate(0px, -50px);
+  }
+  .instructorDescriptionShadow {
+    background-color: transparent;
+    height: auto;
+  }
+  .instructorImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background-color: #e9e9e9;
+  }
+  .dividerInstructor {
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .instructorDescriptionShadow {
+    width: 100%;
+  }
+  .instructorInfo {
+    flex-direction: column;
+    font-size: 18px;
+  }
   .courseBenefitsTitle {
     display: flex;
     justify-content: center;
     width: 100%;
     color: #000;
-    margin-top: 30px;
+    margin-bottom: 100px;
     font-size: 20px;
     font-weight: 700;
     font-family: 'Nunito Sans', sans-serif;
@@ -308,9 +730,10 @@
     color: #242424;
   }
   .videoInstructorContainer {
-    padding: 20px 10px;
-    background-color: #301a02;
-    border-radius: 5px;
+    width: 100%;
+    padding: 50px 10px;
+    background-color: #8e9aaf65;
+    border-radius: 0px;
   }
   .instructorGallery {
     display: flex;
@@ -324,12 +747,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: #fff;
     font-family: 'Nunito', sans-serif;
     font-weight: lighter;
     font-size: 35px;
     color: #242424;
+    margin-bottom: 40px;
+
   }
   .orderButtonContainerInstr {
     display: flex;
@@ -337,5 +762,59 @@
     margin-top: 40px;
     justify-content: center;
     align-items: center;
+  }
+  .scheduleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 200px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #8e9aaf;
+  }
+  .divider {
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .courseConditionsDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    width: 95%;
+    height: auto;
+    margin-top: 50px;
+    background-color: transparent;
+  }
+  .courseConditionsDescriptionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #7c4306c5;
+    color: #000;
+    padding: 10px 0px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  .courseConditionsDescriptionItemHalf {
+    width: 50%;
+    background-color: #fff;
+  }
+  .courseConditionsDescriptionItemHalfWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
   }
 }

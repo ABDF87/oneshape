@@ -37,7 +37,7 @@ const massageMasters: MassageMaster[] = [
     option8:
       'масаж обличчя (використовуючи лімфодренажні, мʼякі мануальні, скульптуруючі, фасціальні, ліфтингові, інтраоральні техніки в залежності від запиту клієнта)',
 
-    photo: '/photos/massage-landing.jpg',
+    photo: '/photos/masters/master-portfolio-Tatiana_Sklema.jpg',
   },
   {
     name: 'Ірина',
