@@ -324,37 +324,37 @@ const FaceMassageCourses = () => {
               />
               <Image
                 alt=''
-                src='/intsructor_photos/instructor-cert-group.jpg'
+                src='/photos/intsructor_photos/instructor-cert-group.jpg'
                 width={500}
                 height={500}
               />
               <Image
                 alt=''
-                src='/intsructor_photos/istructor-cert-1.jpg'
+                src='/photos/intsructor_photos/istructor-cert-1.jpg'
                 width={500}
                 height={500}
               />
               <Image
                 alt=''
-                src='/intsructor_photos/instrucor-cert-2.jpg'
+                src='/photos/intsructor_photos/instrucor-cert-2.jpg'
                 width={500}
                 height={500}
               />
               <Image
                 alt=''
-                src='/intsructor_photos/insructor-training-1.jpg'
+                src='/photos/intsructor_photos/insructor-training-1.jpg'
                 width={500}
                 height={500}
               />
               <Image
                 alt=''
-                src='/intsructor_photos/instructor-training-2.jpg'
+                src='/photos/intsructor_photos/instructor-training-2.jpg'
                 width={500}
                 height={500}
               />{' '}
               <Image
                 alt=''
-                src='/intsructor_photos/instructor-conference.jpg'
+                src='/photos/intsructor_photos/instructor-conference.jpg'
                 width={500}
                 height={500}
               />
