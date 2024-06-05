@@ -70,7 +70,8 @@ const FaceMassageCourses = () => {
           <div className={styles.header}>
             <Image
               alt=''
-              src='/intsructor_photos/insructor-training-1.jpg'
+              src='/photos/intsructor_photos/insructor-training-1.jpg'
+            
               width={500}
               height={500}
             />
