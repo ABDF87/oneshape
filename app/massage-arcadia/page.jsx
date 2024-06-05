@@ -44,13 +44,13 @@ const MassageArcadia = () => {
       <form className={styles.formContainer}>
         <h2>Записатися</h2>
         {/* <label className={styles.label}>Ім'я</label> */}
-        <input name='name'  placeholder="Iм`я" className={styles.input} />
+        <input name='name' placeholder="Iм&apos;я" className={styles.input} />
 
         {/* <label className={styles.label}>Телефон</label> */}
-        <input name='tel' placeholder="Телефон" className={styles.input} />
+        <input name='tel' placeholder='Телефон' className={styles.input} />
 
-        <button name='Заказати'  className={styles.formButton}>
-        Відправити
+        <button name='Заказати' className={styles.formButton}>
+          Відправити
         </button>
       </form>
       <section className={styles.ourMassagesContainer}>
