@@ -24,7 +24,7 @@ const MassageArcadia = () => {
         <div className={styles.headerTitle}>
           <h1>Масаж</h1>
           <h2>в салоні One Shape</h2>
-          <h3>Зберігаємо та відновлюємо ваше здоров'я, красу та молодість</h3>
+          <h3>Зберігаємо та відновлюємо ваше здоров&apos;я, красу та молодість</h3>
         </div>
         {/* <div className={styles.headerButton}>
           <BookOnlineButton
