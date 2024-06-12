@@ -31,7 +31,7 @@ const BeforeAfterSlider = ({ photos }: Photos) => {
   };
 
   const slideStyle: any = {
-    width: '400px',
+    width: '100%',
     height: '400px',
     padding: '10px',
     outline: 'none',
