@@ -573,6 +573,7 @@
     background-color: #30271cb4;
     /* transform: translate(0px, -150px); */
     color: #dedbdb;
+    z-index: 20;
   }
   .formContainer h2 {
     font-size: 30px;
