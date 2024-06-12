@@ -242,7 +242,7 @@ const MassageArcadia = () => {
             <div className={styles.massageItem2Color}>
               {/* <div className={styles.massageItemNumber2Color}>2</div> */}
               <CiHeart />
-              Зменьшує об'єми тіла
+              Зменьшує об&apos;єми тіла
             </div>
             <div className={styles.massageItem}>
               {/* <div className={styles.massageItemNumber}>3</div> */}
@@ -321,7 +321,7 @@ const MassageArcadia = () => {
           <h1>Наші майстри</h1>
         </div>
         <div className={styles.mastersContainer}>
-          Наші майстри мають більше п'яти років досвіду. Є кваліфікованими
+          Наші майстри мають більше п&apos;яти років досвіду. Є кваліфікованими
           спеціалістами з масажу тіла та обличчя. Постійно підвищують кваліфікацію.{' '}
         </div>
       </section>
