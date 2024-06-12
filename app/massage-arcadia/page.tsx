@@ -50,10 +50,10 @@ const MassageArcadia = () => {
   return (
     <main className={styles.mainContainer}>
       <section className={styles.header}>
-        <Image
+        <img
           alt=''
           //   src='/photos/massage-landing.jpg'
-          src='/photos/leg-massage.jpg'
+          src='https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223775/leg-massage_pqwaoe.jpg'
           width={500}
           height={500}
         />
@@ -117,8 +117,8 @@ const MassageArcadia = () => {
         <div className={styles.faceMassageContainer}>
           <div className={styles.sectionTitle}>
             <div className={styles.faceMassageImageWrapper}>
-              <Image
-                src={'/photos/cosmetology-landing.jpg'}
+              <img
+                src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223936/cosmetology-landing_jvuuj4.jpg'}
                 alt='massage'
                 width={600}
                 height={500}
@@ -173,8 +173,8 @@ const MassageArcadia = () => {
               <h3>Будьте здоровішою</h3>
             </div>
             <div className={styles.faceMassageImageWrapper}>
-              <Image
-                src={'/photos/anticellu-massage.jpg'}
+              <img
+                src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223954/anticellu-massage_p8kxmp.jpg'}
                 alt='massage'
                 width={600}
                 height={500}
@@ -218,8 +218,8 @@ const MassageArcadia = () => {
         <div className={styles.faceMassageContainer}>
           <div className={styles.sectionTitle}>
             <div className={styles.faceMassageImageWrapper}>
-              <Image
-                src={'/photos/leg-massage.jpg'}
+              <img
+                src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223775/leg-massage_pqwaoe.jpg'}
                 alt='massage'
                 width={600}
                 height={500}
@@ -275,8 +275,8 @@ const MassageArcadia = () => {
               <h3>Виглядайте стрункішою</h3>
             </div>
             <div className={styles.faceMassageImageWrapper}>
-              <Image
-                src={'/photos/massage-stomac.jpg'}
+              <img
+                src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223975/massage-stomac_lf6gww.jpg'}
                 alt='massage'
                 width={600}
                 height={500}
@@ -331,26 +331,26 @@ const MassageArcadia = () => {
           <h1>Наш салон</h1>
         </div>
         <div className={styles.salonPhotosContainer}>
-          <Image
-            src={'/photos/salon-entrance.jpg'}
+          <img
+            src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718224146/salon-entrance_i47ogs.jpg'}
             alt='massage'
             width={600}
             height={500}
           />
-            <Image
-            src={'/photos/salon-room.jpeg'}
+            <img
+            src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718224144/salon-room_pruyop.jpg'}
             alt='massage'
             width={600}
             height={500}
           />
-            <Image
-            src={'/photos/salon-room-2.jpg'}
+            <img
+            src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718224144/salon-room-2_szmlov.jpg'}
             alt='massage'
             width={600}
             height={500}
           />
-            <Image
-            src={'/photos/salon-reception.jpeg'}
+            <img
+            src={'https://res.cloudinary.com/dwxlzszxy/image/upload/v1718224145/salon-reception_jcjxkp.jpg'}
             alt='massage'
             width={600}
             height={500}
