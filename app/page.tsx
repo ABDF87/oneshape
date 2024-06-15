@@ -168,7 +168,7 @@ const Home = () => {
                   <div className={styles.imageWrapper}>
                     <div className={styles.imageTitleManicure}>Педікюр</div>
                     <Image
-                      src='/photos/manicure/pedicureBG.jpeg'
+                      src='/photos/pedicureBG.jpeg'
                       alt='massage'
                       width={500}
                       height={500}
@@ -179,7 +179,7 @@ const Home = () => {
                       Подологічні послуги
                     </div>
                     <Image
-                      src='/photos/manicure/manicure-ba-heel2-a.jpg'
+                      src='/photos/manicure-ba-heel-a.jpg'
                       alt='massage'
                       width={500}
                       height={500}
@@ -190,7 +190,7 @@ const Home = () => {
                       Парфінотерапія
                     </div>
                     <Image
-                      src='/photos/manicure/parafin-therapy.png'
+                      src='/photos/parafin-therapy.png'
                       alt='massage'
                       width={500}
                       height={500}

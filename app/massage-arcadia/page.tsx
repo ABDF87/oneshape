@@ -157,9 +157,7 @@ const MassageArcadia = () => {
               Підтягує овал обличчя
             </div>
           </div>
-          <div className={styles.priceContainer}>
-            <div>Ціна:</div> <div>від 700 грн.</div>
-          </div>
+     
           <div className={styles.beforeAndAfterContainer}>
             <BeforeAfterSlider photos={massage_ba_data} />
           </div>
@@ -209,9 +207,7 @@ const MassageArcadia = () => {
               Відновлює тонус м&apos;язів
             </div>
           </div>
-          <div className={styles.priceContainer}>
-            <div>Ціна:</div> <div>від 500 грн.</div>
-          </div>
+      
         </div>
         <div className={styles.divider}></div>
         {/* лімфа */}
@@ -260,9 +256,7 @@ const MassageArcadia = () => {
               Дарує відчуття легкості в тілі
             </div>
           </div>
-          <div className={styles.priceContainer}>
-            <div>Ціна:</div> <div>від 900 грн.</div>
-          </div>
+
         </div>
         <div className={styles.divider}></div>
         {/* антицеллюліт */}
@@ -311,9 +305,7 @@ const MassageArcadia = () => {
              Підтягнуті стегна та ягодиці
             </div>
           </div>
-          <div className={styles.priceContainer}>
-            <div>Ціна:</div> <div>від 700 грн.</div>
-          </div>
+   
         </div>
       </section>
       <section className={styles.mastersSection}>
