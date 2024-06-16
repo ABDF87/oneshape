@@ -27,7 +27,7 @@ const manicureServices: ManicureService[] = [
     ],
     duration: '90',
     price: '350',
-    image: '/photos/manicure/pedicureBG.jpeg',
+    image: '/photos/pedicureBG.jpeg',
   },
   {
     name: 'Подологічні послуги',
@@ -39,7 +39,7 @@ const manicureServices: ManicureService[] = [
     ],
     duration: '90',
     price: '350',
-    image: '/photos/manicure/manicure-ba-heel-a.jpg',
+    image: '/photos/manicure-ba-heel-a.jpg',
   },
   {
     name: 'Парафіно терапія',
@@ -49,7 +49,7 @@ const manicureServices: ManicureService[] = [
     ],
     duration: '90',
     price: '350',
-    image: '/photos/manicure/parafin-therapy-2.webp',
+    image: '/photos/parafin-therapy.png',
   },
 ];
 
