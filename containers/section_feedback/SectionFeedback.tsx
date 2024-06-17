@@ -11,7 +11,7 @@ interface Props {
 const SectionFeedback = ({ feedbacksData }: Props) => {
   return (
     <section className={styles.sectionFeedback}>
-      <div className={styles.titleFeedbackSection}>Відгуки</div>
+      <div className={styles.titleFeedbackSection}>Що кажуть наші кліенти</div>
       <div className={styles.feedbacksContainer}>
         {/* <div className={styles.feedbackPhoto}></div> */}
         {feedbacksData.map(({ image }) => (

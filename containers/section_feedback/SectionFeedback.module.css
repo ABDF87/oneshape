@@ -28,6 +28,7 @@
 .titleFeedbackSection {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-size: 40px;
   margin-bottom: 40px;
   font-weight: 200;
