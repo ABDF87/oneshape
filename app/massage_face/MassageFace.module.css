@@ -1,4 +1,7 @@
 .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -10,8 +13,13 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  height: auto;
+  height: 700px;
+  width: 100%;
   margin-bottom: 100px;
+}
+.videoHeader {
+  width: 100%;
+height: 100%;
 }
 .layer {
   position: absolute;
@@ -22,7 +30,6 @@
   background-color: #4a280080;
   width: 50%;
   height: 100%;
-  left: 0;
 }
 .header img {
   height: auto;
@@ -46,6 +53,52 @@
   margin-top: 20px;
   font-size: 18px;
   font-weight: 300;
+}
+.headerDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  color: #fff;
+  font-size: 22px;
+  gap: 15px;
+}
+.headerDescriptionItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.discountContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:60%;
+  height: 120px;
+  margin-top: 60px;
+  background-color: #db8419d4;
+  color: #dedbdb;
+  z-index: 20;
+}
+.discountContainerNumber{
+ font-size: 80px;
+}
+.discountContainerDescription{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 28px;
+}
+.showFormButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 80px;
+  background-color: #43413f;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .headerAdress {
   position: absolute;
@@ -75,20 +128,20 @@
 }
 .formContainer {
   display: flex;
-  width: 30%;
+  width: 40%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 30px 10px;
   border-radius: 5px;
-  background-color: #30271cb4;
-  color: #dedbdb;
+  background-color: #edebea;
+  z-index: 20;
 }
 .formContainer h2 {
   font-size: 30px;
   font-weight: 500;
-  color: #fff;
+  color: #272626;
   margin-bottom: 10px;
 }
 .label {
@@ -179,19 +232,16 @@
   color: #000;
   background-color: #f4f6f8;
 }
-.hookParagraph li{
+.hookParagraph li {
   display: flex;
   align-items: center;
-  gap:10px;
+  gap: 10px;
   margin-right: 30px;
 }
-.hook img{
+.hook img {
   width: 50%;
   border-radius: 5px;
-
 }
-
-
 
 .sectionTitle {
   display: flex;
@@ -316,7 +366,7 @@
 }
 
 .beforeAndAfterContainer {
-  display: none
+  display: none;
 }
 .beforeAndAfterTitle {
   display: flex;
@@ -402,7 +452,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+
     justify-content: center;
     background-color: #4a280080;
     width: 100%;
@@ -419,7 +469,6 @@
     margin-bottom: 100px;
     margin-left: 30px;
     color: #fff;
-
   }
   .headerTitle h2 {
     display: flex;
@@ -446,16 +495,18 @@
   }
   .formContainer {
     display: flex;
-    width: 40%;
+    width: 50%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 30px 5px;
+    padding: 30px 10px;
     border-radius: 5px;
-    background-color: #30271cb4;
-    color: #dedbdb;
+    background-color: #edebea;
     z-index: 20;
+  }
+  .formContainer h2{
+    color:#242323
   }
   .salonPhotosContainer {
     display: flex;
@@ -483,7 +534,7 @@
     width: 100%;
   }
   .header {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -491,7 +542,8 @@
     text-align: center;
     height: auto;
     width: 100%;
-    margin-bottom: 210px;
+    margin-bottom: 40px;
+    /* margin-bottom: 210px; */
     /* background-color: #b24e15; */
   }
   .layer {
@@ -499,85 +551,138 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #4a280080;
+    justify-content: start;
+    /* background-color: #4a2700a5; */
+    background: linear-gradient(#222120bc, #3a3735c9, #3635346a);
+    /* background: linear-gradient( #0d0d0e,#516873d4, #dd85119e ); */
+
     width: 100%;
     height: 100%;
+    z-index: 20;
     /* background: linear-gradient(#beaee056, #93a9f8); */
   }
   .header img {
     width: 100%;
     height: auto;
   }
-  .headerTitle {
-    position: absolute;
+  .header video {
+    width: 100%;
+  }
+  .brandLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
-    margin-bottom: 150px;
-    color: #fff;
-    margin-left: 0;
-  }
-  .headerTitle h1 {
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  .headerTitle h2 {
-    margin-left: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-    font-size: 20px;
-    font-weight: 400;
-
-  }
-  .headerTitle h3 {
     margin-top: 20px;
     font-size: 20px;
+    font-weight: lighter;
+    color:#fff
+  }
+  .headerTitle {
+    /* position: absolute; */
+    width: 70%;
+    height: auto;
+    margin-top: 40px;
+    color: #fff;
+    margin-left: 0;
+    border-left-width: 2px;
+    border-left-color: #fff;
+  }
+  .headerTitle h1 {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #fff;
+  }
+  .headerTitle h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 11px;
+  }
+  .headerTitle h3 {
+    font-size: 25px;
     font-weight: 300;
     margin-left: 0;
-    padding: 0 10px;
-    background-color: #21202097;
-    padding: 20px 0px;
+    letter-spacing: 11px;
+
   }
+  .headerDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    color: #fff;
+    font-size: 22px;
+    gap: 15px;
+  }
+  .headerDescriptionItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .discountContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height: 120px;
+    margin-top: 60px;
+    background-color: #db8419d4;
+    color: #dedbdb;
+    z-index: 20;
+  }
+  .discountContainerNumber{
+   font-size: 80px;
+  }
+  .discountContainerDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 28px;
+  }
+
   .headerAdress {
     position: absolute;
     display: flex;
     align-items: center;
     gap: 10px;
-    bottom: 180px;
+    bottom: 10px;
     color: #fff;
     font-weight: 200;
     margin-left: 0;
   }
-  .headerButton {
-    position: absolute;
-    bottom: 100px;
+
+  .showFormButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    background-color: #43413f;
     color: #fff;
-    font-weight: 200;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .formContainer {
-    position: absolute;
-    bottom: -180px;
     display: flex;
-    width: 90%;
+    width: 95%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
     padding: 30px 10px;
     border-radius: 5px;
-    background-color: #30271cb4;
-    /* transform: translate(0px, -150px); */
-    color: #dedbdb;
+    background-color: #edebea;
     z-index: 20;
   }
   .formContainer h2 {
     font-size: 30px;
     font-weight: 500;
-    color: #fff;
+    color: #4a4b4b;
     margin-bottom: 10px;
   }
   .label {
@@ -586,7 +691,7 @@
     width: 90%;
   }
   .input {
-    width: 90%;
+    width: 98%;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -610,7 +715,7 @@
     font-weight: 300;
     color: #fff;
     margin-top: 10px;
-    background-color: #703f02;
+    background-color: #ec9020;
   }
   .formButton:active {
     background-color: #7f4908;
@@ -640,7 +745,7 @@
     height: auto;
     padding: 0px;
     margin-bottom: 0px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .hookTitle {
     display: flex;
@@ -655,7 +760,7 @@
     margin-bottom: 10px;
     color: #000;
   }
- 
+
   .hookParagraph {
     display: flex;
     flex-direction: column;
@@ -671,16 +776,15 @@
     color: #000;
     background-color: #f4f6f8;
   }
-  .hook img{
+  .hook img {
     width: 95%;
     border-radius: 5px;
   }
-  .videoWrapper{
+  .videoWrapper {
     display: flex;
     justify-content: center;
     width: 95%;
     border-radius: 5px;
-
   }
 
   .beforeAndAfterContainer {

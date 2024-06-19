@@ -1,5 +1,6 @@
 'use client';
 import React, { use, useContext } from 'react';
+
 import styles from './Home.module.css';
 import Header from '@/components/header/Header';
 import Slider from '@/components/promo-slider/Slider';
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <main className={styles.mainContainer}>
+     
       <BookOnlineModal
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}

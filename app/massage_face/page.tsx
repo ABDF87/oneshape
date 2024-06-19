@@ -18,8 +18,13 @@ const MassageFace = () => {
   const [formSent, setFormSent] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [showForm, setShowForm] = useState(false);
 
   const form: any = useRef();
+
+  const showFormHandler = () => {
+    setShowForm(true);
+  };
 
   const formData = {
     service_id: 'service_shape',
@@ -28,7 +33,7 @@ const MassageFace = () => {
     template_params: {
       client_name: name,
       client_phone: phone,
-      message: 'massage landing',
+      message: 'заявка з лендінгу обличчя -40%',
     },
   };
 
@@ -50,69 +55,102 @@ const MassageFace = () => {
   return (
     <main className={styles.mainContainer}>
       <section className={styles.header}>
-        <img
+        {/* <img
           alt=''
           //   src='/photos/massage-landing.jpg'
           src='https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223936/cosmetology-landing_jvuuj4.jpg'
           width={500}
           height={500}
+        /> */}
+        <video
+          className={styles.videoHeader}
+          src={
+            'https://res.cloudinary.com/dwxlzszxy/video/upload/v1718709056/Tetiana_reel_massage1_koufjs.mov'
+          }
+          width={600}
+          height={500}
+          autoPlay
+          muted
+          loop
         />
         <div className={styles.layer}>
+          <div className={styles.brandLabel}>One Shape</div>
           <div className={styles.headerTitle}>
-            <h1>Масаж обличчя</h1>
-            <h2>від експертів салону One Shape</h2>
-            <h3>
-              Виглядайте молодшими, приберіть зморшки та подвійне підборіддя вже
-              після першой процедури
-            </h3>
+            <h1>МАСАЖ</h1>
+            <h2> ОБЛИЧЧЯ</h2>
+            <h3>В АРКАДІЇ</h3>
           </div>
+          <div className={styles.headerDescription}>
+            <div className={styles.headerDescriptionItem}>
+              <CiHeart />
+              Спеціалізований салон з масажу
+            </div>
+            <div className={styles.headerDescriptionItem}>
+              <CiHeart />
+              Працюють майстри топ рівня
+            </div>
+            <div className={styles.headerDescriptionItem}>
+              <CiHeart />
+              Авторська методика
+            </div>
+            <div className={styles.headerDescriptionItem}>
+              <CiHeart />
+              Результат з першої процедури
+            </div>
+          </div>
+          <div className={styles.discountContainer}>
+            <div className={styles.discountContainerNumber}>-40%</div>
+            <div className={styles.discountContainerDescription}>
+              <div>на першу</div>
+              <div>процедуру</div>
+            </div>
+          </div>
+
           <div className={styles.headerAdress}>
             <FaLocationDot />
-
             <h4>Гагарінське плато, 5а</h4>
           </div>
         </div>
-        {formSent ? (
-          <div className={styles.formSentText}>
-            Заявка відправлена <br /> Наш адміністратор зв&apos;яжеться з вами
-            <br />у найближчий час
-          </div>
-        ) : (
-          <form
-            className={styles.formContainer}
-            onSubmit={sendEmail}
-            ref={form}
-          >
-            <h2>Записатися</h2>
-            {/* <label className={styles.label}>Ім'я</label> */}
-            <input
-              type='text'
-              className={styles.input}
-              name='client_name'
-              placeholder="Iм'я"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              required
-            />
-
-            {/* <label className={styles.label}>Телефон</label> */}
-            <input
-              type='phone'
-              name='client_phone'
-              placeholder='Телефон'
-              className={styles.input}
-              onChange={(e) => setPhone(e.target.value)}
-              value={phone}
-              required
-            />
-
-            <button name='Заказати' className={styles.formButton}>
-              Відправити
-            </button>
-          </form>
-        )}
       </section>
+      {formSent ? (
+        <div className={styles.formSentText}>
+          Заявка відправлена <br /> Наш адміністратор зв&apos;яжеться з вами
+          <br />у найближчий час
+        </div>
+      ) : !showForm ? (
+        <div className={styles.showFormButton} onClick={showFormHandler}>
+          ЗАПИСАТИСЯ
+        </div>
+      ) : (
+        <form className={styles.formContainer} onSubmit={sendEmail} ref={form}>
+          <h2>Записатися</h2>
+          {/* <label className={styles.label}>Ім'я</label> */}
+          <input
+            type='text'
+            className={styles.input}
+            name='client_name'
+            placeholder="Iм'я"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            required
+          />
 
+          {/* <label className={styles.label}>Телефон</label> */}
+          <input
+            type='phone'
+            name='client_phone'
+            placeholder='Телефон'
+            className={styles.input}
+            onChange={(e) => setPhone(e.target.value)}
+            value={phone}
+            required
+          />
+
+          <button name='Заказати' className={styles.formButton}>
+            Відправити
+          </button>
+        </form>
+      )}
       <section className={styles.hook}>
         <div className={styles.hookTitle}>
           Чи дійсно є ефект після першої ж процедури?
@@ -138,7 +176,7 @@ const MassageFace = () => {
           Якщо ви живете в Одесі, то у вас є можливість потрапити на процедуру
           до одного з найкращіх майстрів з массажу обличчя в Україні - Тетяни
           Склеми або її учениць. Тетяна спеціалізується саме на масажі обличчя
-          більше вісьми років, проводе процедури, навчає майстрів, виступає на
+          більше восьми років, проводе процедури, навчає майстрів, виступає на
           професійних конференціях популярізуючи остані методики та ділючись
           досвідом. В салоні One Shape яким володіє Тетяна підримуються найвищі
           стандарти щодо майстрів, відбувається постійне підвищення їх
