@@ -629,7 +629,7 @@ height: 100%;
     align-items: center;
     width:100%;
     height: 120px;
-    margin-top: 60px;
+    margin-top: 30px;
     background-color: #db8419d4;
     color: #dedbdb;
     z-index: 20;
@@ -721,16 +721,13 @@ height: 100%;
     background-color: #7f4908;
   }
   .formSentText {
-    position: absolute;
-    bottom: -180px;
+    position: static;
     display: flex;
     width: 90%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
     padding: 30px 10px;
     border-radius: 5px;
     background-color: #456e07b4;

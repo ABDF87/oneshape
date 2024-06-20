@@ -12,6 +12,8 @@ import massage_ba_data from '@/data/massage_ba_data';
 import SectionFeedback from '@/containers/section_feedback/SectionFeedback';
 import massageFeedback from '@/data/massageFeedback';
 import { CiHeart } from 'react-icons/ci';
+import { CiCircleCheck } from "react-icons/ci";
+
 
 const MassageFace = () => {
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
@@ -74,7 +76,10 @@ const MassageFace = () => {
           loop
         />
         <div className={styles.layer}>
-          <div className={styles.brandLabel}>One Shape</div>
+          <div className={styles.brandLabel}>
+          <a href="tel:+380635711996">+380(63)571 19 96</a>
+          <a href="tel:++380970415216">+380(97)041 52 16</a>
+          </div>
           <div className={styles.headerTitle}>
             <h1>МАСАЖ</h1>
             <h2> ОБЛИЧЧЯ</h2>
@@ -82,19 +87,23 @@ const MassageFace = () => {
           </div>
           <div className={styles.headerDescription}>
             <div className={styles.headerDescriptionItem}>
-              <CiHeart />
+            <CiCircleCheck />
+
               Спеціалізований салон з масажу
             </div>
             <div className={styles.headerDescriptionItem}>
-              <CiHeart />
+            <CiCircleCheck />
+
               Працюють майстри топ рівня
             </div>
             <div className={styles.headerDescriptionItem}>
-              <CiHeart />
+            <CiCircleCheck />
+
               Авторська методика
             </div>
             <div className={styles.headerDescriptionItem}>
-              <CiHeart />
+            <CiCircleCheck />
+
               Результат з першої процедури
             </div>
           </div>
@@ -171,7 +180,7 @@ const MassageFace = () => {
       </section>
 
       <section className={styles.hook}>
-        <div className={styles.hookTitle}>Унікальна можливість</div>
+        <div className={styles.hookTitle}>Масаж обличчя - наша спеціалізація</div>
         <div className={styles.hookParagraph}>
           Якщо ви живете в Одесі, то у вас є можливість потрапити на процедуру
           до одного з найкращіх майстрів з массажу обличчя в Україні - Тетяни
