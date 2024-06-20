@@ -525,6 +525,42 @@ height: 100%;
     width: 49%;
   }
 }
+@media (max-width: 390px) {
+  .headerDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    color: #fff;
+    gap: 15px;
+  }
+  .headerDescriptionItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+  .discountContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height: 80px;
+    margin-top: 30px;
+    background-color: #db8419d4;
+    color: #dedbdb;
+    z-index: 20;
+  }
+
+  .discountContainerNumber p{
+    font-size: 70px;
+  }
+  .discountContainerDescription div{
+    font-size: 25px;
+  }
+
+}
 @media (max-width: 430px) {
   .mainContainer {
     display: flex;
@@ -581,13 +617,12 @@ height: 100%;
     color:#fff
   }
   .headerTitle {
-    /* position: absolute; */
     width: 70%;
     height: auto;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 60px;
     color: #fff;
-    margin-left: 0;
-    border-left-width: 2px;
+    border-left-width: 1px;
     border-left-color: #fff;
   }
   .headerTitle h1 {

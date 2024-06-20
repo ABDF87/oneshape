@@ -108,7 +108,7 @@ const MassageFace = () => {
             </div>
           </div>
           <div className={styles.discountContainer}>
-            <div className={styles.discountContainerNumber}>-40%</div>
+            <div className={styles.discountContainerNumber}><p>-40%</p></div>
             <div className={styles.discountContainerDescription}>
               <div>на першу</div>
               <div>процедуру</div>
@@ -217,22 +217,22 @@ const MassageFace = () => {
         <div className={styles.hookParagraph}>
           <ul>
             <li>
-              <CiHeart /> Лімфодренажні
+            <CiCircleCheck />Лімфодренажні
             </li>
             <li>
-              <CiHeart />
+            <CiCircleCheck />
               Міофесціальні{' '}
             </li>
             <li>
-              <CiHeart />
+            <CiCircleCheck />
               Букальні{' '}
             </li>
             <li>
-              <CiHeart />
+            <CiCircleCheck />
               RF ліфтинг{' '}
             </li>
             <li>
-              <CiHeart />
+            <CiCircleCheck />
               Скульптуруючі{' '}
             </li>
           </ul>
