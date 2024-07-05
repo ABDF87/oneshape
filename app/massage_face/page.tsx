@@ -12,8 +12,7 @@ import massage_ba_data from '@/data/massage_ba_data';
 import SectionFeedback from '@/containers/section_feedback/SectionFeedback';
 import massageFeedback from '@/data/massageFeedback';
 import { CiHeart } from 'react-icons/ci';
-import { CiCircleCheck } from "react-icons/ci";
-
+import { CiCircleCheck } from 'react-icons/ci';
 
 const MassageFace = () => {
   const { isModalOpen, setIsModalOpen, setFormInfo } = useFormContext();
@@ -57,13 +56,40 @@ const MassageFace = () => {
   return (
     <main className={styles.mainContainer}>
       <section className={styles.header}>
-        {/* <img
-          alt=''
-          //   src='/photos/massage-landing.jpg'
-          src='https://res.cloudinary.com/dwxlzszxy/image/upload/v1718223936/cosmetology-landing_jvuuj4.jpg'
-          width={500}
-          height={500}
-        /> */}
+        <div className={styles.headerFrame}></div>
+        <div className={styles.headerTopWrapper}>
+        <div className={styles.headerTitleWrapper}>
+          <div className={styles.headerTitle}>One Shape</div>
+          <div className={styles.headerSubTitle}>
+            cтудія природньої<br/> естетики обличчя
+          </div>
+        </div>
+        <div className={styles.headerContactsWrapper}>
+          <div className={styles.headerContactsNumber}>+38 (063) 571 19 96 </div>
+          <div className={styles.headerContactsAdress}>Гагарінське плато, 5а</div>
+        </div>
+        </div>
+        <div className={styles.headerPhotoContainer}>
+          <img
+            className={styles.headerPhoto}
+            src='https://res.cloudinary.com/dwxlzszxy/image/upload/v1720172527/2024-07-05_11.36.48_jyee0l.jpg'
+            alt='massage_face'
+            width={600}
+            height={400}
+          />
+        </div>
+        <div  className={styles.headerDescriptionContainer}>
+          <div className={styles.headerDescriptionContainerTitle}>МАСАЖ ОБЛИЧЧЯ</div>
+          <div className={styles.headerDescriptionContainerOptions}>
+            <div>Ручний</div>
+            <div>Інтраоральний</div>
+            <div>Апаратний</div>
+          </div>
+        </div>
+        <div className={styles.divider}> </div>
+      </section>
+      {/* <section className={styles.header}>
+       
         <video
           className={styles.videoHeader}
           src={
@@ -120,7 +146,7 @@ const MassageFace = () => {
             <h4>Гагарінське плато, 5а</h4>
           </div>
         </div>
-      </section>
+      </section> */}
       {formSent ? (
         <div className={styles.formSentText}>
           Заявка відправлена <br /> Наш адміністратор зв&apos;яжеться з вами
@@ -180,7 +206,9 @@ const MassageFace = () => {
       </section>
 
       <section className={styles.hook}>
-        <div className={styles.hookTitle}>Масаж обличчя - наша спеціалізація</div>
+        <div className={styles.hookTitle}>
+          Масаж обличчя - наша спеціалізація
+        </div>
         <div className={styles.hookParagraph}>
           Якщо ви живете в Одесі, то у вас є можливість потрапити на процедуру
           до одного з найкращіх майстрів з массажу обличчя в Україні - Тетяни
@@ -217,22 +245,23 @@ const MassageFace = () => {
         <div className={styles.hookParagraph}>
           <ul>
             <li>
-            <CiCircleCheck />Лімфодренажні
+              <CiCircleCheck />
+              Лімфодренажні
             </li>
             <li>
-            <CiCircleCheck />
+              <CiCircleCheck />
               Міофесціальні{' '}
             </li>
             <li>
-            <CiCircleCheck />
+              <CiCircleCheck />
               Букальні{' '}
             </li>
             <li>
-            <CiCircleCheck />
+              <CiCircleCheck />
               RF ліфтинг{' '}
             </li>
             <li>
-            <CiCircleCheck />
+              <CiCircleCheck />
               Скульптуруючі{' '}
             </li>
           </ul>

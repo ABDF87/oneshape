@@ -1,4 +1,4 @@
-.mainContainer {
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&display=swap');.mainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
 }
 .videoHeader {
   width: 100%;
-height: 100%;
+  height: 100%;
 }
 .layer {
   position: absolute;
@@ -69,21 +69,21 @@ height: 100%;
   align-items: center;
   gap: 10px;
 }
-.discountContainer{
+.discountContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width:60%;
+  width: 60%;
   height: 120px;
   margin-top: 60px;
   background-color: #db8419d4;
   color: #dedbdb;
   z-index: 20;
 }
-.discountContainerNumber{
- font-size: 80px;
+.discountContainerNumber {
+  font-size: 80px;
 }
-.discountContainerDescription{
+.discountContainerDescription {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -505,8 +505,8 @@ height: 100%;
     background-color: #edebea;
     z-index: 20;
   }
-  .formContainer h2{
-    color:#242323
+  .formContainer h2 {
+    color: #242323;
   }
   .salonPhotosContainer {
     display: flex;
@@ -541,11 +541,11 @@ height: 100%;
     gap: 10px;
     font-size: 18px;
   }
-  .discountContainer{
+  .discountContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width:100%;
+    width: 100%;
     height: 80px;
     margin-top: 30px;
     background-color: #db8419d4;
@@ -553,13 +553,12 @@ height: 100%;
     z-index: 20;
   }
 
-  .discountContainerNumber p{
+  .discountContainerNumber p {
     font-size: 70px;
   }
-  .discountContainerDescription div{
+  .discountContainerDescription div {
     font-size: 25px;
   }
-
 }
 @media (max-width: 430px) {
   .mainContainer {
@@ -568,19 +567,29 @@ height: 100%;
     align-items: center;
     height: auto;
     width: 100%;
+    overflow: hidden;
   }
   .header {
     /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     text-align: center;
-    height: auto;
+    height: 100vh;
     width: 100%;
     margin-bottom: 40px;
+    margin-top: 0px;
     /* margin-bottom: 210px; */
-    /* background-color: #b24e15; */
+    background-color: #102601;
+  }
+  .headerFrame {
+    position: absolute;
+    top: 150px;
+    width: 95%;
+    height: 500px;
+    border: 1px solid #d9bfa0;
+    z-index: 20;
   }
   .layer {
     position: absolute;
@@ -614,16 +623,87 @@ height: 100%;
     margin-top: 20px;
     font-size: 20px;
     font-weight: lighter;
-    color:#fff
+    color: #fff;
   }
+  .headerTopWrapper {
+    display: flex;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .headerTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55%;
+  }
+
+  .headerContactsWrapper {
+    margin-right: 10px;
+    margin-top: 15px;
+    color: #d9bfa0;
+  }
+
   .headerTitle {
     width: 70%;
     height: auto;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     color: #fff;
-    border-left-width: 1px;
-    border-left-color: #fff;
+    font-size: 30px;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* border-left-width: 1px; */
+    /* border-left-color: #fff; */
+  }
+  .headerSubTitle {
+    font-size: 14px;
+    color: #d9bfa0;
+    font-weight: 300;
+    margin-right: 5px;
+  }
+  .headerContactsNumber {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .headerContactsAdress {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .headerPhotoContainer {
+    overflow: hidden;
+    width: 150%;
+    height: 500px;
+    transform: rotate(-10deg);
+    margin-bottom: 50px;
+  }
+  .headerPhoto {
+    transform: rotate(10deg);
+    transform: translate(0px, -320px);
+  }
+  .headerDescriptionContainerTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .headerDescriptionContainerOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #d9bfa0;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .divider {
+    width: 70%;
+    height: 1px;
+    background-color: #d9bfa0;
   }
   .headerTitle h1 {
     font-size: 50px;
@@ -641,7 +721,6 @@ height: 100%;
     font-weight: 300;
     margin-left: 0;
     letter-spacing: 11px;
-
   }
   .headerDescription {
     display: flex;
@@ -658,21 +737,21 @@ height: 100%;
     align-items: center;
     gap: 10px;
   }
-  .discountContainer{
+  .discountContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width:100%;
+    width: 100%;
     height: 120px;
     margin-top: 30px;
     background-color: #db8419d4;
     color: #dedbdb;
     z-index: 20;
   }
-  .discountContainerNumber{
-   font-size: 80px;
+  .discountContainerNumber {
+    font-size: 80px;
   }
-  .discountContainerDescription{
+  .discountContainerDescription {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -696,7 +775,7 @@ height: 100%;
     align-items: center;
     width: 80%;
     height: 80px;
-    background-color: #43413f;
+    background-color: #1B5948;
     color: #fff;
     font-size: 20px;
     margin-bottom: 20px;
