@@ -186,6 +186,44 @@ const MassageFace = () => {
           </button>
         </form>
       )}
+        <section className={styles.hook}>
+        <div className={styles.hookTitle}>Техніки в яких ми експерти</div>
+        <div className={styles.hookParagraph}>
+          <ul>
+            <li>
+              <CiCircleCheck />
+              Лімфодренажні
+            </li>
+            <li>
+              <CiCircleCheck />
+              Міофесціальні{' '}
+            </li>
+            <li>
+              <CiCircleCheck />
+              Букальні{' '}
+            </li>
+            <li>
+              <CiCircleCheck />
+              RF ліфтинг{' '}
+            </li>
+            <li>
+              <CiCircleCheck />
+              Скульптуруючі{' '}
+            </li>
+          </ul>
+        </div>
+        <video
+          className={styles.videoWrapper}
+          src={
+            'https://res.cloudinary.com/dwxlzszxy/video/upload/v1718709056/Tetiana_reel_massage1_koufjs.mov'
+          }
+          width={600}
+          height={500}
+          autoPlay
+          muted
+          loop
+        />
+      </section>
       <section className={styles.hook}>
         <div className={styles.hookTitle}>
           Чи дійсно є ефект після першої ж процедури?
@@ -240,44 +278,7 @@ const MassageFace = () => {
         </div>
         <img src={'/photos/intsructor_photos/instructor-conference.jpg'} />
       </section>
-      <section className={styles.hook}>
-        <div className={styles.hookTitle}>Техніки в яких ми експерти</div>
-        <div className={styles.hookParagraph}>
-          <ul>
-            <li>
-              <CiCircleCheck />
-              Лімфодренажні
-            </li>
-            <li>
-              <CiCircleCheck />
-              Міофесціальні{' '}
-            </li>
-            <li>
-              <CiCircleCheck />
-              Букальні{' '}
-            </li>
-            <li>
-              <CiCircleCheck />
-              RF ліфтинг{' '}
-            </li>
-            <li>
-              <CiCircleCheck />
-              Скульптуруючі{' '}
-            </li>
-          </ul>
-        </div>
-        <video
-          className={styles.videoWrapper}
-          src={
-            'https://res.cloudinary.com/dwxlzszxy/video/upload/v1718709056/Tetiana_reel_massage1_koufjs.mov'
-          }
-          width={600}
-          height={500}
-          autoPlay
-          muted
-          loop
-        />
-      </section>
+    
       <section className={styles.hook}>
         <div className={styles.hookTitle}>У нас затишно </div>
         <div className={styles.hookParagraph}>

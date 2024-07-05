@@ -170,9 +170,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 80%;
   height: 80px;
-  background-color: #43413f;
+  background-color: #1b5948;
   color: #fff;
   font-size: 20px;
   margin-bottom: 20px;
@@ -251,10 +251,10 @@
   font-weight: 300;
   color: #fff;
   margin-top: 10px;
-  background-color: #703f02;
+  background-color: #1B5948;
 }
 .formButton:active {
-  background-color: #7f4908;
+  background-color: #102601;
 }
 .formSentText {
   position: absolute;
@@ -520,6 +520,28 @@
   height: 500px;
   border-radius: 10px;
 }
+@media (max-width: 932px) {
+  .headerTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+
+  }
+  .headerTitle {
+    width: 100%;
+    height: auto;
+    margin: 0 0 5px 0;
+    color: #fff;
+    font-size: 36px;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 @media (max-width: 830px) {
   .header img {
     width: 400px;
@@ -536,16 +558,30 @@
     height: 100%;
     left: 0;
   }
-  .headerTitle {
+  .headerTitleWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 55%;
+
+  }
+  .headerTitle {
+    width: 100%;
     height: auto;
-    margin-bottom: 100px;
-    margin-left: 30px;
+    margin: 0 0 5px 0;
     color: #fff;
+    font-size: 36px;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .headerSubTitle {
+    font-size: 14px;
+    color: #d9bfa0;
+    font-weight: 300;
   }
   .headerTitle h2 {
     display: flex;
@@ -718,19 +754,19 @@
     justify-content: center;
     align-items: center;
     width: 55%;
+
   }
 
   .headerContactsWrapper {
-    margin-right: 10px;
+    margin-right: 15px;
     margin-top: 15px;
     color: #d9bfa0;
   }
 
   .headerTitle {
-    width: 100%;
+    width: auto;
     height: auto;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
     color: #fff;
     font-size: 36px;
     padding: 0;
@@ -738,8 +774,6 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    /* border-left-width: 1px; */
-    /* border-left-color: #fff; */
   }
   .headerSubTitle {
     font-size: 14px;
@@ -910,10 +944,10 @@
     font-weight: 300;
     color: #fff;
     margin-top: 10px;
-    background-color: #ec9020;
+    background-color: #1B5948;
   }
   .formButton:active {
-    background-color: #7f4908;
+    background-color: #102601;
   }
   .formSentText {
     position: static;
