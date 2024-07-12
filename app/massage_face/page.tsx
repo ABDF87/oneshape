@@ -58,16 +58,21 @@ const MassageFace = () => {
       <section className={styles.header}>
         <div className={styles.headerFrame}></div>
         <div className={styles.headerTopWrapper}>
-        <div className={styles.headerTitleWrapper}>
-          <div className={styles.headerTitle}>One Shape</div>
-          <div className={styles.headerSubTitle}>
-            cтудія природньої<br/> естетики обличчя
+          <div className={styles.headerTitleWrapper}>
+            <div className={styles.headerTitle}>One Shape</div>
+            <div className={styles.headerSubTitle}>
+              cтудія природньої
+              <br /> естетики обличчя
+            </div>
           </div>
-        </div>
-        <div className={styles.headerContactsWrapper}>
-          <div className={styles.headerContactsNumber}>+38 (063) 571 19 96 </div>
-          <div className={styles.headerContactsAdress}>Гагарінське плато, 5а</div>
-        </div>
+          <div className={styles.headerContactsWrapper}>
+            <div className={styles.headerContactsNumber}>
+              +38 (063) 571 19 96{' '}
+            </div>
+            <div className={styles.headerContactsAdress}>
+              Гагарінське плато, 5а
+            </div>
+          </div>
         </div>
         <div className={styles.headerPhotoContainer}>
           <img
@@ -78,8 +83,10 @@ const MassageFace = () => {
             height={400}
           />
         </div>
-        <div  className={styles.headerDescriptionContainer}>
-          <div className={styles.headerDescriptionContainerTitle}>МАСАЖ ОБЛИЧЧЯ</div>
+        <div className={styles.headerDescriptionContainer}>
+          <div className={styles.headerDescriptionContainerTitle}>
+            МАСАЖ ОБЛИЧЧЯ
+          </div>
           <div className={styles.headerDescriptionContainerOptions}>
             <div>Ручний</div>
             <div>Інтраоральний</div>
@@ -186,7 +193,84 @@ const MassageFace = () => {
           </button>
         </form>
       )}
-        <section className={styles.hook}>
+      <section className={styles.hook}>
+        <div className={styles.hookTitle} style={{ color: '#5F432E' }}>
+          Ціни
+        </div>
+        <div
+          className={styles.hookParagraph}
+          style={{
+            alignItems: 'start',
+            backgroundColor: '#fff',
+            color: '#5F432E',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100%',
+                justifyContent: 'space-between',
+              }}
+            >
+             <div style={{fontWeight:'600'}}> Масаж обличчя:</div>
+            ручний + інтраоральний + RF ліфтинг
+            </div>
+            <br/>
+            <div
+              style={{
+                display: 'flex',
+                width: '100%',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>Тривалість:</div>
+              <div> 60 хв.</div>
+            </div>
+          </div>
+
+          <br />
+          <div
+            style={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div>Одна процедура:</div>
+            <div> 800 грн.</div>
+          </div>
+          <br />
+          <div
+            style={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div>Абонемент 10 процедур:</div>
+            <div> 7000 грн.</div>
+          </div>
+          <div>+ 1 масаж у подарунок</div>
+          <br />
+
+          {/* <div style={{ marginBottom: '10px' }}>Процедура включає:</div>
+
+          <div>Ручний скульптуруючий масаж</div>
+          <div>Інтраоральний масаж</div>
+          <div>RF-ліфтинг</div> */}
+        </div>
+      </section>
+      <div className={styles.divider}> </div>
+      {/* <section className={styles.hook}>
         <div className={styles.hookTitle}>Техніки в яких ми експерти</div>
         <div className={styles.hookParagraph}>
           <ul>
@@ -223,7 +307,7 @@ const MassageFace = () => {
           muted
           loop
         />
-      </section>
+      </section> */}
       <section className={styles.hook}>
         <div className={styles.hookTitle}>
           Чи дійсно є ефект після першої ж процедури?
@@ -278,7 +362,7 @@ const MassageFace = () => {
         </div>
         <img src={'/photos/intsructor_photos/instructor-conference.jpg'} />
       </section>
-    
+
       <section className={styles.hook}>
         <div className={styles.hookTitle}>У нас затишно </div>
         <div className={styles.hookParagraph}>
