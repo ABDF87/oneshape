@@ -34,7 +34,7 @@ const MassageFace = () => {
     template_params: {
       client_name: name,
       client_phone: phone,
-      message: 'заявка з лендінгу обличчя -40%',
+      message: 'заявка з лендінгу обличчя',
     },
   };
 
@@ -88,10 +88,16 @@ const MassageFace = () => {
             МАСАЖ ОБЛИЧЧЯ
           </div>
           <div className={styles.headerDescriptionContainerOptions}>
-            <div>Ручний</div>
+            <div>Ручний скульптуруючий</div>
             <div>Інтраоральний</div>
+            <div>RF-ліфтинг</div>
             <div>Апаратний</div>
           </div>
+        </div>
+        <div className={styles.climateContainer}>
+          <div>У нас завжди є світло</div>
+          <div>У нас завжди тихо</div>
+          <div>Кондиціонер в кожній масажній</div>
         </div>
         <div className={styles.divider}> </div>
       </section>
@@ -200,6 +206,8 @@ const MassageFace = () => {
         <div
           className={styles.hookParagraph}
           style={{
+            display: 'flex',
+            flexDirection: 'column',
             alignItems: 'start',
             backgroundColor: '#fff',
             color: '#5F432E',
@@ -221,10 +229,10 @@ const MassageFace = () => {
                 justifyContent: 'space-between',
               }}
             >
-             <div style={{fontWeight:'600'}}> Масаж обличчя:</div>
-            ручний + інтраоральний + RF ліфтинг
+              <div style={{ fontWeight: '600' }}> Масаж обличчя:</div>
+              ручний + інтраоральний + RF ліфтинг
             </div>
-            <br/>
+            <br />
             <div
               style={{
                 display: 'flex',
@@ -366,7 +374,9 @@ const MassageFace = () => {
       <section className={styles.hook}>
         <div className={styles.hookTitle}>У нас затишно </div>
         <div className={styles.hookParagraph}>
-          В One Shape ми цінуємо комфорт та красу. Наші фахівці створюють
+          В One Shape ми цінуємо комфорт та красу. Завдяки центральному
+          генератору встановленному на будинок у нас завжди є світло, працюють
+          кондиціонери і при цьому намає шуму генератора. Наші фахівці створюють
           унікальну атмосферу затишку і спокою, де ви можете повністю
           розслабитися та насолодитися професійним масажем. Ми використовуємо
           передові техніки та високоякісні засоби, щоб ваша шкіра сяяла
