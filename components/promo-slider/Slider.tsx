@@ -57,7 +57,7 @@ const SliderShow = () => {
     infinite: true,
     autoplaySpeed: 3000,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     pauseOnFocus: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -232,7 +232,7 @@ const SliderShow = () => {
           </div>
         </div>
       </div>
-      <div style={slideStyle}>
+      {/* <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
           <Image
             src={'/photos/banners/banner-1.png'}
@@ -279,8 +279,8 @@ const SliderShow = () => {
             />
           </div>
         </div>
-      </div>
-      <div style={slideStyle}>
+      </div> */}
+      {/* <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
           <Image
             src={'/photos/banners/banner-2-1.png'}
@@ -339,7 +339,7 @@ const SliderShow = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
           <Image
