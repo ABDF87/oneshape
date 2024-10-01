@@ -27,7 +27,7 @@ const Contacts = () => {
                   <p>вул. Гагарінське плато 5а</p>
                   <p>(2 перлина)</p>
                   <p> Часи роботи: </p>
-                  <p>10:00 - 18:00</p>
+                  <p>9:00 - 19:00</p>
                 </div>
                 <div className={styles.divider}></div>
                 <div className={styles.contactsInnerWrapperRight}>
