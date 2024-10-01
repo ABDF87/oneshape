@@ -58,7 +58,7 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
       onClick={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Головна', 'Ціни', 'Масаж', 'Манікюр', 'Навчання', 'Контакти'].map(
+        {['Головна', 'Ціни', 'Масаж', 'Навчання', 'Контакти'].map(
           (text, index) => (
             <ListItem
               key={text}
@@ -69,8 +69,8 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
                   : activeMenuItem === '/prices' && text === 'Ціни'
                   ? { backgroundColor: '#000' }
                   : activeMenuItem === '/massage' && text === 'Масаж'
-                  ? { backgroundColor: '#000' }
-                  : activeMenuItem === '/manicure' && text === 'Манікюр'
+                  // ? { backgroundColor: '#000' }
+                  // : activeMenuItem === '/manicure' && text === 'Манікюр'
                   ? { backgroundColor: '#000' }
                   : activeMenuItem === '/courses/massage' && text === 'Навчання'
                   ? { backgroundColor: '#000' }
@@ -93,8 +93,8 @@ const MobileMenu = ({ setDeployedMenu, deployedMenu }: Props) => {
                       ? '/prices'
                       : text === 'Масаж'
                       ? '/massage'
-                      : text === 'Манікюр'
-                      ? '/manicure'
+                      // : text === 'Манікюр'
+                      // ? '/manicure'
                       : text === 'Навчання'
                       ? '/courses/massage'
                       : '/contact'

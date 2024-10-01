@@ -154,7 +154,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className={styles.sectionManicure}>
+          {/* <div className={styles.sectionManicure}>
             <div className={styles.sectionContentContainer}>
               <div className={styles.manicureContentWrapper}>
                 <div className={styles.sectionPhotoContainer}>
@@ -215,7 +215,7 @@ const Home = () => {
                 <div className={styles.massageButtonContainerExtention}> </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <MassageCoursesBanner />
           {/* <div className={styles.sectionFeedbacks}>
             <SectionFeedback feedbacksData={massageFeedback} />

@@ -54,9 +54,9 @@ const Menu = () => {
         <div className={activePage === '/massage' ?  styles.activeMenuItem : styles.menuItem}>
         <Link href='/massage'>Масаж</Link>
         </div>
-        <div className={activePage === '/manicure' ?  styles.activeMenuItem : styles.menuItem}>
+        {/* <div className={activePage === '/manicure' ?  styles.activeMenuItem : styles.menuItem}>
         <Link href='/manicure'>Манікюр</Link>
-        </div>
+        </div> */}
 
   
         <div className={activePage === '/courses/massage' ?  styles.activeMenuItem : styles.menuItem}>
