@@ -340,7 +340,7 @@ const SliderShow = () => {
           </div>
         </div>
       </div> */}
-      <div style={slideStyle}>
+      {/* <div style={slideStyle}>
         <div className={styles.bannerWrapper}>
           <Image
             src={'/photos/banners/banner-03.png'}
@@ -465,7 +465,7 @@ const SliderShow = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </Slider>
   );
 };
